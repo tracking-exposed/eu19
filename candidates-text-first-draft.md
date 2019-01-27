@@ -14,7 +14,7 @@ fbTREX has so far produced research over elections and referendums in 14 countri
 
 We need widespread adoption of the fbTREX toolset in order to build up a robust and heterogeneous dataset from which to glean insights. We look forward to collaborating with interdisciplinary parties from various countries so that together we can produce useful contextual overviews and tangible case studies on how FB’s algorithm may have influenced the narratives around and results of EU elections.
 
-Unlike Facebook, fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analyzing collective phenomena in the public interest. We are asking individuals only to share some of the data that Facebook gives them – the goal is to study social media influence, not the subjects participating. Still, this information can contain a lot of personally identifying information (PII).
+Unlike Facebook, fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the data that Facebook gives them – the goal is to study social media influence, not the subjects participating. Still, this information can contain a lot of personally identifying information (PII).
 
 fbTREX’s ethical policy imposes the following limits:
 1. We observe only news feeds, not individual profiles or pages.
