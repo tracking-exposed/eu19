@@ -10,7 +10,7 @@ With fbTREX, we can better scrutinise our information diets, and get insights in
 
 Promoting algorithmic diversity and our right to pick our own algorithms is a primary goal for fbTREX. We are creating a community where we can share, compare, improve, remix, and critique algorithms, as autonomous and informed individuals deciding what is most appropriate for ourselves at any given time.
 
-By taking ownership over our algorithms, we can explore potential alternatives for social interaction and information sharing. And contrary to Facebook’s practices, we can create algorithms which behave more ethically and transparently, protecting our personal data and prioritizing our own needs.
+By taking ownership over our algorithms, we can explore potential alternatives for social interaction and information sharing. And contrary to Facebook’s practices, we can create algorithms which behave more ethically and transparently, protecting our personal data and prioritising our own needs.
 
 fbTREX offers two open technology solutions to this end.
 
@@ -23,7 +23,7 @@ We hope that you will join our digital evidence-gathering community and particip
 
 **Privacy**
 
-Dataset access is limited to researchers analyzing collective phenomena in the public interest
+Dataset access is limited to researchers analysing collective phenomena in the public interest
 1. We will collect only the information that Facebook provides to you in your news feed
 2. We will collect only posts marked as public. We will never collect posts marked for friends only.
 3. You have full control over your data, and may delete it at any time.
