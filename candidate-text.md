@@ -21,7 +21,7 @@ Unlike Facebook, fbTREX prioritises the protection of personal data. Access to t
 4. Third-party access to user data is granted by each user on a case-by-case and strictly opt-in basis.
 5. Analyses run on the dataset will be strictly aimed at understanding social phenomenons, not individuals.
 
-**CTA options**
+**CTA options**\
 EU Election '19, join a collaborative effort to map propaganda and Facebook abuses\
 Collaborate with fbTREX to monitor EU elections\
 Collaborate with fbTREX to monitor algorithmic influence in the 2019 EU election\
