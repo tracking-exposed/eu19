@@ -1,4 +1,4 @@
-fbTREX is facilitating research into the impact of the Facebook algorithm on the 2019 EU elections. In recent years, it has become clear that the lack of transparency of the FB platform presents acute problems with regard to elections, as issues of data exploitation, media manipulation, and algorithmic censorship continually surface.
+fbTREX is facilitating research into the impact of the Facebook algorithm on the 2019 EU elections. In recent years, it has become clear that the lack of transparency of the Facebook platform presents acute problems with regard to elections, as issues of data exploitation, media manipulation, and algorithmic censorship continually surface.
 
 While political campaigns tend to view digital platforms as a means to communicate directly with constituents, Facebook exercises its immense and tightly-held control over the flow of information precisely by intermediating between political groups and citizens, deciding for all of us which stories are or are not seen by users.
 
@@ -8,7 +8,7 @@ Facebook influences the way political discourse is perceived and potentially imp
 
 fbTREX provides open technology solutions which produce a structured dataset of evidence useful for research and analysis into the influence of the Facebook algorithm over political discourse. We aim to promote transparency and accountability over this issue during the critical period of the run-up to the 2019 EU elections, when public opinion is being shaped.
 
-We call on political groups, researchers, and data volunteers to join us in a pan-European effort aimed at observing narratives around EU electoral campaigns to better understand how our perceptions of reality are shaped by the FB algorithm. We hope that through this process we can continue to develop a collective approach to the personalised experiences, expectations, and realities that Facebook creates for us.
+We call on political groups, researchers, and data volunteers to join us in a pan-European effort aimed at observing narratives around EU electoral campaigns to better understand how our perceptions of reality are shaped by the Facebook algorithm. We hope that through this process we can continue to develop a collective approach to the personalised experiences, expectations, and realities that Facebook creates for us.
 
 fbTREX has so far produced research over elections and referendums in 14 countries. Among the most enlightening methods has been to quantify the visibility of publishers’ content in news feeds. This is accomplished by recording the news feed content – or information diet – presented to citizens in the run-up to elections.
 
