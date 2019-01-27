@@ -22,3 +22,5 @@ fbTREX’s ethical policy imposes the following limits:
 3. Users who install the extension have full control on their data. They can delete all of the data provided at any time.
 4. Third-party access to user data is granted by each user on a case-by-case and strictly opt-in basis.
 5. Analyses run on the dataset will be strictly aimed at understanding social phenomenons, not individuals.
+
+CTA forthcoming
