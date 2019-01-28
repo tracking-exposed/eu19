@@ -4,8 +4,6 @@ Facebook does not enable us to understand or control how our news feed content i
 
 To understand the complex, contemporary political debate, we need tools to help us pop our filter bubbles. fbTREX RSS feed allows us to analyse, experiment with, and educate ourselves about the information in each of our news feeds, in order to make more informed decisions based on a broader, collective perspective of facts and events.
 
-In cooperation with journalists, researchers and citizens, our experiences with fbTREX can provide useful insights for policymakers.
-
 fbTREX RSS feed is a disintermediated, machine-readable data feed. Queries retrieve posts from all contributors’ feeds collectively and present them transparently and chronologically, providing a logical, horizontal view of all of the information collected.
 
 We hope that you will consider assisting in the development of this tool by donating your own public news feed content to this collaborative portal of information.
@@ -23,4 +21,12 @@ Unlike Facebook, fbTREX prioritises the protection of personal data. Access to t
 4. Third-party access to user data is granted by each user on a case-by-case and strictly opt-in basis.
 5. Analyses run on the dataset will be strictly aimed at understanding social phenomenons, not individuals.
 
-**CFA**: Pop your bubble!
+**CFA**:\
+First part: Pop your bubble!\
+Second part: Explore our collective news feed(/)collaborative portal of information.
+
+
+**Notes to self**
+
+1. explain RSS
+2. integrate rss-reaader.md, article
