@@ -1,0 +1,29 @@
+{{ define "main" -}}
+
+<div class="entry-header center">
+    <h1>Homepage</h1>
+</div>
+<div class="entry-content">
+    <ul class="archive">
+        {{ range .Data.Pages -}}
+        <li>
+            <article>
+                <h3>
+                    <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
+                </h3>
+                <time class="post-date hidden" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+                <p>
+                    {{ .Summary }}
+                    {{ if .Truncated }}
+                    <span class="read-more-link">
+                        <a href="{{ .RelPermalink }}">Read More …</a>
+                    </span>
+                    {{ end }}
+                </p>
+            </article>
+        </li>
+        {{- end }}
+    </ul>
+</div>
+
+{{- end }}

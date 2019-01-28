@@ -1,0 +1,356 @@
+body {
+  font-family: $font-stack;
+  color: $black;
+  font-size: 14px;
+  line-height: 140%;
+  direction: ltr;
+  letter-spacing: 0.5px;
+  font-weight: $regular;
+  background-color: $grey-bg;
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: $primary
+}
+a:visited {
+  color: $primary-dark;
+}
+a:hover, a:focus, a:active {
+  color: $primary-dark;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Heading
+--------------------------------------------------------------*/
+h1, .h1_style {
+  font-size: 40px;
+  line-height: 140%;
+  font-weight: $regular;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+h2, .h2_style {
+  font-size: 32px;
+  line-height: 140%;
+  font-weight: $bold;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+h3, .h3_style{
+  font-size: 24px;
+  line-height: 140%;
+  font-weight: $bold;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+h4, .h4_style {
+  font-size: 18px;
+  line-height: 140%;
+  text-transform: uppercase;
+  font-weight: $bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+h5, h6, .h5_style {
+  font-size: 18px;
+  line-height: 140%;
+  color: $grey-full;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+h5 {
+  font-weight: $bold;
+}
+
+.entry-content ul, .entry-content ol {
+  margin: 30px 0 30px 2%;
+}
+.entry-content li {
+  margin-bottom: 15px;
+}
+
+
+/*--------------------------------------------------------------
+## Characters formatting
+--------------------------------------------------------------*/
+div, form, p, .paragraph, small, .small, mark, label, input {
+  font-weight: $regular;
+}
+b, .bold, strong, .strong {
+  font-weight: $bold !important;
+}
+em, i, .italic {
+  font-style: italic;
+}
+p, .paragraph {
+  font-size: 16px;
+  line-height: 160%;
+  display: block;
+  font-weight: $regular;
+  margin-bottom: 15px;
+}
+small, .small {
+  font-size: 80%;
+  line-height: 140%;
+  display: inline-block;
+}
+kbd, code {
+  font-size: 85%;
+  padding: 2px 6px;
+  display: inline-block;
+  background: $grey-light;
+  border: solid 1px $grey-medium;
+  word-wrap: break-word;
+  @include border-radius(2px, 2px, 2px, 2px);
+}
+var {
+  font-weight: $bold;
+  border-bottom: dotted 1px $black;
+}
+del, strike {
+  text-decoration: line-through;
+}
+blockquote, q {
+  display: block;
+  margin: 10px 0 10px 15px;
+  padding-left: 15px;
+  font-style: italic;
+  border-left: solid 2px $grey-medium;
+  @include border-radius(2px, 2px, 2px, 2px);
+}
+blockquote p, q p {
+  line-height: 160%;
+}
+cite {
+  display: inline-block;
+  margin-left: 30px;
+  font-weight: $bold;
+}
+pre {
+  max-width: 100%;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+mark, address {
+  background: $secondary;
+  border: solid 1px $tertiary-dark;
+  padding: 0 4px;
+  @include border-radius(2px, 2px, 2px, 2px);
+}
+address {
+  margin-bottom: 15px;
+  display: inline-block;
+  font-size: 80%;
+}
+ins {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 0;
+  margin-bottom: 30px;
+}
+table td, table th {
+  padding: 8px 12px;
+  background-color: $white;
+  vertical-align: middle;
+  border-spacing: 0;
+}
+table th {
+  background-color: $grey-light;
+  border: solid 1px $grey-medium;
+}
+dl {
+  margin-bottom: 35px;
+}
+dl dd {
+  margin: 0 0 20px 2%;
+}
+dl dt {
+  font-weight: $bold;
+  margin-bottom: 5px;
+}
+hr {
+  display: block;
+  margin: 20px 0;
+
+
+}
+figcaption {
+  font-size: 80%;
+}
+.underline {
+  text-decoration: underline !important;
+}
+.text-shadow {
+  @include text-shadow(0, 1px, 1px, $black);
+}
+.black {
+  color: $black;
+}
+.primary-color {
+  color: $primary !important;
+}
+.secondary-color {
+  color: $tertiary;
+}
+.light-font {
+  font-weight: $regular !important;
+}
+.white {
+  color: $white !important;
+}
+
+
+/* --------------------------------------------------
+## BTN
+--------------------------------------------------  */
+.btn,
+.tags a,
+.comment-reply-link {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: $primary;
+  font-size: 12px;
+  font-weight: $regular;
+  text-decoration: none;
+  color: $white !important;
+  cursor: pointer;
+  margin: 0 10px 5px 0;
+}
+.btn:visited,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.tags a:visited,
+.tags a:hover,
+.tags a:focus,
+.tags a:active,
+.comment-reply-link:visited,
+.comment-reply-link:hover,
+.comment-reply-link:active,
+.comment-reply-link:focus
+{
+  color: $white;
+}
+.btn_big {
+  padding: 20px 50px;
+  font-size: 17px;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  font-family: $font-stack;
+  border: none;
+  display: inline-block;
+  background: $primary;
+  color: $white;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 15px 45px;
+  //@include box-shadow(0,0,3px,0,$grey-medium);
+  border-radius: 0;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:disabled, input[type="submit"]:disabled {
+  opacity:0.6;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  box-shadow: none;
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  outline: thin dotted;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  font-family: $font-stack;
+  color: $grey-medium;
+  border: 1px solid $grey-medium;
+  padding: 15px 10px;
+  line-height: 15px;
+  font-size: 13px;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: $black;
+  border-color: $primary;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+label.checkbox {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+select {
+  border: 1px solid $grey-medium;
+}
+textarea {
+  width: 100%;
+}

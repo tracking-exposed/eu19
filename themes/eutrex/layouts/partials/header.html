@@ -1,0 +1,16 @@
+<header id="masthead" class="site-header">
+    {{ if not (isset .Params "banner") }}
+        <div class="banner">
+            <div class="container center">
+                <small>
+                    <a href='{{ ref . "page/get-the-extension.md" }}' title="Download the browser extension">Download the browser extension. <b>Be a contributor, be a hero!</b></a>
+                </small>
+            </div>
+        </div>
+    {{ end }}
+    <div class="container">
+        <p class="logo hidden-txt"><a href="{{ .Site.BaseURL }}" title="Go back to home page">Tracking Expose</a></p>
+        {{- partial "header-menu.html" . -}}
+        <span class="clear"></span>
+    </div>
+</header>
