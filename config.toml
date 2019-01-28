@@ -1,4 +1,4 @@
-baseURL = "https://eu19.tracking.exposed/"
+baseURL = "/"
 languageCode = "en-us"
 title = "eu19 Tracking Expose"
 theme = "eutrex"

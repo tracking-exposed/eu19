@@ -13,6 +13,6 @@ Run `hugo server -D` to have content in draft status published, do it and enjoy 
 The command `hugo` renders your site into public/ dir and is ready to be deployed to your web server. 
 For any refercence go to [Hugo basic usage page](https://gohugo.io/getting-started/usage/)
 
-##Create content
+## Create content
 To create a new content, run the command `hugo new FOLDER/FILE-NAME.md` i.e. `hugo new faq/what-is-rss.md`. It will make a .md file stored in the relative folder under `content` folder.
 In front-matte of the new .md file, change the `draft` value to `false` to publish the post.
