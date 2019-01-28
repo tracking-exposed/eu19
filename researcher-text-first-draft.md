@@ -23,4 +23,8 @@ Unlike Facebook, fbTREX prioritises the protection of personal data. Access to t
 4. Third-party access to user data is granted by each user on a case-by-case and strictly opt-in basis.
 5. Analyses run on the dataset will be strictly aimed at understanding social phenomenons, not individuals.
 
-CTA forthcoming
+**CTA options**\
+Join fbTREX in exposing Facebook’s effects on social problems\
+Collaborate with fbTREX in exposing the influence and abuses of Facebook\
+Join a collaborative effort to investigate personalisation algorithms\
+Join us in researching the dangerous social effects of personalisation algorithms
