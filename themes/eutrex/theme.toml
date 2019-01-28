@@ -3,8 +3,8 @@
 
 name = "eutrex"
 license = "MIT"
-licenselink = "https://github.com/tracking-exposed/eu19/tree/master/theme/eutrex/LICENSE"
-description = "The hugo custom theme for eu19 Tracking Expose"
+licenselink = "https://github.com/tracking-exposed/eu19/tree/master/themes/eutrex/LICENSE"
+description = "The hugo custom theme for eu19 Tracking Exposed"
 homepage = "https://eu19.tracking.exposed/"
 tags = []
 features = []
