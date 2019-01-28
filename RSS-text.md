@@ -31,14 +31,14 @@ There are various RSS readers for various platforms, but here are some of the op
 
 ### RSS Readers
 #### Cross-platform
-[Feedly](https://feedly.com/): Webapp, iOS, Android. Proprietary. Requires registration, but not a valid email.\
-[Winds](https://getstream.io/winds/): Pre-compiled binaries for Windows, OSX and GNU/Linux. Open source. Requires registration, but not a valid email.
+* [Feedly](https://feedly.com/): Webapp, iOS, Android. Proprietary. Requires registration, but not a valid email.\
+* [Winds](https://getstream.io/winds/): Pre-compiled binaries for Windows, OSX and GNU/Linux. Open source. Requires registration, but not a valid email.
 
 #### OSX
-[ViennaRSS](https://github.com/ViennaRSS/vienna-rss/releases/tag/v/3.5.3): Pre-compiled binaries, compatible with Mojave. Open source.
+* [ViennaRSS](https://github.com/ViennaRSS/vienna-rss/releases/tag/v/3.5.3): Pre-compiled binaries, compatible with Mojave. Open source.
 
 #### Android
-[Flym](https://play.google.com/store/apps/details?id=net.frju.flym&hl=en_US): FOSS alternative.
+* [Flym](https://play.google.com/store/apps/details?id=net.frju.flym&hl=en_US): FOSS alternative.
 
 #### Other resources
 [Wikipedia's comparison of feed readers](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators)\
