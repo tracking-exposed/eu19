@@ -12,7 +12,7 @@ fbTREX RSS feed is designed to foster the spirit of the GDPR, empowering us to h
 
 fbTREX is not a SOCMINT tool. RSS queries are restricted to concepts represented by Wikipedia entries. This makes it useful for research and exploration into a broad range of subjects, while preventing potential abuse of personal data.
 
-**Privacy**
+### Privacy
 
 Unlike Facebook, fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the data that Facebook gives them – the goal is to study social media, not the subjects participating. Still, this information can contain a lot of personally identifying information (PII), so fbTREX’s ethical policy imposes the following limits:
 1. We observe only news feeds, not individual profiles or pages.
@@ -21,12 +21,29 @@ Unlike Facebook, fbTREX prioritises the protection of personal data. Access to t
 4. Third-party access to user data is granted by each user on a case-by-case and strictly opt-in basis.
 5. Analyses run on the dataset will be strictly aimed at understanding social phenomenons, not individuals.
 
-**CFA**:\
+### What is RSS?
+
+RSS is a format which delivers a disintermediated, chronologically-ordered feed for web content. It is often used by news sites and blogs because it enables readers to subscribe to receive updates about new content through RSS reader webapps or software.
+
+For more information on the history and use of RSS versus social media, check out [this article](https://motherboard.vice.com/en_us/article/a3mm4z/the-rise-and-demise-of-rss).
+
+There are various RSS readers for various platforms, but here are some of the options to get you started:
+
+### RSS Readers
+#### Cross-platform
+[Feedly](https://feedly.com/): Webapp, iOS, Android. Proprietary. Requires registration, but not a valid email.\
+[Winds](https://getstream.io/winds/): Pre-compiled binaries for Windows, OSX and GNU/Linux. Open source. Requires registration, but not a valid email.
+
+#### OSX
+[ViennaRSS](https://github.com/ViennaRSS/vienna-rss/releases/tag/v/3.5.3): Pre-compiled binaries, compatible with Mojave. Open source.
+
+#### Android
+[Flym](https://play.google.com/store/apps/details?id=net.frju.flym&hl=en_US): FOSS alternative.
+
+#### Other resources
+[Wikipedia's comparison of feed readers](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators)\
+[Readers available on github](https://github.com/topics/rss-reader)
+
+### CTA
 First part: Pop your bubble!\
 Second part: Explore our collective news feed(/)collaborative portal of information.
-
-
-**Notes to self**
-
-1. explain RSS
-2. integrate rss-reaader.md, article
