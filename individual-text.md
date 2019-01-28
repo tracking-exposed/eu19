@@ -16,7 +16,11 @@ fbTREX offers two open technology solutions to this end: A **browser extension**
 
 We hope that you will join our digital evidence-gathering community and participate in our efforts to better understand what information the Facebook algorithm is feeding us. The more our community grows, the better we will be able to understand the divergent information diets that Facebook imposes on us.
 
-##### Privacy
+#### Install the fbTREX browser extension
+Available as a [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and in the [Chrome Web Store](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).\
+We should probably have graphic links.
+
+#### Privacy
 
 Unlike Facebook, fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the data that Facebook gives them – the goal is to study social media, not the subjects participating. Still, this information can contain a lot of personally identifying information (PII), so fbTREX’s ethical policy imposes the following limits:
 * We will collect only the information that Facebook provides to you in your news feed
@@ -27,4 +31,5 @@ Unlike Facebook, fbTREX prioritises the protection of personal data. Access to t
 
 ##### CTA
 
-Donate your digital body (to science)!
+First part: Donate your digital body (to science)\
+Second part: Install the fbTREX browser extension today!
