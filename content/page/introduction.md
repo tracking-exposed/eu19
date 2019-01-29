@@ -1,0 +1,43 @@
+---
+title: "eu19.tracking.exposed"
+date: 2019-01-29T08:20:22+01:00
+draft: false
+---
+
+## A collaborative observatory of algorithm influences, and few citizen driven solutions
+
+#### This talk has been given the 29 of January at [privacycamp](https://privacycamp.eu), session [Towards real safeguards: Data-driven political campaigns and EU election](https://privacycamp.eu/?page_id=1067)
+
+Today I want to talk about a project named ALEX, which is the acronym for Algorithm Exposed, and one of its first output: a tool for scientific analysis of the social network personalisation algorithm, that we call fbTREX, [facebook.tracking.exposed](https://facebook.tracking.exposed). It works by collecting what Facebook sends to you, as your timeline. Because is personalised, it can be collected as evidence and used to understand the algorithm logic.
+
+First, let me tell you how the idea started, and the road so far. The project begins almost two years ago, as a way to understand the algorithm used by FB to organise users’ timeline. My vision was to increase transparency behind personalisation algorithms so that we can start having more effective control of our online experience, and more awareness of the logic behind how information circulates. That’s why the name, ALgorithm EXposed (ALEX).
+
+The team and I did so by asking people to “donate their digital body” to the science. People who use Facebook can now download a browser extension and become part of the first community that helps research that works on the impact and the dynamics of Automated Decision Making in our life and society. Every FB access creates a different timeline, a window into the organisational ability of the algorithm. But once the user refreshes the page, that chunk of information is lost. We can capture and store that instant we collect forensically valid evidence that can be used for policy-making, sciences, and the education of people on algorithm influence into society.
+
+The project has received attention during our first months. We presented at many international conferences and run many more local events apt at educating and testing the tool. After a first, small round of funding from Lush DigitalFund, 11.000 euro, we have now raised 150.000 euro from the European Research Council, who gave us the mandate to develop technologies that increase algorithm literacy. We are pretty happy about this because we don’t want to sell our data, we want to exist in the public interest, as a free software project. The GDPR was the right step toward granting people rights in the digital world, now we think it’s time to focus on which ideals, and which ethical considerations should drive our approach techno-political issues.
+
+Think about a common thing that still today transmit information: newspapers. They all base their report on events, but they differ in style, focus, and approach. We are all familiar with how they report news differently. We learn how to recognise their diversity, and we decide where we want to stay, on a spectrum of options. What they do, is they craft and organise information, pretty much like FB would do. However, while we do have many newspapers around, and we are able to “change” how information is organised by reading another newspaper, we cannot do the same with the “newspaper FB”, the information within which we can only read it that way, the Facebook way. Thinking about FB as a media platform is not entirely accurate (it’s not in its DNA) but it is helpful to get the idea behind our primary concern that an algorithm is a form of social power; we can’t avoid their presence because of the amount of information available, but we need to understand the spectrum and exert our agenda, somehow. 
+
+We know an alleged solution is to migrate to a better platform (every Facebook PR would say “nobody force you to stay on Facebook”) but the network effect ensures this is in fact not a viable option for many people on the network. Not only that: for one single expert who has tools to do fact-checking, getting accurate information, experiment different networks, there are hundred for which Facebook is synonymous with the internet. As we have seen the last couple of years at least, the opaqueness of FB algorithms have been exploited in many ways, and perhaps is the manipulation of political events that is the most frightening. Sure, political manipulation is nothing new, but political manipulation that exploits users political inclinations is different; because it is personal and automated; and the only way to realise it is to share your phone with someone else, which is not really viable. This is the technical challenge we face: enable citizen having a partial copy of what Facebook selects for them. It is a fundamental step to engage with peers, verify how differently you perceive a complex issue, and understand how your personalised newspaper is different from one of your friends, colleagues, partners.
+
+Despite our mission does not revolve around academic research, the academic community engaged in our work right from the start, and so far the use of our tool by the academic community resulted in three peer-reviewed publications and backed some important reports, like WebFoundation and Tactical Tech. The results of one of the mentioned research paper, suggest not only that Facebook algorithm reinforce biases as expected, but that the same bias-inductive order of timeline was presented to a non-negligible number of users that were experimentally set as neutral concerning their political views. Although preliminary, similar results suggest an active, and not just passive reinforcing, the role of the Facebook algorithm in shaping people opinions and political preferences.
+
+The support of the European Research Council is and will be used in this direction: to support research on Automated Decision Making in our life and society, and hopefully better policies. I believe that the best model, and the model that worked for us, is focusing on the relations with external partners and talking with the business and academic worlds made us what we are today.
+
+But first and foremost, we now have two goals.
+
+First, we want to make FB more similar to the good old newspapers, concerning accountability. We are currently developing new technologies to release unfiltered, raw FB data. First thing RSS (hear that, Aaron?). This is just a simple experiment to give people, journalists, extra but decisive help to be able to search into the unfiltered flow of FB.
+
+Our second goal is then to develop the idea of algorithmic diversity into a series of accessible interfaces and design, to do two things:
+
+First, allow users to experiment with different algorithms, to make their best Facebook fact newspaper. fbTREX offers a new potential reality of how users and algorithms can co-exist, by allowing users agency and ownership over the algorithm, and letting users experiment with all of the possible alternatives for social interactions, information, and news that an algorithm can display.
+
+Second, allow users, journalists, and researcher to monitor the influence of the algorithm on elections. In between 2016 and 2018, we track elections in Netherland, France, and Italy, and calculate what we call “information diet”, that is the degree of exposure of a specific chunk of information based on the user’s tracked behaviour.
+
+As more of the academic and business world is joining the party (we hope to do great things with the University of Amsterdam, and we have great business advisors) we are launching our next call for action on the European Elections 2019. This is a pan-European effort aimed at one goal: observe narratives around the EU electoral campaigns to support and foster a deeper understanding of data exploitation models and algorithms by social media platforms such as Facebook. We wish to develop and increase awareness of online political advertisements and targeting and give reporters and activist a way to monitor political campaigns and the use of the network in targeting people and opinions and sharing advertisements.
+
+So, having the European elections in mind, if you are on FB, please donate your digital body to science! And if you are a developer looking to work on an exciting project, feel free to approach me.
+
+
+
+_Coming soon! Read the [high level project description](https://github.com/tracking-exposed/presentation/blob/master/European%20Election%20action%20plan%20-%20v1.3.pdf), or check out our [previous publications and talks](https://facebook.tracking.exposed/initiatives/). Get in touch at support ﹫tracking・exposed._
