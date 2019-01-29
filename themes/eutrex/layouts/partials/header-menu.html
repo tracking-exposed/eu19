@@ -1,4 +1,5 @@
-<nav class="main-navigation">
+<nav class="main-navigation" id="site-navigation">
+    <button class="menu-toggle hidden-txt" aria-controls="primary-menu" aria-expanded="false">Primary Menu</button>
     <ul>
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}

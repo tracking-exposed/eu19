@@ -94,5 +94,10 @@ GENERAL RESPONSIVE QUERY
 
 //menu toggle
 @media screen and (min-width: 820px) {
-
+  .menu-toggle {
+    display: none;
+  }
+  #site-navigation ul {
+    display: block;
+  }
 }

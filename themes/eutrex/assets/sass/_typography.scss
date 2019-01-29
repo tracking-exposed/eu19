@@ -13,13 +13,13 @@ body {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: $primary
+  color: $tertiary
 }
 a:visited {
-  color: $primary-dark;
+  color: $tertiary-light;
 }
 a:hover, a:focus, a:active {
-  color: $primary-dark;
+  color: $tertiary-light;
 }
 a:focus {
   outline: thin dotted;
@@ -145,7 +145,7 @@ pre {
 }
 mark, address {
   background: $secondary;
-  border: solid 1px $tertiary-dark;
+  border: solid 1px $secondary;
   padding: 0 4px;
   @include border-radius(2px, 2px, 2px, 2px);
 }
@@ -222,8 +222,8 @@ figcaption {
 .tags a,
 .comment-reply-link {
   display: inline-block;
-  padding: 15px 35px;
-  background-color: $primary;
+  padding: 10px 35px;
+  background-color: $tertiary;
   font-size: 12px;
   font-weight: $regular;
   text-decoration: none;
@@ -231,20 +231,18 @@ figcaption {
   cursor: pointer;
   margin: 0 10px 5px 0;
 }
-.btn:visited,
 .btn:hover,
 .btn:focus,
 .btn:active,
-.tags a:visited,
 .tags a:hover,
 .tags a:focus,
 .tags a:active,
-.comment-reply-link:visited,
 .comment-reply-link:hover,
 .comment-reply-link:active,
 .comment-reply-link:focus
 {
   color: $white;
+  background-color: $tertiary-dark;
 }
 .btn_big {
   padding: 20px 50px;

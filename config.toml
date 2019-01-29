@@ -16,10 +16,10 @@ menu = ["main", "footer"]
     url = "/page/get-the-extension/"
     weight = -100
  [[menu.main]]
-    page = "faqs"
-    identifier = "faqs"
-    name = "FAQ"
-    url = "/faq/"
+    page = "homepage"
+    identifier = "/"
+    name = "Home page"
+    url = "/"
     weight = -110
 
 
