@@ -79,7 +79,15 @@ GENERAL RESPONSIVE QUERY
 
 @media screen and (max-width: 580px)
 {
-
+  #colophon {
+    text-align: center;
+  }
+  #colophon .main-navigation {
+    display: block;
+    float: none;
+    text-align: center;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 460px)
