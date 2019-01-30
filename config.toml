@@ -1,0 +1,31 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "eu19 Tracking Expose"
+theme = "eutrex"
+[permalinks]
+  posts = "/:slug/"
+
+#sectionPagesMenu = "main"
+
+menu = ["main", "footer"]
+
+ [[menu.main]]
+    page = "get-the-extension"
+    identifier = "get-the-extension"
+    name = "Get the extension"
+    url = "/page/get-the-extension/"
+    weight = -100
+ [[menu.main]]
+    page = "homepage"
+    identifier = "/"
+    name = "Home page"
+    url = "/"
+    weight = -110
+
+
+ [[menu.footer]]
+    page = "get-the-extension"
+    identifier = "get-the-extension"
+    name = "Get the extension"
+    url = "/page/get-the-extension/"
+    weight = -110

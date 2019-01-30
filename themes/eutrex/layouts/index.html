@@ -1,0 +1,90 @@
+{{ define "main" -}}
+
+<div class="logo-wrapper">
+    {{- partial "logo.html" . -}}
+</div>
+
+<header class="entry-content center">
+    <h1>A collaborative observatory of algorithm influences, and few citizen driven solutions</h1>
+</header>
+<div class="entry-content">
+    <h3>This talk has been given the 29 of January at <a href="https://privacycamp.eu/" target="_blank">privacycamp</a>, session <a href="https://privacycamp.eu/?page_id=1067" target="_blank">Towards real safeguards: Data-driven political campaigns and EU election</a></h3>
+    <p>
+        Today I want to talk about a project named <a href="https://erc.europa.eu/news/erc-proof-concept-grant-examples-research-projects-2-round" target="_blank">ALEX</a>, which is the acronym for Algorithms Exposed, and one of its first outputs: a tool for scientific analysis of social network personalisation algorithms, that we call fbTREX, <a href="https://facebook.tracking.exposed/" target="_blank">facebook.tracking.exposed</a>. Its function is to collect the stories Facebook presents to you in your news feed. Because these are personalised, they can be collected as evidence and used to understand Facebook’s algorithmic logic.
+    </p>
+    <p>
+        First, let me tell you how the idea started, and the road so far. The project began almost two years ago, as a way to understand the algorithm used by Facebook to organise users’ news feed. My vision was to increase transparency behind personalisation algorithms, so that we can begin to have more effective control of our online experiences, and more awareness of the logic behind how information circulates. Hence the name, ALgorithms EXposed (ALEX).
+    </p>
+    <p>
+        The team and I did this by asking people to “donate their digital body” to science. People who use Facebook can now download a browser extension and become part of the first community contributing to research on the impact and the dynamics of Automated Decision Making in our lives and society. Every time you access Facebook, it presents a different version of your news feed, a window into the organisational ability of the algorithm. But you refresh the page, that chunk of information is lost. We can capture and store that moment, collecting forensically valid evidence useful for policy-making, sciences, and the education of people on algorithmic influence on society.
+    </p>
+    <p>
+        The project has received attention during our first months. We have presented at many international conferences and run many more local events aimed at educating and testing the tool. After a first, small round of funding from <a href="https://beta.lush.com/en/article/aligning-digital-with-our-ethics" target="_blank">Lush DigitalFund</a>, 11.000 euro, we have now raised 150.000 euro from the <a href="https://erc.europa.eu/news/erc-proof-concept-grant-examples-research-projects-2-round" target="_blank">European Research Council</a>, who have mandated us to develop technologies increasing algorithmic literacy. We are excited about this because we do not want to sell our data—we want to exist in the public interest, as a free software project. The GDPR was a great step toward granting people rights in the digital world, and now we think it’s time to focus on which ideals, and which ethical considerations should drive our approach to techno-political issues.
+    </p>
+    <p>
+        Think about what is still a common means to transmit information: newspapers. They all base their reporting on events, but they differ in style, focus, and approach. We are all familiar with how they report news differently. We learn how to recognise their diversity, and we decide our place among a spectrum of options. Newspapers craft and organise information, as Facebook would. However, while we do have many newspapers around, and we are able to “change” how information is organised by reading another newspaper, we cannot do the same with the “Facebook newspaper” – we can only read this information according to Facebook’s logic. Thinking of Facebook as a media platform is not entirely accurate (it’s not in its DNA), but it is helpful to understanding the idea behind our primary concern: that an algorithm is a form of social power; we can’t avoid their presence because of the sheer volume of information available, but we need to understand this spectrum and somehow exert our agenda over them.
+    </p>
+    <p>
+        One alleged solution is to migrate to a better platform (as Facebook would claim, “nobody forces you to stay on Facebook”), but the network effect ensures that this is not a viable option for many people on the network. Not only that: for every expert who has means to fact-check, get accurate information, and experiment with different networks, there are hundreds of people for whom Facebook is synonymous with the internet. As we have seen the last couple of years at least, the opaqueness of Facebook’s algorithms has been exploited in various ways, and perhaps the manipulation of political events is the most frightening among these. Political manipulation is nothing new, but when it exploits users’ political inclinations it is different because it is personal and automated in its targeting; the only way to recognize it is to share your phone with someone else, which is not really viable. This is the technical challenge we face: enabling citizens to have a partial copy of what Facebook selects for their news feed. It is a fundamental step toward engaging with peers, to verify how your information environments diverge around complex issues, and understand how your personalised newspaper is different from that of your friends, colleagues, partners.
+    </p>
+    <p>
+        Our own mission does not revolve around academic research, but we have collaborated with the academic community in our work from the beginning, and so far the use of our tool by academics has resulted in three peer-reviewed publications and has backed some important reports, like those published by <a href="https://webfoundation.org/research/the-invisible-curation-of-content-facebooks-news-feed-and-our-information-diets/" target="_blank">WebFoundation</a> and <a href="https://ourdataourselves.tacticaltech.org/posts/overview-italy/" target="_blank">Tactical Tech</a>. The results of these research papers, suggests not only that the Facebook algorithm reinforces biases, as expected, but that the same bias-inductive ordering of the news feed was presented to a non-negligible number of users who were experimentally designed to be politicially neutral. Although preliminary, similar results suggest an active, not just passive, reinforcing role of the Facebook algorithm in shaping our opinions and political preferences.
+    </p>
+    <p>
+        The support of the <a href="https://erc.europa.eu/news/erc-proof-concept-grant-examples-research-projects-2-round" target="_blank">European Research Council</a> is and will be used toward this end: to support research into Automated Decision Making in our lives and society, hopefully leading to more informed policies. I believe that the best model—the model that worked for us—is to collaborate with external partners, engaging with the business and academic worlds has made us what we are today.
+    </p>
+    <p>
+        <b>But first and foremost, we now have two overarching goals:</b>
+    </p>
+    <ol>
+        <li>
+            To bring the accountability of good old newspapers to Facebook. We are currently developing new technologies to release unfiltered, raw Facebook data.
+            <ul>
+                <li>Our first iteration is powered by RSS. It is a simple experiment to give citizens and journalists decisive assistance in being able to search an unfiltered, disintermediated flow of Facebook stories.</li>
+            </ul>
+        </li>
+        <li>
+            To then develop the idea of algorithmic diversity into a series of accessible interface designs, to accomplish two things:
+            <ul>
+                <li>
+                    First, to allow users to experiment with different algorithms, to design their own Facebook newspaper. fbTREX offers a new vision of how users and algorithms can potentially co-exist, by providing users agency and ownership over algorithms, enabling them to experiment with all of the possible alternatives for social interactions, information, and news that an algorithm can display.
+                </li>
+                <li>
+                    Second, to allow users, journalists, and researchers to monitor the influence of Facebook’s algorithm on elections. Between 2016 and 2018, we tracked elections in the <a href="https://facebook.tracking.exposed/NetherlandsElections" target="_blank">Netherlands</a>, <a href="https://medium.com/@trackingexposed/facebook-algorithm-and-impact-on-media-french-election-experiment-1-d760ed5a242f" target="_blank">France</a>, and <a href="https://elezioni.tracking.exposed/" target="_blank">Italy</a>, and calculated what we call that “information diet”—that is, the degree of exposure to specific segments of information based on the user’s tracked behaviour.
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <p>
+        As more of the academic and business world join us (we hope to do great things with the University of Amsterdam, and we have great business advisors), we are launching our next call for action around the 2019 European Elections. This is a pan-European effort aimed at one goal: to observe narratives around EU electoral campaigns, fostering a deeper understanding of data exploitation models and social media algorithms like those of Facebook. We wish to develop awareness of targeted political advertising to empower reporters and activists to monitor political campaigns and their use of the network in targeting citizens as they form their opinions and share advertisements.
+    </p>
+    <p>
+        So, with the European elections in mind, if you are on Facebook, please donate your digital body to science! And if you are a developer looking to work on an exciting project, please feel free to approach me.
+    </p>
+    <p>
+        <i>Coming soon! Read the <a href="https://github.com/tracking-exposed/presentation/blob/master/European%20Election%20action%20plan%20-%20v1.3.pdf" target="_blank">high level project description</a>, or check out our <a href="https://facebook.tracking.exposed/initiatives/" target="_blank">previous publications and talks</a>. Get in touch at <a href="mailto:support﹫tracking.exposed">support﹫tracking.exposed</a></i>
+    </p>
+    <!--ul class="archive">
+        {{ range .Data.Pages -}}
+        <li>
+            <article>
+                <h3>
+                    <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
+                </h3>
+                <time class="post-date hidden" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+                <p>
+                    {{ .Summary }}
+                    {{ if .Truncated }}
+                    <span class="read-more-link">
+                        <a href="{{ .RelPermalink }}">Read More …</a>
+                    </span>
+                    {{ end }}
+                </p>
+            </article>
+        </li>
+        {{- end }}
+    </ul-->
+</div>
+<div class="row"></div>
+
+{{- end }}
