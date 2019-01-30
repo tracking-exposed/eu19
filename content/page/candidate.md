@@ -1,7 +1,7 @@
 ---
 title: "Are you a candidate?"
 date: 2019-01-30T15:21:28+01:00
-draft: true
+draft: false
 ---
 
 ### fbTREX is facilitating collaborative research and monitoring around the impact of the Facebook algorithm on the 2019 EU elections.

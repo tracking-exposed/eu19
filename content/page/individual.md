@@ -1,7 +1,7 @@
 ---
 title: "Individual"
 date: 2019-01-30T15:30:49+01:00
-draft: true
+draft: false
 ---
 
 ### fbTREX empowers users to monitor their information diet
