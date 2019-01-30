@@ -1,3 +1,8 @@
+title: "watch events horizontally"
+date: 2019-01-30T15:09:22+01:00
+draft: true
+---
+
 ### [fbTREX RSS feed](https://facebook.tracking.exposed/feeds/) has rolled out ahead of the 2019 European elections to empower citizens to educate themselves and each other based on a collective feed of information on various subjects.
 
 Facebook does not enable us to understand or control how our news feed content is selected, and has even been found to provide different users seeking the same information completely different lenses through which to perceive of the subject, as Eli Pariser [discovered](https://www.rollingstone.com/politics/politics-news/book-excerpt-the-filter-bubble-by-eli-pariser-71053/). The influence that Facebook’s algorithm exercises over our worldviews reinforces political polarisation and restricts users’ common access to a complete spectrum of knowledge.
