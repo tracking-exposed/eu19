@@ -1,3 +1,9 @@
+---
+title: "Researcher"
+date: 2019-01-30T15:32:40+01:00
+draft: true
+---
+
 ### fbTREX is collaborating with researchers and journalists, providing technical assistance and useful datasets to expose Facebook’s personalisation algorithms and their impacts on society
 
 Facebook has immense influence over the flow of information. Its personalisation algorithms feed us information based on our existing orientations, reinforcing confirmation biases and polarisation in our societies. We increasingly lack common understandings as personalisation algorithms design bespoke realities for each of us, divergently impacting our lifestyles, moods, and opinions on a daily basis. Facebook’s domination over and proprietisation of information has led to extreme information asymmetry between Facebook and societies. Not only does Facebook understand us more than we understand them, due in part to their divisive personlisation algorithms, they increasingly understand our societies better than we do.

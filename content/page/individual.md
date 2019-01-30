@@ -1,3 +1,9 @@
+---
+title: "Individual"
+date: 2019-01-30T15:30:49+01:00
+draft: true
+---
+
 ### fbTREX empowers users to monitor their information diet
 
 Our information diet is increasingly determined by personalisation algorithms. We should have a right to know whether the information we are being fed truly nourishes our own minds and societies.
