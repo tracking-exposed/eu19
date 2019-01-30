@@ -1,12 +1,12 @@
 
 ## Social scientists
-might stop to struggle with technical complexities and platform secrecy. Our goal is to enable them in testing the impact of personalization algorithms. Follow our page on [organize your algorithm test](...), and [compare among peers](...)
+It can be a struggle to study personalisation algorithms when you are confronted with technical complexities and platform secrecy. Our goal is to assist researchers analysing the social impact of personalisation algorithms. Check out our pages on [organising algorithm tests](...), and [comparing results among peers](...)
 
 ## Every Facebook user
-represent a unique point of observation of the network. More diverse we are, an more we can collect evidences of deceptive advertising, misleading communication. Also, more diverse is your curiosity, and more variety of usage we can provide. To contribute, install the extension
+Users represent a unique point of observation on the network. As our community becomes more diverse, we can collect more complete evidence of deceptive advertising, misleading communication, and abuse of influence. And as our community's curiosity grows, we can respond with a greater variety of usage. To contribute, install the extension.
 
 ## Whoever knows how to transform data
-We have an opendata strategy; our goal is to keep protected individuals but let possible analyze social phenomena. Check it out if you are a developer knowing dataviz, a data scientist or a data analyst.
+We follow an open data strategy–our goal is to protect users while enabling analysis of social phenomena. If you are a dataviz developer, data scientist or data analyst, we'd love to collaborate with you!
 
-## political candidates and advertisers
-Whoever pay to have a facebook presence, by sponsored content or community efforts, would never understand how the algorithm treat their content. You might believe to be _disintermediated_ but if fact you are not.
+## Political candidates and advertisers
+If you have a sponsored Facebook presence, you might believe your communications are _disintermediated_, but they are not. We want to help you better understand how the algorithm treats your content. Reach out to us!
