@@ -1,6 +1,7 @@
+---
 title: "watch events horizontally"
 date: 2019-01-30T15:09:22+01:00
-draft: true
+draft: false
 ---
 
 ### [fbTREX RSS feed](https://facebook.tracking.exposed/feeds/) has rolled out ahead of the 2019 European elections to empower citizens to educate themselves and each other based on a collective feed of information on various subjects.

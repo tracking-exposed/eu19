@@ -1,7 +1,7 @@
 ---
 title: "Researcher"
 date: 2019-01-30T15:32:40+01:00
-draft: true
+draft: false
 ---
 
 ### fbTREX is collaborating with researchers and journalists, providing technical assistance and useful datasets to expose Facebook’s personalisation algorithms and their impacts on society
