@@ -87,6 +87,7 @@ GENERAL RESPONSIVE QUERY
     float: none;
     text-align: center;
     width: auto;
+    margin-top: 30px;
   }
 }
 
@@ -101,7 +102,7 @@ GENERAL RESPONSIVE QUERY
 }
 
 //menu toggle
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 980px) {
   .menu-toggle {
     display: none;
   }

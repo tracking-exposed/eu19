@@ -15,17 +15,36 @@ canonifyURLs = true
 menu = ["main", "footer"]
 
  [[menu.main]]
-    page = "get-the-extension"
-    identifier = "get-the-extension"
-    name = "Get the extension"
-    url = "/page/get-the-extension/"
-    weight = -100
- [[menu.main]]
-    page = "homepage"
-    identifier = "/"
-    name = "Home page"
-    url = "/"
+    page = "Researcher"
+    identifier = "researcher"
+    name = "Researcher"
+    url = "/page/researcher/"
     weight = -110
+ [[menu.main]]
+    page = "Individual"
+    identifier = "Individual"
+    name = "Individual"
+    url = "/page/individual/"
+    weight = -120
+ [[menu.main]]
+    page = "Candidate"
+    identifier = "candidate"
+    name = "Candidates"
+    url = "/page/candidate/"
+    weight = -130
+ [[menu.main]]
+    page = "Ethos"
+    identifier = "ethos"
+    name = "Goals and ethos"
+    url = "/page/ethos/"
+    weight = -140
+ [[menu.main]]
+    page = "RSS"
+#    parent = "the parent element identifier"
+    identifier = "rss"
+    name = "Watch events"
+    url = "/page/rss/"
+    weight = -150
 
 
  [[menu.footer]]
@@ -34,3 +53,33 @@ menu = ["main", "footer"]
     name = "Get the extension"
     url = "/page/get-the-extension/"
     weight = -110
+ [[menu.footer]]
+     page = "Researcher"
+     identifier = "researcher"
+     name = "Researcher"
+     url = "/page/researcher/"
+     weight = -120
+ [[menu.footer]]
+     page = "Individual"
+     identifier = "individual"
+     name = "Individual"
+     url = "/page/individual/"
+     weight = -130
+ [[menu.footer]]
+     page = "Candidate"
+     identifier = "candidate"
+     name = "Candidates"
+     url = "/page/candidate/"
+     weight = -140
+ [[menu.footer]]
+     page = "Ethos"
+     identifier = "ethos"
+     name = "Goals and ethos"
+     url = "/page/ethos/"
+     weight = -150
+ [[menu.footer]]
+     page = "RSS"
+     identifier = "rss"
+     name = "Watch events horizontally"
+     url = "/page/rss/"
+     weight = -160

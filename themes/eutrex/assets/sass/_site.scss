@@ -46,22 +46,63 @@ nav.main-navigation {
 #site-navigation {
   margin: 0;
 }
-#site-navigation li {
-  margin: 27px 15px 27px 0;
-}
+
 #site-navigation ul {
   display: none;
 }
 .main-navigation li {
   list-style: none;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-left: 0;
+  text-align: left;
 }
 .main-navigation a {
-  display: inline;
+  display: inline-block;
   text-decoration: none;
   font-size: 16px;
+  padding: 27px 15px 27px 0;
   color: $black !important;
+}
+/**
+ * menu children style
+ */
+li.has-children {
+  padding-right: 15px;
+  position: relative;
+  background: transparent url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyNXB4IiBoZWlnaHQ9IjI1cHgiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjUgMjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGZpbGw9IiMyOTM0QTIiIGQ9Ik0yMC43MzgsOC4xNzVjLTAuMjMyLTAuMjMyLTAuNjA4LTAuMjMyLTAuODQxLDBsLTcuMzksNy40MDRMNS4xMDMsOC4xNzVjLTAuMjMyLTAuMjMyLTAuNjA4LTAuMjMyLTAuODQsMAoJCWMtMC4yMzEsMC4yMzMtMC4yMzEsMC42MDgsMCwwLjg0MWw3LjgxMSw3LjgxQzEyLjE4OCwxNi45NCwxMi4zMzMsMTcsMTIuNDkzLDE3YzAuMTQ1LDAsMC4zMDQtMC4wNiwwLjQyLTAuMTc0bDcuODExLTcuODEKCQlDMjAuOTcsOC43ODMsMjAuOTcsOC40MDcsMjAuNzM4LDguMTc1eiIvPgo8L2c+Cjwvc3ZnPg==') right 25px no-repeat;
+}
+
+li.has-children:hover {
+  background:  transparent url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyNXB4IiBoZWlnaHQ9IjI1cHgiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjUgMjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGZpbGw9IiMyOTM0QTIiIGQ9Ik00LjI2MywxNi44MjZjMC4yMzIsMC4yMzEsMC42MDgsMC4yMzEsMC44NDIsMGw3LjM5LTcuNDA0bDcuNDA0LDcuNDA0YzAuMjMxLDAuMjMxLDAuNjA3LDAuMjMxLDAuODQsMAoJCWMwLjIzLTAuMjMzLDAuMjMtMC42MDgsMC0wLjg0MmwtNy44MTItNy44MWMtMC4xMTQtMC4xMTMtMC4yNTktMC4xNzQtMC40MTktMC4xNzRjLTAuMTQ1LDAtMC4zMDQsMC4wNjEtMC40MiwwLjE3NGwtNy44MTIsNy44MQoJCUM0LjAzLDE2LjIxOCw0LjAzLDE2LjU5NCw0LjI2MywxNi44MjZ6Ii8+CjwvZz4KPC9zdmc+') right 25px no-repeat;
+}
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 100%;
+  left: -9999em;
+  z-index: 99999;
+  width: 100%;
+  min-width: 220px;
+  background-color: $grey-bg;
+}
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: 0;
+}
+.main-navigation ul ul li {
+  margin-left: 15px;
+}
+.main-navigation ul ul li a {
+  padding: 10px 20px 10px 0;
+  margin-top: 10px;
+  border-bottom: solid 1px $grey-medium;
+  width: auto;
+  font-size: 14px;
+}
+.main-navigation ul ul li:last-child a {
+  border: none;
 }
 
 /**
@@ -100,6 +141,9 @@ nav.main-navigation {
 #masthead.mobile #site-navigation li:first-child {
   margin-top: 60px;
 }
+#masthead.mobile #site-navigation ul ul li:first-child {
+  margin-top: 0
+}
 #masthead.mobile #site-navigation li {
   display: block;
   width: 100%;
@@ -107,6 +151,27 @@ nav.main-navigation {
   line-height: 60px;
   font-size: 18px;
   margin-left: 0;
+}
+#masthead.mobile .main-navigation ul ul {
+  box-shadow: none;
+  float: none;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100%;
+  background-color: $grey-bg;
+}
+#masthead.mobile li.has-children {
+  background: none;
+}
+#masthead.mobile .main-navigation ul ul li a {
+  padding: 10px 20px 10px 0;
+  margin-top: 10px;
+  border-bottom: none;
+  font-size: 16px;
+}
+#masthead.mobile .main-navigation a {
+  padding: 10px 20px 10px 0;
 }
 
 /* --------------------------------------------------
@@ -125,8 +190,14 @@ nav.main-navigation {
   width: 60px;
   margin: 0;
 }
+#colophon .main-navigation {
+  margin: 0 0 30px 0;
+}
 #colophon .main-navigation a {
-  font-size: 15px;
+  font-size: 14px;
+  padding: 0;
+  margin: 10px 0;
+  line-height: 30px;
 }
 
 /* --------------------------------------------------
