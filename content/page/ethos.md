@@ -37,6 +37,26 @@ Throughout 2019, we intend to make considerable progress toward our vision for f
 	* Protecting user data by sharing it only with networks and researchers with whom we have built trusted relationships.
 	* Continuing to develop a framework for ethical data reuse. We hope to set an example for the potential of collecting datasets in the public interest, allowing us to better understand social phenomena while protecting individuals.
 
+## Ethos
+
+fbTREX operates to expose how tracking and profiting from user data has a negative impact on society, so that corrective political and civil actions can be taken to address these issues.
+
+We raise awareness, offer assistance, and develop tools to help individuals and organizations face the challenged posed by data tracking. We provide analytical instruments to reuse the data collected, restoring the benefits of this data to their rightful owners.
+
+We are techno-activists, but we operate in the interest of all of society – we strive to elucide what has been hidden, and to make understandable what has been obscured, through the use of clear language, free thinking, and unfailing optimism.
+
+### Responsible use of technology
+
+We recognise that technology can elevate human potential, but we believe that this pursuit brings serious responsibilities. Users must be aware of the implications of the technology that they use, and companies have an ethical obligation to be designed as transparently and fairly as possible.
+
+### Shared knowledge
+
+We believe that knowledge symmetry is the greatest equalizer between users and companies, allowing users to make informed decisions about the risks and advantages of technology. We undertake and advocate an open approach to knowledge, and do our best to share what we know.
+
+### Critical thinking
+
+Critical thinking enables us to question the world around us and search for answers, instead of just accepting the status quo. We consider this to be the most crucial element of a healthy relationship with technology.
+
 ## Technical ethos
 
 We do not share full access to the fbTREX dataset with third parties – we believe this asset has been provided in trust by our users, and we pledge to protect it.
