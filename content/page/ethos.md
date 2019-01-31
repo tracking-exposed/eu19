@@ -37,12 +37,27 @@ Throughout 2019, we intend to make considerable progress toward our vision for f
 	* Protecting user data by sharing it only with networks and researchers with whom we have built trusted relationships.
 	* Continuing to develop a framework for ethical data reuse. We hope to set an example for the potential of collecting datasets in the public interest, allowing us to better understand social phenomena while protecting individuals.
 
-## Ethos
+## Technical ethos
 
-fbTREX is a free software project designed to promote accountability for personalisation algorithms, and for increasing understanding and awareness of their effects. We aim to address Facebook’s closed model as a decentralized community. As we exist in the public interest, we do not sell our data.
+We do not share full access to the fbTREX dataset with third parties – we believe this asset has been provided in trust by our users, and we pledge to protect it.
 
-Because our assets are unique, fbTREX should be seen as an infrastructure to facilitate analysis of Facebook data, rather than a specific product built on top of scraped data. fbTREX aims to enable anyone aligned with our mission to reuse the data we have gathered through collective observation.
+At the moment, our data protection model is by policy, but as part of our development plan, we will improve our technology to offer data protection by design.
 
-Diversity ensures broad observation of social media and validity in testing. Algorithms affect all kinds of people globally, with different languages, cultures, and politics. It’s important to understand how algorithms affect everyone who makes up the global community of social network users.
+When installing fbTREX, users only share some of the data that Facebook provides to them in the form of public news feed posts. Still, some personally identifying information (PII) may be present in this data, in particular as they can be linked to the users’ profile before anonymisation. As we only collect data in public interest, transparency and fairness are essential to us in our handling of this data. We do not have a business plan to develop, and will not use our datasets for profiling.
 
-We want to develop a reproducible method to measure the diversity of political debates, and value our growth in accordance with this metric; diversity is a higher priority for fbTREX than raw numbers of users.
+fbTREX ethics clearly define the following limitations that we set for ourselves and third parties handling fbTREX datasets, in both the collection and analysis of data.
+
+1. We only collect public news feed data. We do not collect data from users’ profiles.
+	* This represents the difference between fbTREX, which enables self-assessment, and social media intelligence. We do not engage in social media intelligence, as we consider it to be a potentially abusive practice.
+	* We consider the public data from users’ news feeds to potentially contain personally identifying information (PII), and treat it as such.
+
+2. We only store public news feed data on our servers.
+
+3. Users who install the fbTREX browser extension have full control over their data.
+	* Users can halt our collection of their data at any time by uninstalling the extension.
+	* Collected data can be deleted at any time on request to support@tracking.exposed.
+
+4. We follow a strict opt-in policy. Users will have to meaningfully opt-in to share their data with any third party.
+
+5. fbTREX will only run analyses on our datasets to study social effects of personalisation algorithms, not the individuals participating.
+	* While this cannot be formally verified yet, as part of our development, we intend to formulate and pu blish updates on the safeguards we are implementing in our research.
