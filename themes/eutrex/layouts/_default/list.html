@@ -5,13 +5,12 @@
 </div>
 <div class="entry-content">
     <ul class="archive">
-        {{ range .Data.Pages -}}
-        <li>
+        {{ range $index, $element := .Data.Pages }}
+        <li class="column_1-2{{if not (modBool $index 2)}} omega{{end}}">
             <article>
-                <h3>
+                <h3 class="center">
                     <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
                 </h3>
-
                 <time class="post-date hidden" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
                 <p>
                     {{ .Summary }}
@@ -20,11 +19,13 @@
                         <a href="{{ .RelPermalink }}">Read More…</a>
                     </span>
                     {{ end }}
+
                 </p>
             </article>
         </li>
         {{- end }}
     </ul>
+    <span class="clear"></span>
 </div>
 
 {{- end }}
