@@ -105,6 +105,14 @@ jQuery(document).ready(function($) {
     } )();
 
 
+    /**
+     * map js
+     */
+    var country = $('#member').find('path');
+    country.click(function() {
+        var code = $(this).attr('id');
+        alert(code);
+    })
 
 
 

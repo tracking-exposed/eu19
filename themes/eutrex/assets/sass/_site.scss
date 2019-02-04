@@ -266,6 +266,28 @@ ul.archive h3 a {
   margin: 10px 0;
   background-size: contain !important;
 }
+
+/**
+ * MAP
+ */
+#member path {
+  cursor: pointer;
+}
+#member path:hover {
+  fill: $tertiary-dark;
+  stroke-width: 0.75;
+}
+#map-container {
+  border-bottom: solid 1px $grey-full;
+  border-top:  solid 1px $grey-full;
+}
+svg#eu-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /**
  * ICON
  */
