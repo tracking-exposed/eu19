@@ -352,3 +352,35 @@ select {
 textarea {
   width: 100%;
 }
+
+
+/*--------------------------------------------------------------
+# Widget
+--------------------------------------------------------------*/
+.overlay, #overlay_shade {
+  display: none;
+}
+#overlay_shade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: $grey-medium;
+  cursor: pointer;
+}
+.overlay {
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  max-width: 450px;
+  min-width: 280px;
+  min-height: 100px;
+  z-index: 999;
+  margin: 0 10px;
+  background-color: $white;
+  border: solid 1px $grey-full
+}

@@ -106,15 +106,89 @@ jQuery(document).ready(function($) {
 
 
     /**
+     * overlay function
+     */
+    /* general overlay */
+    function openOverlay(id) {
+        var overlay = $(id);
+        var shade = $('#overlay_shade');
+
+        shade.fadeTo(200, 0.8, function() {
+            var props = {
+                overlayWidth    : overlay.width(),
+                scrTop          : $(window).scrollTop(),
+                viewPortWidth   : $(window).width()
+            };
+            var leftPos = ((props.viewPortWidth - props.overlayWidth) / 2) - 10;
+            overlay.css({
+                display : 'block',
+                opacity : 0,
+                top : '-=9999',
+                left : leftPos+'px'
+            }).animate({
+                top : props.scrTop + 80,
+                opacity : 1
+            }, 800, function(){
+                shade.addClass('hideable');
+                overlay.addClass('hideable');
+            });
+        });
+    }
+    /*close overlay*/
+    function closeOverlay() {
+        var overlay= $('.overlay');
+        var shade = $('#overlay_shade');
+        //verifica che l'animazione si completa
+        if (shade.hasClass('hideable') && overlay.hasClass('hideable')) {
+            overlay.animate({
+                top: '-=9999',
+                opacity: 0
+            }, 200, function () {
+                shade.fadeOut(200);
+                $(this).css('display', 'none');
+            });
+            overlay.removeClass('hideable');
+            shade.removeClass('hideable');
+        }
+    }
+    /*uso overlay*/
+    $('#overlay_shade, .overlay a.close_btn').on('click', function(e) {
+        e.preventDefault();
+        closeOverlay();
+    });
+
+
+    /**
      * map js
      */
+    var previewData;
+
+    $.getJSON("https://raw.githubusercontent.com/tracking-exposed/eu19/map/data/keywords-preview.json", function(data) {
+        previewData = data;
+    });
+
     var country = $('#member').find('path');
     country.click(function() {
         var code = $(this).attr('id');
-        alert(code);
-    })
+        var obj = getObjects(previewData, 'lang', code);
 
+        $('#preview-info').find('p').html(obj[0]['country'] + "<br />" + obj[0]['total'] + "<br />" + obj[0]['labels']);
+        openOverlay('#preview-info');
+        console.log(obj);
+    });
 
+    function getObjects(obj, key, val) {
+        var objects = [];
+        for (var i in obj) {
+            if (!obj.hasOwnProperty(i)) continue;
+            if (typeof obj[i] == 'object') {
+                objects = objects.concat(getObjects(obj[i], key, val));
+            } else if (i == key && obj[key] == val) {
+                objects.push(obj);
+            }
+        }
+        return objects;
+    }
 
 
 });
