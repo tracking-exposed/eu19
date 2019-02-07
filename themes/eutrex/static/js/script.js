@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
                 scrTop          : $(window).scrollTop(),
                 viewPortWidth   : $(window).width()
             };
-            var leftPos = ((props.viewPortWidth - props.overlayWidth) / 2) - 10;
+            var leftPos = ((props.viewPortWidth - props.overlayWidth) / 2) - 30;
             overlay.css({
                 display : 'block',
                 opacity : 0,
@@ -152,7 +152,7 @@ jQuery(document).ready(function($) {
         }
     }
     /*uso overlay*/
-    $('#overlay_shade, .overlay a.close_btn').on('click', function(e) {
+    $('#overlay_shade, .overlay a.close-btn').on('click', function(e) {
         e.preventDefault();
         closeOverlay();
     });
@@ -169,10 +169,16 @@ jQuery(document).ready(function($) {
 
     var country = $('#member').find('path');
     country.click(function() {
-        var code = $(this).attr('id');
-        var obj = getObjects(previewData, 'lang', code);
+        var code = $(this).attr('id'),
+            overlay = $('#preview-info'),
+            obj = getObjects(previewData, 'lang', code);
 
-        $('#preview-info').find('p').html(obj[0]['country'] + "<br />" + obj[0]['total'] + "<br />" + obj[0]['labels']);
+        overlay.find('h3').html(obj[0]['country']);
+        overlay.find('b.language-data').html(obj[0]['language']);
+        overlay.find('b.contributors-data').html(obj[0]['total']);
+        overlay.find('b.keywords-sum').html(obj[0]['totalKeywords']);
+        overlay.find('ul.keywords-data').html(obj[0]['labels']);
+
         openOverlay('#preview-info');
         console.log(obj);
     });
