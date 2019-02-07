@@ -2,36 +2,42 @@
   {
     "lang": "it",
     "country": "Italy",
+    "language" : "Italian",
+    "totalKeywords": 447,
     "labels": [
-      "Buondì",
-      "Magliano de' Marsi",
-      "Rieti",
-      "CNA",
-      "Ore"
+      "<li>Buondì</li>",
+      "<li>Magliano de' Marsi</li>",
+      "<li>Rieti</li>",
+      "<li>CNA</li>",
+      "<li>Ore</li>"
     ],
     "total": 100
   },
   {
     "lang": "pl",
     "country": "Poland",
+    "language" : "Polish",
+    "totalKeywords": 247,
     "labels": [
-      "Fotografia",
-      "Partia Socjalistyczna (Francja)",
-      "Mydła",
-      "Magia",
-      "Grecja"
+      "<li>Fotografia</li>",
+      "<li>Partia Socjalistyczna (Francja)</li>",
+      "<li>Mydła</li>",
+      "<li>Magia</li>",
+      "<li>Grecja</li>"
     ],
     "total": 100
   },
   {
     "lang": "fr",
     "country": "France",
+    "language" : "French",
+    "totalKeywords": 347,
     "labels": [
-      "Reblochon",
-      "Pomme de terre",
-      "Omelette",
-      "Tarte",
-      "Acoustique"
+      "<li>Reblochon</li>",
+      "<li>Pomme de terre</li>",
+      "<li>Omelette</li>",
+      "<li>Tarte</li>",
+      "<li>Acoustique</li>"
     ],
     "total": 100
   },
