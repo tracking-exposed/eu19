@@ -8,9 +8,11 @@
             </div>
         </div>
     {{ end }}
+    {{ if not (isset .Params "header") }}
     <div class="container">
         <p class="logo hidden-txt"><a href="{{ .Site.BaseURL }}" title="Go back to home page">Tracking Expose</a></p>
         {{- partial "header-menu.html" . -}}
         <span class="clear"></span>
     </div>
+    {{ end }}
 </header>

@@ -5,9 +5,72 @@
 </div>
 <div class="row"></div>
 
+<form id="main-search" class="center" action="#" method="get">
+    <h1 class="h3_style">
+        Search a keyword in FaceBook<br />
+        <small class="paragraph">to discover how it use that keyword</small>
+    </h1>
+    <fieldset class="entry-content">
+        <div class="left">
+            <div class="country-select">
+                <select id="country-select">
+                    <option value="ireland">English Ireland</option>
+                    <option value="malta">English Malta</option>
+                    <option value="austria">German Austria</option>
+                    <option value="belgium">German Belgium</option>
+                    <option value="bulgaria">Bulgarian</option>
+                    <option value="croatia">Croatian</option>
+                    <option value="cyprus">Greek Cyprus</option>
+                    <option value="czech-republic">Czech</option>
+                    <option value="denmark">Danish</option>
+                    <option value="estonia">Estonian</option>
+                    <option value="finland">Finnish</option>
+                    <option value="france">French</option>
+                    <option value="germany">German</option>
+                    <option value="greece">Greek</option>
+                    <option value="hungary">Hungarian</option>
+                    <option value="italy">Italian</option>
+                    <option value="latvia">Latvian</option>
+                    <option value="lithuania">Lithuanian</option>
+                    <option value="Luxembourg">German Luxembourg</option>
+                    <option value="netherlands">Dutch</option>
+                    <option value="Poland">Polish</option>
+                    <option value="portugal">Portuguese</option>
+                    <option value="romania">Romanian</option>
+                    <option value="slovakia">Slovak</option>
+                    <option value="slovenia">Slovenian</option>
+                    <option value="spain">Spanish</option>
+                    <option value="sweden">Swedish</option>
+                </select>
+            </div>
+            <span class="clear"></span>
+            <label for="country-select">Choose a language</label>
+        </div>
+
+        <div class="left">
+            <input id="keywords-input" type="text" placeholder="Type a keyword" /><br />
+            <label for="keywords-input">Choose a keyword to search</label>
+        </div>
+        <div class="left">
+            <button type="submit" class="btn btn_big top"><b>Search</b></button>
+        </div>
+    </fieldset>
+</form>
+
+<div class="center">
+    <b>Or browse the map</b>
+    <div class="row"></div>
+</div>
+
 <div id="map-container">
     {{- partial "map.html" . -}}
     <span class="clear"></span>
+</div>
+<div class="row"></div>
+
+<div class="entry-content">
+    <h3 class="center">About TRex</h3>
+    {{ .Content }}
 </div>
 
 {{- end }}
