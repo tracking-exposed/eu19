@@ -1,0 +1,21 @@
+{{ define "main" -}}
+
+<div class="entry-header center">
+    <h1>{{ .Title }}</h1>
+</div>
+<div class="entry-content">
+    <ul class="archive">
+        {{ range $index, $element := .Data.Pages }}
+        <li class="column_1-3{{if not (modBool $index 3)}} omega{{end}}">
+            <article>
+                <h3 class="center">
+                    <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
+                </h3>
+            </article>
+        </li>
+        {{- end }}
+    </ul>
+    <span class="clear"></span>
+</div>
+
+{{- end }}

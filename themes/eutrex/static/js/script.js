@@ -171,13 +171,21 @@ jQuery(document).ready(function($) {
     country.click(function() {
         var code = $(this).attr('id'),
             overlay = $('#preview-info'),
-            obj = getObjects(previewData, 'lang', code);
+            obj = getObjects(previewData, 'lang', code),
 
-        overlay.find('h3').html(obj[0]['country']);
-        overlay.find('b.language-data').html(obj[0]['language']);
-        overlay.find('b.contributors-data').html(obj[0]['total']);
-        overlay.find('b.keywords-sum').html(obj[0]['totalKeywords']);
-        overlay.find('ul.keywords-data').html(obj[0]['labels']);
+            countryData= obj[0]['country'],
+            languageData = obj[0]['language'],
+            contributorsData = obj[0]['total'],
+            totalKeywordsData = obj[0]['totalKeywords'],
+            labelsData = obj[0]['labels'],
+            formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
+
+        overlay.find('h3').html(countryData);
+        overlay.find('b.language-data').html(languageData);
+        overlay.find('b.contributors-data').html(contributorsData);
+        overlay.find('b.keywords-sum').html(totalKeywordsData);
+        overlay.find('ul.keywords-data').html(labelsData);
+        $('a#country-link').attr('href', '/country/'+formattedCountry);
 
         openOverlay('#preview-info');
         console.log(obj);
