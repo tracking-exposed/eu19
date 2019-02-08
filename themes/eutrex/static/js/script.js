@@ -212,9 +212,9 @@ jQuery(document).ready(function($) {
     var mainForm = $('#main-search');
     mainForm.submit(function(e){
         e.preventDefault();
-        var country = $('#country-select').val(),
+        var lang = $('#country-select').val(),
             keyword = $('#keywords-input').val();
-        window.location.href = '/country/' + country + '/#' + keyword;
+        window.location.href = '/language/' + lang + '/#' + keyword;
     });
 
     if( $('#country-page').length > 0 ) {

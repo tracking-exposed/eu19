@@ -311,7 +311,6 @@ label[for="keywords-input"] {
 }
 .select-selected {
   background-color: $white;
-  //min-width: 140px;
   text-align: left;
 }
 .select-selected:after {
@@ -330,6 +329,7 @@ label[for="keywords-input"] {
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 13px;
 }
 .select-items {
   position: absolute;
