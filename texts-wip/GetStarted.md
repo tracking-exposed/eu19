@@ -1,13 +1,6 @@
 # Installation Guide
 How to install facebook.tracking.exposed web browser extension.
 
-## Index
-
-1. Simple Setup
-2. Advanced
-3. Developers
-
-  
 
 
 ## **Simple Setup**
@@ -18,13 +11,13 @@ To install the extension on Firefox, [open this link](https://addons.mozilla.org
 
 First, click on "Add to Firefox", then confirm by clicking "Add".
 
-![a](https://user-images.githubusercontent.com/40333748/52488392-0343c900-2bc0-11e9-89d0-8aba8d67bae9.png) ![a](https://user-images.githubusercontent.com/40333748/52488451-1f476a80-2bc0-11e9-9342-8393ccd67c9c.png)
+![a](https://user-images.githubusercontent.com/40333748/52488392-0343c900-2bc0-11e9-89d0-8aba8d67bae9.png)![a](https://user-images.githubusercontent.com/40333748/52488451-1f476a80-2bc0-11e9-9342-8393ccd67c9c.png)
 
 
 ##### Chromium / Google Chrome
 To install on Chromium or Google Chrome, [open this link](https://chrome.google.com/webstore/detail/trackingexposed-investiga/fnknflppefckhjhecbfigfhlcbmcnmmi) and click **"Add"**, then **"Add extension"**.
 
-![screenshot](https://user-images.githubusercontent.com/40333748/52487712-8106d500-2bbe-11e9-8970-3687f18b469c.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52488066-5a956980-2bbf-11e9-8eef-1022824adf79.png)
+![screenshot](https://user-images.githubusercontent.com/40333748/52487712-8106d500-2bbe-11e9-8970-3687f18b469c.png)![screenshot](https://user-images.githubusercontent.com/40333748/52488066-5a956980-2bbf-11e9-8eef-1022824adf79.png)
 
 
 
@@ -46,7 +39,7 @@ As a first step you should download the [last build here](https://github.com/tra
 If you use Chrome or Chromium, you should unzip the folder first.
 To install the extension insert [chrome://extensions](chrome://extensions) in your URL bar as below. Then, enable **Developer mode**. Click on **Load unpacked extension** and select the unzipped directory contained in this repo.
 
-![screenshot](https://user-images.githubusercontent.com/40333748/52487754-9c71e000-2bbe-11e9-813e-7ad649388b6a.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52487756-9d0a7680-2bbe-11e9-8041-0603390b96e3.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52487757-9da30d00-2bbe-11e9-90dd-68bbbb5ac9b6.png)
+![screenshot](https://user-images.githubusercontent.com/40333748/52487754-9c71e000-2bbe-11e9-813e-7ad649388b6a.png)![screenshot](https://user-images.githubusercontent.com/40333748/52487756-9d0a7680-2bbe-11e9-8041-0603390b96e3.png)![screenshot](https://user-images.githubusercontent.com/40333748/52487757-9da30d00-2bbe-11e9-90dd-68bbbb5ac9b6.png)
 
 
 ##### Set up your browser (for Firefox)
@@ -54,7 +47,7 @@ As standard practice, Firefox doesn't allow unpacked extension to be loaded. How
 To accomplish this just enter  [about:debugging](about:debugging) in your URL bar. Then click on **Load Temporary Add-on** and select the zip file in your Downloads folder.
 
 
-![screenshot](https://user-images.githubusercontent.com/40333748/52487759-9e3ba380-2bbe-11e9-8c96-c87dc35871ba.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52487760-9e3ba380-2bbe-11e9-85dc-5ad7a1303574.png)
+![screenshot](https://user-images.githubusercontent.com/40333748/52487759-9e3ba380-2bbe-11e9-8c96-c87dc35871ba.png)![screenshot](https://user-images.githubusercontent.com/40333748/52487760-9e3ba380-2bbe-11e9-85dc-5ad7a1303574.png)
 
 
 
