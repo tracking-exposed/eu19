@@ -1,6 +1,15 @@
 # Installation Guide
 How to install facebook.tracking.exposed web browser extension.
 
+## Index
+
+1. Simple Setup
+2. Advanced
+3. Developers
+
+  
+
+
 ## **Simple Setup**
 Our facebook.tracking.exposed extension has been tested on both Mozilla and Google browsers. Once you know which browser you are using, you can follow the steps below.
 
@@ -9,21 +18,18 @@ To install the extension on Firefox, [open this link](https://addons.mozilla.org
 
 First, click on "Add to Firefox", then confirm by clicking "Add".
 
-![a](https://user-images.githubusercontent.com/40333748/52417746-db376580-2aec-11e9-992a-7233c7811780.png)
-
-![a](https://user-images.githubusercontent.com/40333748/52417747-dbcffc00-2aec-11e9-89d5-fa42d16be133.png)
+![a](https://user-images.githubusercontent.com/40333748/52488392-0343c900-2bc0-11e9-89d0-8aba8d67bae9.png) ![a](https://user-images.githubusercontent.com/40333748/52488451-1f476a80-2bc0-11e9-9342-8393ccd67c9c.png)
 
 
 ##### Chromium / Google Chrome
-To install on Chromium or Google Chrome, [open this link](https://chrome.google.com/webstore/detail/trackingexposed-investiga/fnknflppefckhjhecbfigfhlcbmcnmmi) and click "Add", then "Add extension".
+To install on Chromium or Google Chrome, [open this link](https://chrome.google.com/webstore/detail/trackingexposed-investiga/fnknflppefckhjhecbfigfhlcbmcnmmi) and click **"Add"**, then **"Add extension"**.
 
-![screenshot](https://user-images.githubusercontent.com/40333748/52428847-1d6ba180-2b03-11e9-9b00-52c91be72174.png)
-
-![screenshot](https://user-images.githubusercontent.com/40333748/52428849-1e043800-2b03-11e9-8dcb-82fd1a472f6c.png)
+![screenshot](https://user-images.githubusercontent.com/40333748/52487712-8106d500-2bbe-11e9-8970-3687f18b469c.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52488066-5a956980-2bbf-11e9-8eef-1022824adf79.png)
 
 
 
-#### Congratulations, **facebook.tracking.exposed is now installed and will start working as soon as you open your Facebook feed!**
+
+Congratulations, *facebook.tracking.exposed* is now installed and will start working as soon as you open your Facebook feed!
 
 If, for whatever reason (for example in the unlikely case the extension is taken down), the steps above do not work, keep reading below.
 
@@ -38,34 +44,23 @@ As a first step you should download the [last build here](https://github.com/tra
 ##### Set up your browser (for Chromium / Google Chrome)
 
 If you use Chrome or Chromium, you should unzip the folder first.
-To install the extension insert [chrome://extensions](chrome://extensions) in your URL bar as below.
+To install the extension insert [chrome://extensions](chrome://extensions) in your URL bar as below. Then, enable **Developer mode**. Click on **Load unpacked extension** and select the unzipped directory contained in this repo.
 
-![screenshot](https://user-images.githubusercontent.com/40333748/52428452-43447680-2b02-11e9-89b9-4326334f0d9b.png)
-
-Afterwards, enable **Developer mode**.
-
-![screenshot](https://user-images.githubusercontent.com/40333748/52428454-43447680-2b02-11e9-8fc6-71784200a894.png)
-
-Click on **Load unpacked extension** and select the unzipped directory contained in this repo.
-
-![screenshot](https://user-images.githubusercontent.com/40333748/52428456-43dd0d00-2b02-11e9-8adf-6c12120a4af7.png)
+![screenshot](https://user-images.githubusercontent.com/40333748/52487754-9c71e000-2bbe-11e9-813e-7ad649388b6a.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52487756-9d0a7680-2bbe-11e9-8041-0603390b96e3.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52487757-9da30d00-2bbe-11e9-90dd-68bbbb5ac9b6.png)
 
 
 ##### Set up your browser (for Firefox)
-As standard practice, firefox doesn't allow unpacked extension to be loaded. However, it does allow developers to test unpacked extensions **temporarily**.
-To accomplish this just enter  [about:debugging](about:debugging) in your URL bar.
+As standard practice, Firefox doesn't allow unpacked extension to be loaded. However, it does allow developers to test unpacked extensions **temporarily**.
+To accomplish this just enter  [about:debugging](about:debugging) in your URL bar. Then click on **Load Temporary Add-on** and select the zip file in your Downloads folder.
 
-![screenshot](https://user-images.githubusercontent.com/40333748/52428457-43dd0d00-2b02-11e9-9415-07b014f9482c.png)
 
-Then click on **Load Temporary Add-on** and select the zip file in your Downloads folder.
-
-![screenshot](https://user-images.githubusercontent.com/40333748/52428458-4475a380-2b02-11e9-8151-9d6ac9d2bd2c.png)
+![screenshot](https://user-images.githubusercontent.com/40333748/52487759-9e3ba380-2bbe-11e9-8c96-c87dc35871ba.png) ![screenshot](https://user-images.githubusercontent.com/40333748/52487760-9e3ba380-2bbe-11e9-85dc-5ad7a1303574.png)
 
 
 
 ## **Forking the Project** (for developers)
 
-The third part of the guide describes how to fork and build this extension using git. 
+The third part of the guide describes how to fork and build this extension using git.
 
 This project requires Node 5+.
 We suggest installing nvm for easy version maintaining. Alternatively, you can install Nodejs from a package, but make sure it's the right version and install npm as well for package management.
@@ -116,28 +111,8 @@ Keep `npm start` running in the background to take advantage of the autoreload.
 ### It works!
 Now you can use the extensions as described in the Advanced section above.
 
-##### Note on autoreloading the extension
-By running `npm start`, the extension will work in `DEVELOPMENT` mode. This
-means that every time you reload `facebook.com`, the extension will automatically
-reload itself using the `chrome.runtime.reload()` method.
 
-Note that before we were using [Extension
-Reloader](https://chrome.google.com/webstore/detail/extensions-reloader/fimgfedafeadlieiabdeeaodndnlbhid)
-to autoreload your extension every time a build succeeds.
-This dependency is no longer needed.
-
-##### Extend fixtures
-
- * You've to install the package `tidy` the last version in ubuntu is not
-   working (we'll update the comment when fixed), use
-   http://binaries.html-tidy.org/
- * Copy the userContentWrapper Element
- * save in file.html
-
-```
-tidy -i -m -w 0 -utf8 file.html
-```
-
-##### TL;DR how replicate the build?
+### TL;DR
+How to replicate the build?
 
 `$ npm i ; npm run build:dist ; ls -l dist/extension.zip`
