@@ -1,6 +1,6 @@
 {{ define "main" -}}
 
-<header class="entry-header">
+<header class="entry-header search-page">
     <figure class="left">
         <img src="/images/language/{{ lower .Title }}.svg" />
     </figure>
@@ -9,7 +9,7 @@
         <small><a href="/language">Change language</a></small>
         <ul class="preview-data">
             <li class="language-icon icon-small">
-                Country: <b class="language-data"></b>
+                Country: <b class="language-data">{{ .Params.country }}</b>
                 <small><a href="/country">Change country</a></small>
             </li>
             <li class="contributors-icon icon-small">
