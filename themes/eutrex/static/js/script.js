@@ -236,8 +236,23 @@ jQuery(document).ready(function($) {
 
 
     /**
-     * map js
+     * map preview data
      */
+
+    function getObjects(obj, key, val) {
+        var objects = [];
+        for (var i in obj) {
+            if (!obj.hasOwnProperty(i)) continue;
+            if (typeof obj[i] == 'object') {
+                objects = objects.concat(getObjects(obj[i], key, val));
+            } else if (i == key && obj[key] == val) {
+                objects.push(obj);
+            }
+        }
+        return objects;
+    }
+
+
     var previewData;
 
     $.getJSON("https://raw.githubusercontent.com/tracking-exposed/eu19/map/data/keywords-preview.json", function(data) {
@@ -268,19 +283,6 @@ jQuery(document).ready(function($) {
         console.log(obj);
     });
 
-    function getObjects(obj, key, val) {
-        var objects = [];
-        for (var i in obj) {
-            if (!obj.hasOwnProperty(i)) continue;
-            if (typeof obj[i] == 'object') {
-                objects = objects.concat(getObjects(obj[i], key, val));
-            } else if (i == key && obj[key] == val) {
-                objects.push(obj);
-            }
-        }
-        return objects;
-    }
-
 
     /**
      * home form
@@ -293,13 +295,10 @@ jQuery(document).ready(function($) {
         window.location.href = '/language/' + lang + '/#' + keyword;
     });
 
-    if( $('.search-page').length > 0 ) {
+    if( $('#search-page').length > 0 ) {
         var keyword = window.location.hash.substring(1);
         //todo use this for json search into country page
         $('.keyword').html(keyword)
     }
-
-
-
 
 });
