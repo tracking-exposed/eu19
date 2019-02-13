@@ -59,7 +59,7 @@
                 var ref = $(this).attr('data-value');
                 e.preventDefault();
                 removeLocationHash();
-                window.location.href += '#'+ref;
+                window.location.href += '#'+ref.replace(/\s+/g, '-').toLowerCase();
                 location.reload();
 
             });
