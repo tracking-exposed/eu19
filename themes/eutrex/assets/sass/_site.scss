@@ -363,8 +363,6 @@ label[for="keywords-input"] {
 }
 
 
-
-
 /**
  * MAP
  */
@@ -388,12 +386,13 @@ svg#eu-map {
 /**
  * preview-data overlay
  */
-#preview-info li {
+.preview-data li {
   display: inline-block;
   list-style: none;
   margin-left: 0;
   margin-bottom: 20px;
 }
+
 .icon-small {
   padding-left: 40px;
   background-repeat: no-repeat !important;
@@ -402,16 +401,47 @@ svg#eu-map {
 li.language-icon {
   line-height: 35px;
 }
-#preview-info .keywords-data {
+.preview-data .keywords-data {
   margin-top: 10px;
 }
-#preview-info ul.keywords-data li {
+.preview-data ul.keywords-data li {
   margin-bottom: 5px;
   list-style-type: decimal;
   display: list-item;
   margin-left: 10%;
   font-style: italic;
 }
+
+
+/* --------------------------------------------------
+## SEARCH-PAGES
+--------------------------------------------------  */
+.search-page figure {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.page-info .preview-data {
+  margin-top: 10px;
+}
+.page-info .preview-data li {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search-page-container {
+  border-top: solid 1px $grey-medium;
+}
+.search-page-container .column_1-3, .search-page-container .column_2-3 {
+  padding: 20px 0;
+}
+.search-page-container .column_1-3 {
+  border-right: solid 1px $grey-medium;
+}
+
+
+
+
+
 
 /**
  * ICON

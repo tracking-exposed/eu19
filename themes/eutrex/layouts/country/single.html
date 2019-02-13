@@ -1,8 +1,39 @@
 {{ define "main" -}}
 
-<header class="entry-header center" id="country-page">
-    <h1>{{ .Title }}</h1>
-    <b class="keyword"></b>
+<header class="entry-header search-page">
+    <figure class="left">
+        <img src="/images/country/{{ urlize .Title }}.svg" />
+    </figure>
+    <div class="page-info left">
+        <h1 class="top">{{ .Title }}</h1>
+        <small><a href="/country">Change country</a></small>
+        <ul class="preview-data">
+            <li class="language-icon icon-small">
+                 <b class="language-data"></b> language
+                <small><a href="/language">Change language</a></small>
+            </li>
+            <li class="contributors-icon icon-small">
+                <b class="contributors-data"></b> contributors<br />
+                <small>Means that we collect data from <b class="contributors-data"></b> people who has download our extension. <a href='{{ ref . "/page/get-the-extension.md" }}' title="Download the browser extension">Be one of them</a>.</small>
+            </li>
+        </ul>
+    </div>
+    <span class="clear"></span>
 </header>
+
+<div class="search-page-container">
+    <div class="column_1-3">
+        <h3 class="top">
+            Most used keywords<br />
+            <small class="paragraph">In the last 7 days</small>
+        </h3>
+    </div>
+    <div class="column_2-3 omega">poppo</div>
+    <span class="clear"></span>
+</div>
+
+
+<b class="keyword"></b>
+
 
 {{- end }}
