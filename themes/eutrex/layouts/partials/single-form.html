@@ -1,0 +1,12 @@
+
+<form class="main-search center" action="#" method="get">
+    <fieldset>
+        <div class="keywords-wrapper left">
+            <input id="keywords-input" type="text" placeholder="Type a keyword" /><br />
+            <label for="keywords-input">Choose a keyword to search in <b>{{ .Scratch.Get "lang" }}</b> </label>
+        </div>
+        <div class="button-wrapper left omega">
+            <button type="submit" class="btn btn_big top"><b>Search</b></button>
+        </div>
+    </fieldset>
+</form>

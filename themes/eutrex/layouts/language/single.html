@@ -1,4 +1,5 @@
 {{ define "main" -}}
+{{ .Scratch.Add "lang"  .Title }}
 
 <header class="entry-header search-page">
     <figure class="left">
@@ -21,7 +22,7 @@
     <span class="clear"></span>
 </header>
 
-<div class="search-page-container" id="search-page">
+<div class="search-page-container" id="search-page" data-lang="{{ .Title }}">
     <div class="column_1-3">
         <h3 class="top">
             Most used keywords<br />
@@ -31,13 +32,12 @@
     </div>
     <div class="column_2-3 omega">
 
-        <b class="keyword"></b>
+        {{- partial "single-form.html" . -}}
 
     </div>
     <span class="clear"></span>
 </div>
 
-{{ .Scratch.Add "lang"  .Title }}
 {{- partial "single-script.html" . -}}
 
 {{- end }}

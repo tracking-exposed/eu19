@@ -238,7 +238,7 @@ jQuery(document).ready(function($) {
     /**
      * map preview data
      */
-
+    //choose a single element into json array
     function getObjects(obj, key, val) {
         var objects = [];
         for (var i in obj) {
@@ -252,14 +252,13 @@ jQuery(document).ready(function($) {
         return objects;
     }
 
-
-    var previewData;
+    var previewData,
+        country = $('#member').find('path');
 
     $.getJSON("https://raw.githubusercontent.com/tracking-exposed/eu19/map/data/keywords-preview.json", function(data) {
         previewData = data;
     });
-
-    var country = $('#member').find('path');
+    //trigger on country map click
     country.click(function() {
         var code = $(this).attr('id'),
             overlay = $('#preview-info'),
@@ -283,11 +282,12 @@ jQuery(document).ready(function($) {
         console.log(obj);
     });
 
-
     /**
      * home form
      */
-    var mainForm = $('#main-search');
+    var mainForm = $('#main-search'),
+        searchPage = $('#search-page');
+
     mainForm.submit(function(e){
         e.preventDefault();
         var lang = $('#country-select').val(),
@@ -295,10 +295,29 @@ jQuery(document).ready(function($) {
         window.location.href = '/language/' + lang + '/#' + keyword;
     });
 
-    if( $('#search-page').length > 0 ) {
-        var keyword = window.location.hash.substring(1);
-        //todo use this for json search into country page
-        $('.keyword').html(keyword)
+    //triggere dosearch just loading the page
+    if( searchPage.length > 0 ) {
+        var keyword = window.location.hash.substring(1),
+            lang = searchPage.attr('data-lang').toLowerCase();
+        $('#keywords-input').val(keyword);
+        doSearch(keyword, lang);
     }
+
+    /**
+     * Do search function
+     * @param keyword
+     * @param lang
+     */
+    function doSearch( keyword, lang ){
+
+        var url = 'https://something.com/' + lang + '/' + keyword;
+        //alert(url);
+
+    }
+
+
+
+
+
 
 });

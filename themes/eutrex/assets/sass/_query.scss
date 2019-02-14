@@ -74,14 +74,14 @@ GENERAL RESPONSIVE QUERY
 
 @media screen and (max-width: 680px)
 {
-  .keywords-wrapper {
+  form#main-search .keywords-wrapper {
     width: 60%;
     margin-right: 0 !important;
   }
   .country-wrapper {
     width: 38%;
   }
-  form#main-search button, .button-wrapper {
+  form#main-search button, form#main-search  .button-wrapper {
     width: 100%;
     margin-top: 5px;
   }
