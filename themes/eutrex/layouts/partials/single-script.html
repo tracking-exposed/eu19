@@ -4,6 +4,9 @@
          *  most used keywords data
          */
         var items = [],
+            //todo: use in place of sample data, getting lang variable form page
+            slug = '{{ .Scratch.Get "lang" }}',
+            url = 'https://something.com/lang/' + slug.toLowerCase(),
             keywords = $("#most-used-keywords"),
             preloader = $('.preloader');
 

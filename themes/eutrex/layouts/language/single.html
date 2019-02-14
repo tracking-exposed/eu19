@@ -37,6 +37,7 @@
     <span class="clear"></span>
 </div>
 
+{{ .Scratch.Add "lang"  .Title }}
 {{- partial "single-script.html" . -}}
 
 {{- end }}

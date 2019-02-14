@@ -39,7 +39,7 @@
     <span class="clear"></span>
 </div>
 
-
+{{ .Scratch.Add "lang"  .Params.lang }}
 {{- partial "single-script.html" . -}}
 
 {{- end }}
