@@ -85,6 +85,11 @@ GENERAL RESPONSIVE QUERY
     width: 100%;
     margin-top: 5px;
   }
+  .search-page-container .column_1-3 {
+    border-right: none;
+    border-bottom: solid 1px $grey-medium;
+    margin-bottom: 20px;
+  }
 
 }
 

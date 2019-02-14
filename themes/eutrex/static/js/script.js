@@ -310,8 +310,65 @@ jQuery(document).ready(function($) {
      */
     function doSearch( keyword, lang ){
 
-        var url = 'https://something.com/' + lang + '/' + keyword;
-        //alert(url);
+        //todo: use in place of sample data
+        var url = 'https://something.com/' + lang + '/' + keyword,
+            items = [],
+            results = $("#results"),
+            preloader = $('.preloader');
+
+        $.getJSON("https://gist.githubusercontent.com/vecna/7087664041e7f0a9c99c22ea7fd1d6b1/raw/38d0c72e4f17a86bef9bfb587b2809fc0395943c/it___Italia.json", function (data) {
+            $.each(data, function (key, val) {
+
+                var id = val['semantic']['_id'],
+                    linkOutput,
+                    author = val['post']['author'],
+                    permalink = val['post']['permalink'],
+                    dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'},
+                    date = val['post']['publicationTime'],
+                    time = new Date(date).toLocaleTimeString("en-US"),
+                    formattedDate = new Date(date).toLocaleDateString("en-US", dateOptions),
+                    type = val['post']['type'],
+                    text = val['post']['fulltext'],
+                    textSize = val['semantic']['textsize'],
+                    relevantWord = val['semantic']['l'],
+                    relevantWordString = relevantWord.toString(),
+
+                    //todo do not works
+                    link = val['post']['links'],
+                    anchorText = val['post']['links']['linked'];
+
+                if(link == '')  linkOutput = '';
+                else linkOutput = "<small>External link contained: <a href='" + link[0]['link'] + "' target='_blank'>" + link[0]['linked'] + "</a></small><br/>";
+
+
+                items.push(
+                    "<li id='" + id + "' class='post'>" +
+                        "<header>" +
+                            "<a href='https://www.facebook.com" + permalink + "' target='_blank' class='permalink'>Post link</a>" +
+                            "<strong>" + author + "</strong>" +
+                            "<small>" + formattedDate + ". " + time + "</small><br />" +
+                            "<small>Type: <b>" + type + "</b></small>, " +
+                            "<small>Words count: <b>" + textSize + "</b></small> " +
+                    "</header>" +
+                        "<p>" + text + "</p>" +
+                        "<footer>" +
+                            linkOutput +
+                            "<small class='relevant-words'>Keywords: <i>" +  relevantWordString.replace(/,/g, '</i> <i>') + "</i></small>" +
+                        "</footer>" +
+                    "</li>"
+                );
+            });
+            $("<ul/>", {
+                html: items.join("")
+            }).appendTo(results);
+
+        }).fail( function() {
+            preloader.hide();
+            $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(results);
+        }).done( function() {
+            preloader.hide();
+        });
+
 
     }
 

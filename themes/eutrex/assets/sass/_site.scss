@@ -458,12 +458,58 @@ li.language-icon {
 .error b {
   display: block;
 }
+.error span {
+  font-size: 80%;
+}
 .preloader {
   display: block;
   margin: 60px auto;
 }
-
-
+/**
+ * Results
+ */
+#results ul {
+  margin: 0;
+}
+#results li {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 20px;
+  background-color: $white;
+  border: solid 1px $grey-medium;
+}
+#results header {
+  margin-bottom: 10px;
+}
+#results header a {
+  display: block;
+  margin-bottom: 5px;
+  color: $primary;
+}
+#results footer a {
+  color: $primary;
+}
+#results header strong {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+#results small {
+  color: $grey-full;
+  margin-bottom: 5px;
+}
+.relevant-words {
+  margin-top: 5px;
+}
+.relevant-words i {
+  display: inline-block;
+  color: $black;;
+  background-color: $grey-medium;
+  padding: 2px 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  @include border-radius(4px,4px,4px,4px);
+}
 
 /**
  * ICON

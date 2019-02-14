@@ -19,7 +19,7 @@
             }).appendTo(keywords);
         }).fail( function() {
             preloader.hide();
-            $('<p class="error"><b>Oops!</b> <small>Something goes wrong, please try later!</small></p>').appendTo(keywords);
+            $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(keywords);
         }).done( function() {
             preloader.hide();
         });
