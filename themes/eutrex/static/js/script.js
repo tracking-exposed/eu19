@@ -345,7 +345,7 @@ jQuery(document).ready(function($) {
                             "<small>" + formattedDate + ". " + time + "</small><br />" +
                             "<small>Type: <b>" + type + "</b></small>, " +
                             "<small>words count: <b>" + textSize + "</b></small> " +
-                    "</header>" +
+                        "</header>" +
                         "<p>" + text + "</p>" +
                         "<footer>" +
                             linkOutput +
@@ -363,24 +363,25 @@ jQuery(document).ready(function($) {
             $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(results);
         }).done( function() {
             preloader.hide();
-        });
-        results.before('<header class="center">' +
+            results.before('<header class="center">' +
                 '<p>RSS link: <a href="' + url + '" class="primary-color"><b>' + url + '</b></a></p>' +
                 '<h3 class="light-font top">' +
                     '<b>XXX</b> results for keyword: <b>' + keyword + '</b><br />' +
                     '<span class="paragraph">here are displayed only the XXX% of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
                 '</h3>' +
-            '</header>' +
-            '<div class="row"></div> '
-        );
-        results.after('<footer class="center">' +
+                '</header>' +
+                '<div class="row"></div> '
+            );
+            results.after('<footer class="center">' +
                 '<h3 class="light-font top">' +
                     'There are other <b>XXX</b> results<br />' +
                     '<span class="paragraph">To see them all use the:</span>' +
                 '</h3>' +
-                '<p>RSS link: <a href="' + url + '" class="primary-color"><b>' + url + '</b></a></p>' +
-            '</footer>'
-        );
+                '<p>RSS link: <a href="' + url + '" class=" primary-color"><b>' + url + '</b></a></p>' +
+                '</footer>'
+            );
+        });
+
     } //end doSearch function
 });
 
