@@ -5,7 +5,7 @@
 </div>
 <div class="entry-content">
     <ul class="archive">
-        {{ range $index, $element := .Data.Pages }}
+        {{ range $index, $element := .Data.Pages.ByTitle }}
         <li class="column_1-3{{if not (modBool $index 3)}} omega{{end}}">
             <article>
                 <h3 class="center">
