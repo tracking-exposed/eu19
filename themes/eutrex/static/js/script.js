@@ -310,7 +310,7 @@ jQuery(document).ready(function($) {
      */
     function doSearch( keyword, lang ){
 
-        //todo: use in place of sample data
+        //todo: use in place of sample data url
         var url = 'https://something.com/' + lang + '/' + keyword,
             items = [],
             results = $("#results"),
@@ -332,14 +332,10 @@ jQuery(document).ready(function($) {
                     textSize = val['semantic']['textsize'],
                     relevantWord = val['semantic']['l'],
                     relevantWordString = relevantWord.toString(),
-
-                    //todo do not works
-                    link = val['post']['links'],
-                    anchorText = val['post']['links']['linked'];
+                    link = val['post']['links'];
 
                 if(link == '')  linkOutput = '';
                 else linkOutput = "<small>External link contained: <a href='" + link[0]['link'] + "' target='_blank'>" + link[0]['linked'] + "</a></small><br/>";
-
 
                 items.push(
                     "<li id='" + id + "' class='post'>" +
@@ -348,7 +344,7 @@ jQuery(document).ready(function($) {
                             "<strong>" + author + "</strong>" +
                             "<small>" + formattedDate + ". " + time + "</small><br />" +
                             "<small>Type: <b>" + type + "</b></small>, " +
-                            "<small>Words count: <b>" + textSize + "</b></small> " +
+                            "<small>words count: <b>" + textSize + "</b></small> " +
                     "</header>" +
                         "<p>" + text + "</p>" +
                         "<footer>" +
@@ -368,13 +364,23 @@ jQuery(document).ready(function($) {
         }).done( function() {
             preloader.hide();
         });
-
-
-    }
-
-
-
-
-
-
+        results.before('<header class="center">' +
+                '<p>RSS link: <a href="' + url + '" class="primary-color"><b>' + url + '</b></a></p>' +
+                '<h3 class="light-font top">' +
+                    '<b>XXX</b> results for keyword: <b>' + keyword + '</b><br />' +
+                    '<span class="paragraph">here are displayed only the XXX% of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
+                '</h3>' +
+            '</header>' +
+            '<div class="row"></div> '
+        );
+        results.after('<footer class="center">' +
+                '<h3 class="light-font top">' +
+                    'There are other <b>XXX</b> results<br />' +
+                    '<span class="paragraph">To see them all use the:</span>' +
+                '</h3>' +
+                '<p>RSS link: <a href="' + url + '" class="primary-color"><b>' + url + '</b></a></p>' +
+            '</footer>'
+        );
+    } //end doSearch function
 });
+

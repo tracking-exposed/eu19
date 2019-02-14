@@ -468,6 +468,10 @@ li.language-icon {
 /**
  * Results
  */
+#results {
+  max-width: 620px;
+  margin: 0 auto;
+}
 #results ul {
   margin: 0;
 }
@@ -481,7 +485,7 @@ li.language-icon {
 #results header {
   margin-bottom: 10px;
 }
-#results header a {
+#results ul header a {
   display: block;
   margin-bottom: 5px;
   color: $primary;
