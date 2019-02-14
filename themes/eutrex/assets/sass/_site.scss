@@ -443,8 +443,19 @@ li.language-icon {
 #most-used-keywords li {
   margin-bottom: 10px;
 }
-
-
+.error {
+  background-color: $secondary;
+  padding: 5px;
+  margin: 10px 10px 0 0;
+  text-align: center;
+}
+.error b {
+  display: block;
+}
+.preloader {
+  display: block;
+  margin: 60px auto;
+}
 
 
 

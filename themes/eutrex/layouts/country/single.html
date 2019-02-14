@@ -25,9 +25,11 @@
     <div class="column_1-3">
         <h3 class="top">
             Most used keywords<br />
-            <small class="paragraph">In the last 7 days</small>
+            <span class="paragraph"><small>For {{ .Params.lang }}, in the last 7 days</small></span>
         </h3>
-        <div id="most-used-keywords"></div>
+        <div id="most-used-keywords">
+            <img src="/images/preloader.gif" class="preloader" width="60" height="60" />
+        </div>
     </div>
     <div class="column_2-3 omega">
 
@@ -38,39 +40,6 @@
 </div>
 
 
-<script type="text/javascript">
-    window.onload = function() {
-        jQuery(document).ready(function($) {
-            /**
-             *  most used keywords data
-             */
-            var mostUsedKeys;
-            $.getJSON("https://gist.githubusercontent.com/vecna/b3aed1224d8873e58f80f1c4705ce94c/raw/cb4bea12b4de951ccd2403cc8b74608e864ba1fa/topk-IT.json", function (data) {
-                var items = [];
-                $.each(data, function (key, val) {
-                    items.push("<li id='" + key + "' class='keyword-element' data-value='" + val['label'] + "'><a href='/country/{{ urlize .Title }}/#" + val['label'] + "'>" + val['label'] + "</a> " + "(" + val['count'] + ")</li>");
-                });
-                $("<ul/>", {
-                    html: items.join("")
-                }).appendTo("#most-used-keywords");
-            });
-
-            $(document).on('click',".keyword-element",function (e) {
-                var ref = $(this).attr('data-value');
-                e.preventDefault();
-                removeLocationHash();
-                window.location.href += '#'+ref.replace(/\s+/g, '-').toLowerCase();
-                location.reload();
-
-            });
-
-            function removeLocationHash(){
-                var noHashURL = window.location.href.replace(/#.*$/, '');
-                window.history.replaceState('', document.title, noHashURL)
-            }
-        });
-    };
-
-</script>
+{{- partial "single-script.html" . -}}
 
 {{- end }}

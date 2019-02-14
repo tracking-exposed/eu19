@@ -25,14 +25,18 @@
     <div class="column_1-3">
         <h3 class="top">
             Most used keywords<br />
-            <small class="paragraph">In the last 7 days</small>
+            <span class="paragraph"><small>For {{ .Title }}, in the last 7 days</small></span>
         </h3>
+        <div id="most-used-keywords"></div>
     </div>
-    <div class="column_2-3 omega">poppo</div>
+    <div class="column_2-3 omega">
+
+        <b class="keyword"></b>
+
+    </div>
     <span class="clear"></span>
 </div>
 
-
-<b class="keyword"></b>
+{{- partial "single-script.html" . -}}
 
 {{- end }}

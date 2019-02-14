@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    window.onload = function() {
+        /**
+         *  most used keywords data
+         */
+        var items = [],
+            keywords = $("#most-used-keywords"),
+            preloader = $('.preloader');
+
+        $.getJSON("https://gist.githubusercontent.com/vecna/b3aed1224d8873e58f80f1c4705ce94c/raw/cb4bea12b4de951ccd2403cc8b74608e864ba1fa/topk-IT.json", function (data) {
+            $.each(data, function (key, val) {
+                items.push("<li id='" + key + "' class='keyword-element' data-value='" + val['label'] + "'><a href='/country/{{ urlize .Title }}/#" + val['label'] + "'>" + val['label'] + "</a> " + "(" + val['count'] + ")</li>");
+            });
+            $("<ul/>", {
+                html: items.join("")
+            }).appendTo(keywords);
+        }).fail( function() {
+            preloader.hide();
+            $('<p class="error"><b>Oops!</b> <small>Something goes wrong, please try later!</small></p>').appendTo(keywords);
+        }).done( function() {
+            preloader.hide();
+        });
+
+        // reload page if click on keyword
+        $(document).on('click',".keyword-element",function (e) {
+            var ref = $(this).attr('data-value');
+            e.preventDefault();
+            removeLocationHash();
+            window.location.href += '#'+ref.replace(/\s+/g, '-').toLowerCase();
+            location.reload();
+
+        });
+
+        function removeLocationHash(){
+            var noHashURL = window.location.href.replace(/#.*$/, '');
+            window.history.replaceState('', document.title, noHashURL)
+        }
+    };
+</script>
