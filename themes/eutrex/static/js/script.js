@@ -415,8 +415,8 @@ jQuery(document).ready(function($) {
                 items.push(
                     "<li id='" + id + "' class='post'>" +
                         "<header>" +
-                            "<a href='https://www.facebook.com" + permalink + "' target='_blank' class='permalink'>Post link</a>" +
-                            "<strong>" + author + "</strong>" +
+                            "<a href='https://www.facebook.com" + permalink + "' target='_blank' class='permalink icon-extra-small'>Post link</a>" +
+                            "<strong class='author icon-extra-small'>" + author + "</strong>" +
                             "<small>" + formattedDate + ". " + time + "</small><br />" +
                             "<small>Type: <b>" + type + "</b></small>, " +
                             "<small>words count: <b>" + textSize + "</b></small> " +
@@ -439,7 +439,10 @@ jQuery(document).ready(function($) {
         }).done( function() {
             preloader.hide();
             results.before('<header class="center">' +
-                '<p>RSS link: <a href="' + url + '" class="primary-color"><b>' + url + '</b></a></p>' +
+                '<p>' +
+                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class="primary-color"><b>' + url + '</b></a>' +
+                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                '</p>' +
                 '<h3 class="light-font top">' +
                     '<b>XXX</b> results for keyword: <b>' + keyword + '</b><br />' +
                     '<span class="paragraph">here are displayed only the XXX% of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
@@ -452,7 +455,10 @@ jQuery(document).ready(function($) {
                     'There are other <b>XXX</b> results<br />' +
                     '<span class="paragraph">To see them all use the:</span>' +
                 '</h3>' +
-                '<p>RSS link: <a href="' + url + '" class=" primary-color"><b>' + url + '</b></a></p>' +
+                '<p>' +
+                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class=" primary-color"><b>' + url + '</b></a>' +
+                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                '</p>' +
                 '</footer>'
             );
         });

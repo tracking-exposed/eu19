@@ -1,8 +1,8 @@
 ---
-title: "Page"
+title: "Tracking Exposed European Election"
 date: 2019-02-07T15:01:21+01:00
 draft: false
-
+description: Welocome in a collaborative observatory of algorithm influences, and few citizen driven solutions
 header: false
 ---
 
