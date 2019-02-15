@@ -235,10 +235,21 @@ jQuery(document).ready(function($) {
     });
 
 
+
+
+    var mainForm = $('#main-search'),
+        singleForm = $('#single-search'),
+        searchPage = $('#search-page'),
+        previewData,
+        country = $('#member').find('path');
+
     /**
-     * map preview data
+     * choose a single element into json array
+     * @param obj
+     * @param key
+     * @param val
+     * @returns {Array}
      */
-    //choose a single element into json array
     function getObjects(obj, key, val) {
         var objects = [];
         for (var i in obj) {
@@ -251,10 +262,19 @@ jQuery(document).ready(function($) {
         }
         return objects;
     }
+    /**
+     * remove hash from url
+     */
+    function removeLocationHash(){
+        var noHashURL = window.location.href.replace(/#.*$/, '');
+        window.history.replaceState('', document.title, noHashURL)
+    }
 
-    var previewData,
-        country = $('#member').find('path');
 
+    /**
+     * map preview data
+     */
+    //the same json for every request
     $.getJSON("https://raw.githubusercontent.com/tracking-exposed/eu19/map/data/keywords-preview.json", function(data) {
         previewData = data;
     });
@@ -282,20 +302,74 @@ jQuery(document).ready(function($) {
         console.log(obj);
     });
 
-    /**
-     * home form
-     */
-    var mainForm = $('#main-search'),
-        searchPage = $('#search-page');
 
-    mainForm.submit(function(e){
+    /**
+     *  most used keywords data
+     */
+    if( searchPage.length > 0 ) {
+        var items = [],
+            slug = searchPage.attr('data-lang'),
+            url = 'https://something.com/lang/' + slug.toLowerCase(),
+            keywords = $("#most-used-keywords"),
+            preloader = $('.preloader-key');
+
+        //todo: use "slug" in place of sample data
+        $.getJSON("https://gist.githubusercontent.com/vecna/b3aed1224d8873e58f80f1c4705ce94c/raw/cb4bea12b4de951ccd2403cc8b74608e864ba1fa/topk-IT.json", function (data) {
+            $.each(data, function (key, val) {
+                items.push("<li id='" + key + "' class='keyword-element' data-value='" + val['label'] + "'><a href='/country/{{ urlize .Title }}/#" + val['label'] + "'>" + val['label'] + "</a> " + "(" + val['count'] + ")</li>");
+            });
+            $("<ul/>", {
+                html: items.join("")
+            }).appendTo(keywords);
+        }).fail( function() {
+            preloader.hide();
+            $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(keywords);
+        }).done( function() {
+            preloader.hide();
+        });
+
+        // reload page if click on keyword
+        $(document).on('click',".keyword-element",function (e) {
+            var ref = $(this).attr('data-value');
+            e.preventDefault();
+            removeLocationHash();
+            window.location.href += '#'+ref.replace(/\s+/g, '-').toLowerCase();
+            location.reload();
+
+        });
+
+    }
+
+    /**
+     * home and single form trigger
+     */
+    mainForm.submit( function(e) {
         e.preventDefault();
         var lang = $('#country-select').val(),
             keyword = $('#keywords-input').val();
+        if( keyword == '' || keyword == null ) {
+            $('.error').remove();
+            return  $('<p class="error"><span>Please, type a keyword</span></p>').appendTo(mainForm);
+        }
         window.location.href = '/language/' + lang + '/#' + keyword;
     });
 
-    //triggere dosearch just loading the page
+    singleForm.submit( function(e) {
+        e.preventDefault();
+        var keyword = $('#keywords-input').val();
+        if( keyword == '' || keyword == null ) {
+            $('.error').remove();
+            return  $('<p class="error"><span>Please, type a keyword</span></p>').appendTo(singleForm);
+        }
+        removeLocationHash();
+        window.location.href += '#'+keyword.replace(/\s+/g, '-').toLowerCase();
+        location.reload();
+    });
+
+
+    /**
+     * trigger doSearch just loading the page
+     */
     if( searchPage.length > 0 ) {
         var keyword = window.location.hash.substring(1),
             lang = searchPage.attr('data-lang').toLowerCase();
@@ -310,12 +384,13 @@ jQuery(document).ready(function($) {
      */
     function doSearch( keyword, lang ){
 
-        //todo: use in place of sample data url
+
         var url = 'https://something.com/' + lang + '/' + keyword,
             items = [],
             results = $("#results"),
             preloader = $('.preloader');
 
+        //todo: use "url" in place of sample data
         $.getJSON("https://gist.githubusercontent.com/vecna/7087664041e7f0a9c99c22ea7fd1d6b1/raw/38d0c72e4f17a86bef9bfb587b2809fc0395943c/it___Italia.json", function (data) {
             $.each(data, function (key, val) {
 

@@ -28,7 +28,9 @@
             Most used keywords<br />
             <span class="paragraph"><small>For {{ .Title }}, in the last 7 days</small></span>
         </h3>
-        <div id="most-used-keywords"></div>
+        <div id="most-used-keywords">
+            <img src="/images/preloader.gif" class="preloader preloader-key" width="60" height="60" />
+        </div>
     </div>
     <div class="column_2-3 omega">
 
@@ -37,7 +39,5 @@
     </div>
     <span class="clear"></span>
 </div>
-
-{{- partial "single-script.html" . -}}
 
 {{- end }}
