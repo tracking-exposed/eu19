@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "eu19 Tracking Expose"
+title = "EU19 Tracking Exposed"
 theme = "eutrex"
 enableRobotsTXT = true
 canonifyURLs = true
