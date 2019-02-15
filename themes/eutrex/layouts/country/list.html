@@ -8,10 +8,16 @@
         {{ range $index, $element := .Data.Pages.ByTitle }}
         <li class="column_1-3{{if not (modBool $index 3)}} omega{{end}}">
             <article>
+                <figure class="center">
+                    <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">
+                        <img src="/images/country/{{ urlize .Title }}.svg" />
+                    </a>
+                </figure>
                 <h3 class="center">
                     <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
                 </h3>
             </article>
+            <div class="row"></div>
         </li>
         {{- end }}
     </ul>
