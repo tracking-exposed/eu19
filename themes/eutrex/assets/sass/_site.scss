@@ -84,15 +84,17 @@ li.has-children:hover {
   left: -9999em;
   z-index: 99999;
   width: 100%;
-  min-width: 220px;
+  min-width: 190px;
   background-color: $grey-bg;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: 0;
+  left: auto;
+  right: 0;
 }
 .main-navigation ul ul li {
   margin-left: 15px;
+  display: block;
 }
 .main-navigation ul ul li a {
   padding: 10px 20px 10px 0;
@@ -100,6 +102,7 @@ li.has-children:hover {
   border-bottom: solid 1px $grey-medium;
   width: auto;
   font-size: 14px;
+  display: block;
 }
 .main-navigation ul ul li:last-child a {
   border: none;
@@ -173,10 +176,13 @@ li.has-children:hover {
 #masthead.mobile .main-navigation a {
   padding: 10px 20px 10px 0;
 }
+#masthead.mobile li a[href="#"] {
+  display: none;
+}
 
 /* --------------------------------------------------
-## FOOTER
---------------------------------------------------  */
+ ## FOOTER
+ --------------------------------------------------  */
 #colophon {
   width: 100%;
   padding: 20px 0;
