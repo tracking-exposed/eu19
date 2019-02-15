@@ -1,3 +1,11 @@
+---
+title: "Know more about the browser extension"
+date: 2019-01-30T15:32:40+01:00
+draft: false
+---
+
+Our tool works for Firefox and Chrome, it is necessary to collect data and it should be spread as much as possible. It exists since two years and [these are our success](https://facebook.tracking.exposed/initiatives).
+
 # Installation Guide
 How to install facebook.tracking.exposed web browser extension.
 
@@ -7,6 +15,7 @@ How to install facebook.tracking.exposed web browser extension.
 Our facebook.tracking.exposed extension has been tested on both Mozilla and Google browsers. Once you know which browser you are using, you can follow the steps below.
 
 ##### Mozilla Firefox
+
 To install the extension on Firefox, [open this link](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/).
 
 First, click on "Add to Firefox", then confirm by clicking "Add".
@@ -18,8 +27,6 @@ First, click on "Add to Firefox", then confirm by clicking "Add".
 To install on Chromium or Google Chrome, [open this link](https://chrome.google.com/webstore/detail/trackingexposed-investiga/fnknflppefckhjhecbfigfhlcbmcnmmi) and click **"Add"**, then **"Add extension"**.
 
 ![screenshot](https://user-images.githubusercontent.com/40333748/52487712-8106d500-2bbe-11e9-8970-3687f18b469c.png)![screenshot](https://user-images.githubusercontent.com/40333748/52488066-5a956980-2bbf-11e9-8eef-1022824adf79.png)
-
-
 
 
 Congratulations, *facebook.tracking.exposed* is now installed and will start working as soon as you open your Facebook feed!
