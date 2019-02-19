@@ -2,3 +2,5 @@
 /public
 .idea
 .sass-cache
+/tests_output
+/chromedriver.log

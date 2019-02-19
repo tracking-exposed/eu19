@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
                 '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
                 '</p>' +
                 '<h3 class="light-font top">' +
-                '<b>XXX</b> results for keyword: <b>' + keyword + '</b><br />' +
+                '<b>XXX</b> results for keyword: <b class="keyword-value">' + keyword + '</b><br />' +
                 '<span class="paragraph">here are displayed only the XXX% of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
                 '</h3>' +
                 '</header>' +

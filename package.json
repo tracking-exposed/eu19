@@ -1,0 +1,23 @@
+{
+  "name": "eu19",
+  "version": "1.0.0",
+  "description": "This is a Hugo development environment running Hugo v. 0.51",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tracking-exposed/eu19.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tracking-exposed/eu19/issues"
+  },
+  "homepage": "https://github.com/tracking-exposed/eu19#readme",
+  "devDependencies": {
+    "chromedriver": "^2.46.0"
+  }
+}
