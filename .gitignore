@@ -4,3 +4,4 @@
 .sass-cache
 /tests_output
 /chromedriver.log
+/geckodriver.log
