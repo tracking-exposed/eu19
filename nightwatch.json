@@ -7,6 +7,8 @@
     "port": 9515
   },
 
+  "custom_assertions_path" : "tests/custom-assert/",
+
   "test_settings" : {
     "default" : {
       "desiredCapabilities": {

@@ -1,4 +1,5 @@
-module.exports = {
+module.exports =
+{
   'Homepage form test' : function (browser) {
     browser
         .url('http://localhost:1313/')
@@ -16,6 +17,7 @@ module.exports = {
         .assert.containsText('.keyword-value', 'test')
         .end();
   },
+
   'Homepage map test' : function (browser) {
     browser
         .url('http://localhost:1313/')
@@ -25,5 +27,28 @@ module.exports = {
         .click('path[id=it]')
         .pause(3000)
         .assert.containsText('h3.top', 'Italy')
+  },
+
+  'Landing page test' : function (browser) {
+    browser
+        .url('http://localhost:1313/')
+        .waitForElementVisible('body')
+        .click('.banner a')
+        .pause(1000)
+        .assert.containsText('h2.top', 'join a collaborative effort to map propaganda and Facebook abuses')
+        .assert.elementCount('a.btn', 2)
+  },
+
+  'Pages test' : function (browser) {
+    browser
+        .url('http://localhost:1313/language/')
+        .waitForElementVisible('ul.archive')
+        .pause(1000)
+        .assert.elementCount('ul.archive li', 22)
+        .url('http://localhost:1313/country/')
+        .waitForElementVisible('ul.archive')
+        .pause(1000)
+        .assert.elementCount('ul.archive li', 27)
   }
+
 };
