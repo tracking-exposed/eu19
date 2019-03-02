@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     var mainForm = $('#main-search'),
         singleForm = $('#single-search'),
         searchPage = $('#search-page'),
-        previewData,
+        previewData = [],
         overlay = $('#preview-info'),
         country = $('#member').find('path'),
         keywords = $('#most-used-keywords'),
@@ -16,7 +16,6 @@ jQuery(document).ready(function($) {
 
 
     // PRIVATE FUNCTIONS
-
     /**
      * choose a single element into json array
      * @param obj
@@ -129,7 +128,6 @@ jQuery(document).ready(function($) {
 
 
     //PUBLIC FUNCTIONS
-
     /**
      * map preview data
      */
@@ -138,27 +136,33 @@ jQuery(document).ready(function($) {
         //the same json for every request
         $.getJSON("https://raw.githubusercontent.com/lrnzctld/eu19/master/data/keywords-preview.json", function(data) {
             previewData = data;
+        }).fail( function() {
+            previewData = null;
         });
         //trigger on country map click
         country.click(function() {
-            var code = $(this).attr('id'),
-                obj = getObjects(previewData, 'lang', code),
-                countryData= obj[0]['country'],
-                languageData = obj[0]['language'],
-                contributorsData = obj[0]['total'],
-                totalKeywordsData = obj[0]['totalKeywords'],
-                labelsData = obj[0]['labels'],
-                formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
+            if ( !previewData ) {
+                overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
+                overlay.find('ul.preview-data').empty();
+                overlay.find('div.center').empty();
+            } else {
+                var code = $(this).attr('id'),
+                    obj = getObjects(previewData, 'lang', code),
+                    countryData= obj[0]['country'],
+                    languageData = obj[0]['language'],
+                    contributorsData = obj[0]['total'],
+                    totalKeywordsData = obj[0]['totalKeywords'],
+                    labelsData = obj[0]['labels'],
+                    formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
 
-            overlay.find('h3').html(countryData);
-            overlay.find('b.language-data').html(languageData);
-            overlay.find('b.contributors-data').html(contributorsData);
-            overlay.find('b.keywords-sum').html(totalKeywordsData);
-            overlay.find('ul.keywords-data').html(labelsData);
-            $('a#country-link').attr('href', '/country/'+formattedCountry);
-
+                overlay.find('h3').html(countryData);
+                overlay.find('b.language-data').html(languageData);
+                overlay.find('b.contributors-data').html(contributorsData);
+                overlay.find('b.keywords-sum').html(totalKeywordsData);
+                overlay.find('ul.keywords-data').html(labelsData);
+                $('a#country-link').attr('href', '/country/'+formattedCountry);
+            }
             openOverlay('#preview-info');
-            //console.log(obj);
         });
     }
 
@@ -223,7 +227,7 @@ jQuery(document).ready(function($) {
         location.reload();
     });
     /**
-     * trigger doSearch just loading the page
+     * Main trigger doSearch just loading the page
      */
     if( searchPage.length > 0 ) {
         var keyword = window.location.hash.substring(1),
@@ -234,7 +238,6 @@ jQuery(document).ready(function($) {
 
 
     //UI
-
     /**
      * overlay function
      */

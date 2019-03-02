@@ -20,7 +20,7 @@ In front-matte of the new .md file, change the `draft` value to `false` to publi
 ## Test suite with Nightwatch
 In order to test application you need to 
 + Have Chrome installed
-+ Install [nodeJs] (https://nodejs.org/en/)
++ Install [nodeJs](https://nodejs.org/en/)
 + Install NightWatch, run: `npm -g install nightwatch` **-g** option make `nightwatch` available globally
 ### Running test
 lunch `hugo server` then lunch `npm test`
