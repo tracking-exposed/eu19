@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/tracking-exposed/eu19#readme",
   "devDependencies": {
-  "dependencies": {
-    "nightwatch": "^1.0.19",
-    "chromedriver": "^2.46.0",
-    "geckodriver": "^1.15.1"
+    "dependencies": {
+      "nightwatch": "^1.0.19",
+      "chromedriver": "^2.46.0",
+      "geckodriver": "^1.15.1"
+    }
   }
 }
