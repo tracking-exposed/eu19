@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-us" }}" class="no-ie no-js">
     {{- partial "head.html" . -}}
-    <body>
+    <body class="{{ .Site.Params.style }}">
         <div id="page" class="site">
             {{- partial "header.html" . -}}
             <main id="content" class="container">

@@ -34,21 +34,21 @@ a:hover, a:active {
 h1, .h1_style {
   font-size: 40px;
   line-height: 140%;
-  font-weight: $regular;
+  font-family: $bold;
   margin-bottom: 25px;
   margin-top: 25px;
 }
 h2, .h2_style {
   font-size: 32px;
   line-height: 140%;
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 20px;
   margin-top: 35px;
 }
 h3, .h3_style{
   font-size: 24px;
   line-height: 140%;
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 15px;
   margin-top: 25px;
 }
@@ -56,7 +56,7 @@ h4, .h4_style {
   font-size: 18px;
   line-height: 140%;
   text-transform: uppercase;
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 10px;
   margin-top: 15px;
 }
@@ -68,7 +68,7 @@ h5, h6, .h5_style {
   margin-top: 15px;
 }
 h5 {
-  font-weight: $bold;
+  font-family: $bold;
 }
 
 .entry-content ul, .entry-content ol {
@@ -83,10 +83,10 @@ h5 {
 ## Characters formatting
 --------------------------------------------------------------*/
 div, form, p, .paragraph, small, .small, mark, label, input {
-  font-weight: $regular;
+  font-family: $regular;
 }
 b, .bold, strong, .strong {
-  font-weight: $bold !important;
+  font-family: $bold !important;
 }
 em, i, .italic {
   font-style: italic;
@@ -95,7 +95,7 @@ p, .paragraph {
   font-size: 16px;
   line-height: 160%;
   display: block;
-  font-weight: $regular;
+  font-family: $regular;
   margin-bottom: 15px;
 }
 small, .small {
@@ -113,7 +113,7 @@ kbd, code {
   @include border-radius(2px, 2px, 2px, 2px);
 }
 var {
-  font-weight: $bold;
+  font-family: $bold;
   border-bottom: dotted 1px $black;
 }
 del, strike {
@@ -133,7 +133,7 @@ blockquote p, q p {
 cite {
   display: inline-block;
   margin-left: 30px;
-  font-weight: $bold;
+  font-family: $bold;
 }
 pre {
   max-width: 100%;
@@ -180,7 +180,7 @@ dl dd {
   margin: 0 0 20px 2%;
 }
 dl dt {
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 5px;
 }
 hr {
@@ -208,7 +208,7 @@ figcaption {
   color: $tertiary;
 }
 .light-font {
-  font-weight: $regular !important;
+  font-family: $regular !important;
 }
 .white {
   color: $white !important;
@@ -225,7 +225,7 @@ figcaption {
   padding: 10px 35px;
   background-color: $tertiary;
   font-size: 12px;
-  font-weight: $regular;
+  font-family: $regular;
   text-decoration: none;
   color: $white !important;
   cursor: pointer;
@@ -246,7 +246,7 @@ figcaption {
 }
 .btn_big {
   padding: 16px 50px;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -396,7 +396,7 @@ a.close-btn {
   background: $white;
   line-height: 27px;
   font-size: 22px;
-  font-weight: $bold;
+  font-family: $bold;
   text-decoration: none;
   color: $primary;
 }
