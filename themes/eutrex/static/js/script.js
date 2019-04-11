@@ -98,7 +98,9 @@ jQuery(document).ready(function($) {
             preloader.hide();
             $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(results);
 
-        }).done( function() {
+        }).done( function( data ) {
+            var ArrayLength = data.length;
+
             preloader.hide();
             results.before('<header class="center">' +
                 '<p>' +
@@ -106,8 +108,8 @@ jQuery(document).ready(function($) {
                 '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
                 '</p>' +
                 '<h3 class="light-font top">' +
-                '<b>XXX</b> results for keyword: <b class="keyword-value">' + keyword + '</b><br />' +
-                '<span class="paragraph">here are displayed only the XXX% of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
+                '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
+                '<span class="paragraph">here are displayed only the XX% of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
                 '</h3>' +
                 '</header>' +
                 '<div class="row"></div> '
