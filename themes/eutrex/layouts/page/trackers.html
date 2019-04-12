@@ -1,0 +1,11 @@
+{{ define "main" -}}
+<h1 class="center">Trackers</h1>
+
+<div id="map-trackers-container" class="map">
+    {{- partial "map.html" . -}}
+    {{- partial "overlay-trackers.html" . -}}
+    <span class="clear"></span>
+</div>
+<div class="row"></div>
+
+{{- end }}

@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
         singleForm = $('#single-search'),
         searchPage = $('#search-page'),
         previewData = [],
-        overlay = $('#preview-info'),
+        overlay = $('.overlay'),
         country = $('#member').find('path'),
         keywords = $('#most-used-keywords'),
         preloaderKey = $('.preloader-key'),
@@ -12,12 +12,17 @@ jQuery(document).ready(function($) {
         keywordInput = $('#keywords-input'),
         results = $('#results'),
         preloader = $('.preloader'),
-        mapContainer = $('#map-container');
+        mapContainer = $('#map-container'),
+        mapTrackersContainer = $('#map-trackers-container');
 
 
+    //////////////////////////////
     // PRIVATE FUNCTIONS
+    //////////////////////////////
+
     /**
      * choose a single element into json array
+     *
      * @param obj
      * @param key
      * @param val
@@ -35,6 +40,7 @@ jQuery(document).ready(function($) {
         }
         return objects;
     }
+
     /**
      * remove hash from url
      */
@@ -42,8 +48,10 @@ jQuery(document).ready(function($) {
         var noHashURL = window.location.href.replace(/#.*$/, '');
         window.history.replaceState('', document.title, noHashURL)
     }
+
     /**
      * Do search function
+     *
      * @param keyword
      * @param lang
      */
@@ -129,9 +137,54 @@ jQuery(document).ready(function($) {
     } //end doSearch function
 
 
-    //PUBLIC FUNCTIONS
     /**
-     * map preview data
+     * Get full country name form country code
+     *
+     * @param countryCode
+     * @returns {*}
+     */
+    function getCountryName( countryCode ) {
+        var countryName;
+
+        if( countryCode == 'it' ) countryName = 'Italy';
+        if( countryCode == 'si' ) countryName = 'Slovenia';
+        if( countryCode == 'dk' ) countryName = 'Denmark';
+        if( countryCode == 'be' ) countryName = 'Belgium';
+        if( countryCode == 'at' ) countryName = 'Austria';
+        if( countryCode == 'cz' ) countryName = 'Czechia';
+        if( countryCode == 'sk' ) countryName = 'Slovakia';
+        if( countryCode == 'lu' ) countryName = 'Luxembourg';
+        if( countryCode == 'pt' ) countryName = 'Portugal';
+        if( countryCode == 'es' ) countryName = 'Spain';
+        if( countryCode == 'pl' ) countryName = 'Poland';
+        if( countryCode == 'gr' ) countryName = 'Greece';
+        if( countryCode == 'fi' ) countryName = 'Finland';
+        if( countryCode == 'de' ) countryName = 'Germany';
+        if( countryCode == 'se' ) countryName = 'Sweden';
+        if( countryCode == 'cy' ) countryName = 'Cyprus';
+        if( countryCode == 'ie' ) countryName = 'Ireland';
+        if( countryCode == 'hu' ) countryName = 'Hungary';
+        if( countryCode == 'lt' ) countryName = 'Lithuania';
+        if( countryCode == 'lv' ) countryName = 'Latvia';
+        if( countryCode == 'ro' ) countryName = 'Romania';
+        if( countryCode == 'bg' ) countryName = 'Bulgaria';
+        if( countryCode == 'ee' ) countryName = 'Estonia';
+        if( countryCode == 'fr' ) countryName = 'France';
+        if( countryCode == 'nl' ) countryName = 'Netherlands';
+        if( countryCode == 'mt' ) countryName = 'Malta';
+        if( countryCode == 'hr' ) countryName = 'Croatia';
+
+        return countryName;
+    }
+
+
+
+    //////////////////////////////
+    // PUBLIC FUNCTIONS
+    //////////////////////////////
+
+    /**
+     * map FaceBook data preview
      */
     if( mapContainer.length > 0 )
     {
@@ -165,6 +218,53 @@ jQuery(document).ready(function($) {
                 $('a#country-link').attr('href', '/country/'+formattedCountry);
             }
             openOverlay('#preview-info');
+        });
+    }
+
+
+    /**
+     * map Trackers
+     */
+    if( mapTrackersContainer.length > 0 )
+    {
+        //trigger on country map click
+        country.click(function() {
+
+            var code = $(this).attr('id'),
+                url = '' + code;
+                country =  getCountryName( code );
+
+            //remove old content from overlay
+            overlay.find('.news-sites').empty();
+            //todo: use "url" in place of sample data
+            $.getJSON("https://gist.githubusercontent.com/vecna/7cfbccfbea1e569ce121176117a541b9/raw/0ab7abc042548a26c839349b8e5d347393c06b5c/mock.json", function (data) {
+                $.each(data, function (key, val) {
+
+                    var i,
+                        text = "",
+                        sites = val['site'],
+                        trackers = val['trackers'];
+                    for ( i = 0; i < trackers.length; i++) {
+                        if (i < trackers.length - 1) var sep = '-'; else sep = '';
+                        text += trackers[i]['id'] + sep;
+                    }
+
+                    var    checkbox = '<label class="checkbox paragraph" for="' + sites + '">' +
+                            '<input type="checkbox" value="' + text + '" id="' + sites + '" name="companies" />' +
+                            '<span>' + sites + '</span><br />' +
+                            '<small>It contains <b>' + trackers.length + '</b> trackers</small>' +
+                            '</label>';
+
+                    overlay.find('.news-sites').append(checkbox);
+                    overlay.find('i.country-name').html(country);
+                });
+
+            }).fail( function() {
+                overlay.find('h3').remove();
+                overlay.find('.center').remove();
+                overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(keywords);
+            });
+            openOverlay('#trackers-info');
         });
     }
 
@@ -202,7 +302,10 @@ jQuery(document).ready(function($) {
         });
     }
 
-    //TRIGGERS
+
+    //////////////////////////////
+    // TRIGGERS
+    //////////////////////////////
 
     /**
      * home and single form trigger
@@ -239,7 +342,10 @@ jQuery(document).ready(function($) {
     }
 
 
-    //UI
+    //////////////////////////////
+    // UI ELEMETNTS
+    //////////////////////////////
+
     /**
      * overlay function
      */

@@ -345,6 +345,12 @@ label.checkbox {
   cursor: pointer;
   margin-bottom: 5px;
 }
+label.paragraph {
+  cursor: pointer;
+}
+label.paragraph small {
+  padding-left: 20px;
+}
 select {
   border: 1px solid $grey-medium;
 }
