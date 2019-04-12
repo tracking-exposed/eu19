@@ -186,11 +186,31 @@ dl dt {
 hr {
   display: block;
   margin: 20px 0;
-
-
 }
-figcaption {
-  font-size: 80%;
+figure {
+  //margin: 10px 0 30px 0;
+}
+figure.full img {
+  width: 100%;
+  margin: 10px auto;
+}
+figure.half img {
+  width: 50%;
+}
+figure.align-left img {
+  float: left;
+  margin: 0 15px 5px 0;
+}
+figure.align-right img {
+  float: right;
+  margin: 0 0 5px 15px;
+}
+figure.align-center img {
+  margin: 10px auto;
+  display: block;
+}
+figcaption, .footnotes li {
+  font-size: 80% !important;
 }
 .underline {
   text-decoration: underline !important;
