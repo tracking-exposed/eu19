@@ -1,5 +1,9 @@
 {{ define "main" -}}
-<h1 class="center">Trackers</h1>
+<h1 class="center"> {{ .Title }}</h1>
+
+<div class="entry-content">
+    {{ .Content }}
+</div>
 
 <div id="map-trackers-container" class="map">
     {{- partial "map.html" . -}}
@@ -7,5 +11,11 @@
     <span class="clear"></span>
 </div>
 <div class="row"></div>
+
+
+<div class="entry-content">
+    <h3 class="center">About webXray</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
 {{- end }}

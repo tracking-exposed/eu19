@@ -251,8 +251,8 @@ jQuery(document).ready(function($) {
 
                     var    checkbox = '<label class="checkbox paragraph" for="' + sites + '">' +
                             '<input type="checkbox" value="' + text + '" id="' + sites + '" name="companies" />' +
-                            '<span>' + sites + '</span><br />' +
-                            '<small>It contains <b>' + trackers.length + '</b> trackers</small>' +
+                            '<span>' + sites + '</span>' +
+                            '<small class="right"><b>' + trackers.length + '</b> trackers</small>' +
                             '</label>';
 
                     overlay.find('.news-sites').append(checkbox);

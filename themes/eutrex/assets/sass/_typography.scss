@@ -363,13 +363,10 @@ input[type="radio"] {
 label.checkbox {
   display: inline-block;
   cursor: pointer;
-  margin-bottom: 5px;
+  width: 100%;
 }
-label.paragraph {
-  cursor: pointer;
-}
-label.paragraph small {
-  padding-left: 20px;
+label.checkbox small {
+  padding-top: 5px;
 }
 select {
   border: 1px solid $grey-medium;
