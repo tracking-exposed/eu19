@@ -109,7 +109,9 @@ GENERAL RESPONSIVE QUERY
 
 @media screen and (max-width: 460px)
 {
-
+  h1.logotype {
+    line-height: 42px;
+  }
 }
 
 @media screen and (max-width: 380px)
