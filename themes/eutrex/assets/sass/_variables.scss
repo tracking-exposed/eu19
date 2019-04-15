@@ -1,28 +1,23 @@
-//@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-
-
 /*fonts var*/
 $font-stack: 'Trex-Regular', sans-serif;
-$regular: 'Trex-Regular';
-$bold: 'Trex-Bold';
+$regular: 'Trex-Regular', sans-serif;
+$medium: 'Trex-Medium', sans-serif;
+$bold: 'Trex-Bold', sans-serif;
 
 /*shade of gray*/
-$black: #020A23;
-$grey-dark: #3C3C3C;
-$grey-full: #76737A;
-$grey-medium: #dcdcdc;
+$black: #161614;
+$grey: #dcdcdc;
+$grey-dark: #76737A;
 $grey-light: #f9f9f9;
-$grey-bg: #F2F6F5;
 $white: #FFF;
 
-/*colors stack*/
-$primary: #003399;
-$primary-dark: #015470;
-$primary-light: #2DA6AF;
-$background: #DCDEE0;
+$background: #F2F6F5;
+
+/* EU colors stack*/
+$primary: #003399; //link colors
+$primary-light: #5472cb;
 $secondary: #FFCC00;
-$tertiary: #FC1D6A;
-$tertiary-light: #fd8cb1;
+$tertiary: #FC1D6A; //btn colors
 $tertiary-dark: #dc1a59;
 
 /*

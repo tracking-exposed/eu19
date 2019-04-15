@@ -6,20 +6,20 @@ body {
   direction: ltr;
   letter-spacing: 0.5px;
   font-weight: $regular;
-  background-color: $grey-bg;
+  background-color: $background;
 }
 
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: $tertiary
+  color: $primary
 }
 a:visited {
-  color: $tertiary-light;
+  color: $primary-light;
 }
 a:hover, a:focus, a:active {
-  color: $tertiary-light;
+  color: $primary-light;
 }
 a:focus {
   outline: thin dotted;
@@ -32,9 +32,9 @@ a:hover, a:active {
 ## Heading
 --------------------------------------------------------------*/
 h1, .h1_style {
-  font-size: 40px;
+  font-size: 42px;
   line-height: 140%;
-  font-family: $bold;
+  font-family: $medium;
   margin-bottom: 25px;
   margin-top: 25px;
 }
@@ -63,21 +63,13 @@ h4, .h4_style {
 h5, h6, .h5_style {
   font-size: 18px;
   line-height: 140%;
-  color: $grey-full;
+  color: $grey-dark;
   margin-bottom: 10px;
   margin-top: 15px;
 }
 h5 {
   font-family: $bold;
 }
-
-.entry-content ul, .entry-content ol {
-  margin: 30px 0 30px 2%;
-}
-.entry-content li {
-  margin-bottom: 15px;
-}
-
 
 /*--------------------------------------------------------------
 ## Characters formatting
@@ -108,7 +100,7 @@ kbd, code {
   padding: 2px 6px;
   display: inline-block;
   background: $grey-light;
-  border: solid 1px $grey-medium;
+  border: solid 1px $grey;
   word-wrap: break-word;
   @include border-radius(2px, 2px, 2px, 2px);
 }
@@ -124,7 +116,7 @@ blockquote, q {
   margin: 10px 0 10px 15px;
   padding-left: 15px;
   font-style: italic;
-  border-left: solid 2px $grey-medium;
+  border-left: solid 2px $grey;
   @include border-radius(2px, 2px, 2px, 2px);
 }
 blockquote p, q p {
@@ -145,7 +137,6 @@ pre {
 }
 mark, address {
   background: $secondary;
-  border: solid 1px $secondary;
   padding: 0 4px;
   @include border-radius(2px, 2px, 2px, 2px);
 }
@@ -168,10 +159,11 @@ table td, table th {
   background-color: $white;
   vertical-align: middle;
   border-spacing: 0;
+  border-bottom: solid 1px $grey;
 }
 table th {
   background-color: $grey-light;
-  border: solid 1px $grey-medium;
+  padding: 16px 12px;
 }
 dl {
   margin-bottom: 35px;
@@ -186,9 +178,6 @@ dl dt {
 hr {
   display: block;
   margin: 20px 0;
-}
-figure {
-  //margin: 10px 0 30px 0;
 }
 figure.full img {
   width: 100%;
@@ -225,7 +214,10 @@ figcaption, .footnotes li {
   color: $primary !important;
 }
 .secondary-color {
-  color: $tertiary;
+  color: $secondary;
+}
+.tertiary-color {
+ color: $tertiary;
 }
 .light-font {
   font-family: $regular !important;
@@ -234,6 +226,31 @@ figcaption, .footnotes li {
   color: $white !important;
 }
 
+/* --------------------------------------------------
+## Entry  formatting
+--------------------------------------------------  */
+.entry-content ul, .entry-content ol {
+  margin: 30px 0 30px 2%;
+}
+.entry-content li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 160%;
+  margin-left: 3%;
+}
+.entry-header h1 {
+  font-size: 52px;
+  margin: 0;
+}
+.entry-content {
+  max-width: 740px;
+  margin: 40px auto 0 auto;
+}
+.entry-header {
+  margin: 100px 0 0 0;
+  padding: 0 0 100px 0;
+  border-bottom: solid 1px $grey;
+}
 
 /* --------------------------------------------------
 ## BTN
@@ -284,7 +301,6 @@ input[type="submit"] {
   font-size: 13px;
   line-height: 15px;
   padding: 15px 45px;
-  //@include box-shadow(0,0,3px,0,$grey-medium);
   border-radius: 0;
   cursor: pointer;
   margin: 10px 0;
@@ -328,7 +344,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
   font-family: $font-stack;
-  border: 1px solid $grey-medium;
+  border: 1px solid $grey;
   padding: 15px 10px;
   line-height: 15px;
   font-size: 13px;
@@ -369,57 +385,9 @@ label.checkbox small {
   padding-top: 5px;
 }
 select {
-  border: 1px solid $grey-medium;
+  border: 1px solid $grey;
 }
 textarea {
   width: 100%;
 }
 
-
-/*--------------------------------------------------------------
-# Widget
---------------------------------------------------------------*/
-.overlay, #overlay_shade {
-  display: none;
-}
-#overlay_shade {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  background-color: $grey-light;
-  cursor: pointer;
-}
-.overlay {
-  position: absolute;
-  top: -9999px;
-  left: 0;
-  width: 75%;
-  padding: 20px;
-  max-width: 450px;
-  min-width: 240px;
-  min-height: 100px;
-  z-index: 999;
-  margin: 0 10px;
-  background-color: $white;
-  border: solid 1px $grey-full
-}
-a.close-btn {
-  position: absolute;
-  right: -15px;
-  top: -15px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  @include border-radius(50%,50%,50%,50%);
-  border: solid 1px $grey-full;
-  background: $white;
-  line-height: 27px;
-  font-size: 22px;
-  font-family: $bold;
-  text-decoration: none;
-  color: $primary;
-}

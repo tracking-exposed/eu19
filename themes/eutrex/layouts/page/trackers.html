@@ -1,9 +1,13 @@
 {{ define "main" -}}
-<h1 class="center"> {{ .Title }}</h1>
+<header class="entry-header center">
+    <h1>{{ .Title }}</h1>
+    <time class="post-date hidden" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+</header>
 
 <div class="entry-content">
     {{ .Content }}
 </div>
+<div class="row"></div>
 
 <div id="map-trackers-container" class="map">
     {{- partial "map.html" . -}}
@@ -11,7 +15,6 @@
     <span class="clear"></span>
 </div>
 <div class="row"></div>
-
 
 <div class="entry-content">
     <h3 class="center">About webXray</h3>

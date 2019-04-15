@@ -35,7 +35,12 @@ EuTRex style sheets written by LC.D https://cataldi.design/
 @import 'typography';
 
 /*! --------------------------------------------------
-# Main style code
+# Mastro template
+--------------------------------------------------  */
+@import 'mastro';
+
+/*! --------------------------------------------------
+# Specific site style code
 --------------------------------------------------  */
 @import 'site';
 
