@@ -6,7 +6,15 @@ enableRobotsTXT = true
 canonifyURLs = true
 [params]
   description = "EU election 2019 Tracking expose. A collaborative observatory of algorithm influences, and few citizen driven solutions."
-  style = ""
+  #set true if it's a sub site
+  subsite = "false"
+  #colors
+  background = ""
+  primary = ""
+  primary_light = ""
+  secondary = ""
+  tertiary_dark = ""
+  tertiary = ""
 
 [permalinks]
   posts = "/:slug/"

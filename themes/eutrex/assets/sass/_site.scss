@@ -191,6 +191,8 @@ label[for="keywords-input"] {
 .map {
   border-bottom: solid 1px $grey;
   border-top:  solid 1px $grey;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 svg#eu-map {
   width: 100%;
