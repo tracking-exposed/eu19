@@ -1,44 +1,43 @@
 {{ define "main" -}}
 {{ .Scratch.Add "lang"  .Params.lang }}
-
-<header class="entry-header search-page">
-    <figure class="left">
-        <img src="/images/country/{{ urlize .Title }}.svg" />
-    </figure>
-    <div class="page-info left">
-        <h1 class="top">{{ .Title }}</h1>
-        <small><a href="/country">Change country</a></small>
-        <ul class="preview-data">
-            <li class="language-icon icon-small">
-                 <b class="language-data">{{ .Params.lang }}</b> language
-                <small><a href="/language">Change language</a></small>
-            </li>
-            <li class="contributors-icon icon-small">
-                <b class="contributors-data"></b> contributors<br />
-                <small>Means that we collect data from <b class="contributors-data"></b> people who has download our extension. <a href='{{ ref . "/page/get-the-extension.md" }}' title="Download the browser extension">Be one of them</a>.</small>
-            </li>
-        </ul>
-    </div>
-    <span class="clear"></span>
-</header>
-
-<div class="search-page-container" id="search-page" data-lang="{{ .Params.lang }}">
-    <div class="column_1-3">
-        <h3 class="top">
-            Most used keywords<br />
-            <span class="paragraph"><small>For {{ .Params.lang }}, in the last 7 days</small></span>
-        </h3>
-        <div id="most-used-keywords">
-            <img src="/images/preloader.gif" class="preloader preloader-key" width="60" height="60" />
+<div class="container">
+    <header class="search-page">
+        <figure class="left">
+            <img src="/images/country/{{ urlize .Title }}.svg" />
+        </figure>
+        <div class="page-info left">
+            <h1 class="top">{{ .Title }}</h1>
+            <small><a href="/country">Change country</a></small>
+            <ul class="preview-data">
+                <li class="language-icon icon-small">
+                     <b class="language-data">{{ .Params.lang }}</b> language
+                    <small><a href="/language">Change language</a></small>
+                </li>
+                <li class="contributors-icon icon-small">
+                    <b class="contributors-data"></b> contributors<br />
+                    <small>Means that we collect data from <b class="contributors-data"></b> people who has download our extension. <a href='{{ ref . "/page/get-the-extension.md" }}' title="Download the browser extension">Be one of them</a>.</small>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="column_2-3 omega">
+        <span class="clear"></span>
+    </header>
 
-        {{- partial "single-form.html" . -}}
+    <div class="search-page-container" id="search-page" data-lang="{{ .Params.lang }}">
+        <div class="column_1-3">
+            <h3 class="top">
+                Most used keywords<br />
+                <span class="paragraph"><small>For {{ .Params.lang }}, in the last 7 days</small></span>
+            </h3>
+            <div id="most-used-keywords">
+                <img src="/images/preloader.gif" class="preloader preloader-key" width="60" height="60" />
+            </div>
+        </div>
+        <div class="column_2-3 omega">
 
+            {{- partial "single-form.html" . -}}
+
+        </div>
+        <span class="clear"></span>
     </div>
-    <span class="clear"></span>
 </div>
-
-
 {{- end }}

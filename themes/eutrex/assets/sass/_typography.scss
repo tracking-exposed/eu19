@@ -247,9 +247,14 @@ figcaption, .footnotes li {
   margin: 40px auto 0 auto;
 }
 .entry-header {
-  margin: 100px 0 0 0;
-  padding: 0 0 100px 0;
+  margin: 0;
+  padding: 100px 0 100px 0;
   border-bottom: solid 1px $grey;
+}
+.sub-theme .entry-header {
+  background-color: $primary;
+  color: $white;
+  border-bottom: none;
 }
 
 /* --------------------------------------------------

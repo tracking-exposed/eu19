@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-us" }}" class="no-ie no-js">
     {{- partial "head.html" . -}}
-    <body class="{{ .Site.Params.style }}">
+    <body class="{{ if .Site.Params.style }}sub-theme{{ end}}">
         <div id="page" class="site">
             {{- partial "header.html" . -}}
-            <main id="content" class="container">
+            <main id="content">
             {{- block "main" . }}{{- end }}
             </main>
             {{- partial "footer.html" . -}}
