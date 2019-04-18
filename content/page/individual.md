@@ -6,6 +6,7 @@ draft: false
 
 ### fbTREX empowers users to monitor their information diet
 
+
 Our *information diet* is increasingly determined by personalisation algorithms. We believe citizens have a right to know whether the information we are being fed truly nourishes our development and agency, at an individual and societal level.
 
 It has become evident in the recent years that Facebook does not offer us a complete or balanced information diet. For instance, if you have hundreds of connections on Facebook, yet you are repeatedly updated with content that is being shared by around 30 friends, you should have a right to know that Facebook is restricting your information diet, as well as why and how.
@@ -24,11 +25,13 @@ We hope that you will join our digital evidence-gathering community and particip
 
 #### Install the fbTREX browser extension
 Our extensions is available as a [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and in the [Chrome Web Store](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).\
-:heavy_exclamation_mark: We should probably have graphic links.
+
+<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
+
 
 #### Privacy
 
-fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the public data that Facebook provides them – the goal is to study social media, not the subjects participating. Still, this information can contain a lot of personally identifying information (PII), so fbTREX’s ethical policy imposes the following limits:
+fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the public data that Facebook provides them. The goal of this collection is to study social media, not the subjects participating to the initiative. Still, this information can contain a lot of personally identifying information (PII), so fbTREX’s ethical policy imposes the following limits:
 * We will collect only the information that Facebook provides to you in your news feed, not in groups or you own profile page.
 * We will collect only posts marked as public. We will never collect posts marked for friends only.
 * You have full control over your data, and may delete it at any time.
