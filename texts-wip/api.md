@@ -27,12 +27,6 @@ The main URL to access our API is:
 
   </tr>
   <tr>
-    <td>Personal Summary+Semantics</td>
-    <td><a href=#semantics>link</a></td>
-    <td>`personal/userToken/semantics/paging`</td>
-
-  </tr>
-  <tr>
     <td>Data Exporter</td>
     <td><a href=#exporter>link</a></td>
     <td>`personal/userToken/exporter/paging`</td>
@@ -47,7 +41,6 @@ The main URL to access our API is:
     <td>General Statistics</td>
     <td><a href=#counter>link</a></td>
     <td>`statistics/counter`</td>
-
   </tr>
 </table>
 
@@ -377,6 +370,69 @@ Request:
     `https://facebook.tracking.exposed/api/v2/personal/1111a1aa1aa111a11a1a1aa1111a111111a1a1a1/csv/1-0`
 
 Response:
-
 `"nature","publicationTime","postId","permaLink","fblinktype","source","sourceLink","displaySource","textsize","texts","impressionTime","impressionOrder","user","timeline","semanticId"`
 `"organic","2019-04-18T17:21:30.000Z","1247146142126177","/CatalunyaDiari/posts/1247146142126177","posts","Catalunya Diari","https://www.facebook.com/CatalunyaDiari/","Catalunya Diari","171"," ‖▩‖ ","2019-04-21T15:05:15.000Z","14","goulash-nocilla-cucumber","onion-couscous-strawberry","82a416a63569d1b65ddfae1ff5b5812b13a247cf"`
+
+
+****
+
+## <a name="exporter"></a>Export your Data
+
+#### URL
+`https://facebook.tracking.exposed/api/v2/personal/$YOUR_TOKEN/exporter/$PAGING`
+<br>
+#### Description
+Returns all the data you own on our platform. `$YOUR_TOKEN` is your userToken.
+
+#### Data Specifics
+
+TBD
+
+#### Sample Usage
+Request:
+    `https://facebook.tracking.exposed/api/v2/personal/1111a1aa1aa111a11a1a1aa1111a111111a1a1a1/exporter/`
+
+
+
+****
+
+## <a name="delete"></a>Delete your Data
+
+#### URL
+`https://facebook.tracking.exposed/api/v2/personal/$YOUR_TOKEN/remove/$PAGING`
+<br>
+#### Description
+Removes the data you own on our platform. `$YOUR_TOKEN` is your userToken. The output will confirm that your data has been deleted.
+
+#### Data Specifics
+
+TBD
+
+#### Sample Usage
+Request:
+    `https://facebook.tracking.exposed/api/v2/personal/1111a1aa1aa111a11a1a1aa1111a111111a1a1a1/remove/5`
+
+Response:<br>
+    `{"timelines":5,"impressions":63,"htmls":35,"summaries":35}`
+
+
+****
+
+## <a name="counter"></a>General Statistics
+
+#### URL
+`https://facebook.tracking.exposed/api/v2/statistics/counter`
+<br>
+#### Description
+General statistics on facebook.tracking.exposed. Contains global and last week's information. Please note that the fields that terminate in *_lw* are for *last week*.
+
+#### Data Specifics
+
+TBD
+
+#### Sample Usage
+Request:
+    `https://facebook.tracking.exposed/api/v2/statistics/counter`
+
+Response:<br>
+    `{"content":{"impressions":15614360,"impressions_lw":162084,"aggregated":2673,"aggregated_lw":140,"labels":87946,"labels_lw":87946,"semantics":625307,"semantics_lw":625307,"anomalies":0,"anomalies_lw":0,"summary":1741653,"summary_lw":89911,"errors":52708,"errors_lw":52708,"metadata":1747629,"metadata_lw":89938,"htmls":9767659,"htmls_lw":110072,"accesses":215408,"accesses_lw":974,"timelines":1207216,"timelines_lw":12826,"supporters":3486,"supporters_lw":13},"computedt":"2019-04-23T13:53:34.254Z","next":"2019-04-23T13:55:34.254Z","cacheTimeSeconds":120}`
