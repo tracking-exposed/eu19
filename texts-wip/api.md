@@ -16,37 +16,36 @@ The main URL to access our API is:
   </tr>
   <tr>
     <td>Personal Summary</td>
-    <td>[link](#summary)</td>
+    <td><a href=#summary>link</a>)</td>
     <td>`personal/userToken/summary/paging`</td>
 
   </tr>
   <tr>
     <td>Personal Csv</td>
-    <td>[link](#csv)</td>
+    <td><a href=#csv>link</a></td>
     <td>`personal/userToken/csv/paging`</td>
 
   </tr>
   <tr>
     <td>Personal Summary+Semantics</td>
-    <td>[link](#semantics)</td>
+    <td><a href=#semantics>link</a></td>
     <td>`personal/userToken/semantics/paging`</td>
 
   </tr>
   <tr>
     <td>Data Exporter</td>
-    <td>[link](#exporter)</td>
+    <td><a href=#exporter>link</a></td>
     <td>`personal/userToken/exporter/paging`</td>
 
   </tr>
   <tr>
     <td>Delete your Data</td>
-    <td>[link](#delete)</td>
+    <td><a href=#delete>link</a></td>
     <td>`personal/userToken/remove/paging`</td>
-
   </tr>
   <tr>
     <td>General Statistics</td>
-    <td>[link](#general)</td>
+    <td><a href=#counter>link</a></td>
     <td>`statistics/counter`</td>
 
   </tr>
@@ -165,11 +164,11 @@ Returns a summary of personal data of an user. `$YOUR_TOKEN` is your userToken, 
     <td>texts</td>
     <td>List of texts for the impression. Contains translations but not comments.</td>
     <td>nested</td>
-    <td>`[
+    <td><xmp>[
       "\"Estoy jodido, este es el final de mi presidencia\". Es la frase que dijo Trump cuando Robert Mueller se puso a investigar su presunta conexión con Rusia. En sus conclusiones, el fiscal especial recoge esta cita y sus intentos por torpedear la investigación, pero no ve delito",
       "El informe sobre la trama rusa revela los intentos de Trump por torpedear la investigación",
       "Estoy jodido, este es el final de mi presidencia , dijo el mandatario tras el nombramiento de un fiscal especial, según el documento de Robert S. Mueller, hecho público este jueves"
-    ]`</td>
+      ]</xmp></td>
   </tr>
   <tr>
     <td>textsize</td>
