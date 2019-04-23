@@ -16,7 +16,7 @@ The main URL to access our API is:
   </tr>
   <tr>
     <td>Personal Summary</td>
-    <td><a href=#summary>link</a>)</td>
+    <td><a href=#summary>link</a></td>
     <td>`personal/userToken/summary/paging`</td>
 
   </tr>
@@ -164,11 +164,11 @@ Returns a summary of personal data of an user. `$YOUR_TOKEN` is your userToken, 
     <td>texts</td>
     <td>List of texts for the impression. Contains translations but not comments.</td>
     <td>nested</td>
-    <td><xmp>[
+    <td>[
       "\"Estoy jodido, este es el final de mi presidencia\". Es la frase que dijo Trump cuando Robert Mueller se puso a investigar su presunta conexión con Rusia. En sus conclusiones, el fiscal especial recoge esta cita y sus intentos por torpedear la investigación, pero no ve delito",
       "El informe sobre la trama rusa revela los intentos de Trump por torpedear la investigación",
       "Estoy jodido, este es el final de mi presidencia , dijo el mandatario tras el nombramiento de un fiscal especial, según el documento de Robert S. Mueller, hecho público este jueves"
-      ]</xmp></td>
+      ]</td>
   </tr>
   <tr>
     <td>textsize</td>
