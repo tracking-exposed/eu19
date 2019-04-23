@@ -221,7 +221,7 @@ Request:
 
 Response:
 
-```[
+`[
 {
 "impressionTime": "2019-04-19T18:06:49.000Z",
 "impressionOrder": 41,
@@ -257,7 +257,7 @@ Response:
 "LIKE": 29,
 "ANGRY": 18,
 "HAHA": 8
-}```
+}`
 
 
 ****
