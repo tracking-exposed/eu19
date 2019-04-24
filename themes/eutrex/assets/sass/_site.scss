@@ -31,13 +31,17 @@
 }
 h1.logotype {
   display: inline-block;
-  line-height: 120px;
+  line-height: 42px;
   padding: 0;
-  margin: 0;
-  margin-left: 10px;
-  vertical-align: bottom;
+  margin: 13px 0 13px 10px;
+  vertical-align: top;
+  text-align: left;
 }
-
+h1.logotype small {
+  color: $primary;
+  font-family: $bold;
+  line-height: 100%;
+}
 
 #trackingexposed-logo, .logo a:hover::before {
   animation: spin1 3s linear forwards;
