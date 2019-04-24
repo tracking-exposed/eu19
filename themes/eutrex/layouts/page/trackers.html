@@ -3,22 +3,23 @@
     <h1>{{ .Title }}</h1>
     <time class="post-date hidden" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
 </header>
+<div class="container">
+    <div class="entry-content">
+        {{ .Content }}
+    </div>
+    <div class="row"></div>
 
-<div class="entry-content">
-    {{ .Content }}
-</div>
-<div class="row"></div>
+    <div id="map-trackers-container" class="map">
+        {{- partial "map.html" . -}}
+        {{- partial "overlay-trackers.html" . -}}
+        <span class="clear"></span>
+    </div>
+    <div class="row"></div>
 
-<div id="map-trackers-container" class="map">
-    {{- partial "map.html" . -}}
-    {{- partial "overlay-trackers.html" . -}}
-    <span class="clear"></span>
-</div>
-<div class="row"></div>
-
-<div class="entry-content">
-    <h3 class="center">About webXray</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="entry-content">
+        <h3 class="center">About webXray</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 </div>
 
 {{- end }}
