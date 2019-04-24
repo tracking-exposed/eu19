@@ -173,6 +173,7 @@ jQuery(document).ready(function($) {
         if( countryCode == 'nl' ) countryName = 'Netherlands';
         if( countryCode == 'mt' ) countryName = 'Malta';
         if( countryCode == 'hr' ) countryName = 'Croatia';
+        if( countryCode == 'gb' ) countryName = 'Great Britain';
 
         return countryName;
     }
