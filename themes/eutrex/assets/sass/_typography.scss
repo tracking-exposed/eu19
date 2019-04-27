@@ -16,7 +16,7 @@ a {
   color: $primary
 }
 a:visited {
-  color: $primary-light;
+  color: $primary;
 }
 a:hover, a:focus, a:active {
   color: $primary-light;
@@ -227,6 +227,12 @@ figcaption, .footnotes li {
 }
 .white {
   color: $white !important;
+}
+.external-link {
+  display: inline-block;
+  padding-right: 25px;
+  background-position: right 1px !important;
+  background-size: 20px !important;
 }
 
 /* --------------------------------------------------

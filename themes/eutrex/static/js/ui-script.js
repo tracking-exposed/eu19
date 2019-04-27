@@ -197,4 +197,7 @@ jQuery(document).ready(function($) {
             }
         }
     });
+
+    $('a[target*="_blank"]').addClass('external-link permalink')
+
 });
