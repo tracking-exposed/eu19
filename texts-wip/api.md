@@ -304,7 +304,7 @@ Returns a list of timelines for the user, including a count for the number of im
       <td>timelines</td>
       <td>List of timeline IDs with the number of impressions collected per ID.</td>
       <td></td>
-      <td>"timelinexxxxyyyy": 12</td>
+      <td>{ "timelinexxxxyyyy": 12, "timelineyyyyyyyzzzzzz" 65</td>
     </tr>
   </tr>
 </table>
