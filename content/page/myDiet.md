@@ -5,7 +5,7 @@ draft: true
 ---
 
 # My Diet
-empowering users to monitor their information diets
+## empowering users to monitor their information diets
 
 Our *information diet* is increasingly determined by personalisation algorithms. We believe citizens have a right to know whether the information we are being fed truly nourishes our development and agency, at an individual and societal level.
 
