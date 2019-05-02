@@ -23,6 +23,7 @@ It's easy to install for both [Firefox](https://addons.mozilla.org/en-US/firefox
 ##### 2. Download your data
 
 You will get a csv that contains the posts you have seen, by which sources, their content, as well as other metadata. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python library, which you can install from our github repository. Another option is to directly get your data from the API: you can read the docs here.
+If you decide to join the EU19 initiative, researchers will only be able to see the posts from the News Media pages that will be compared.
 
 
 <table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57098627-dadcee00-6d1a-11e9-8512-a2cfa48271e2.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57107827-63668900-6d31-11e9-89c7-e5ea0f9acf3c.png"></td></tr></table>
