@@ -3,9 +3,7 @@ title: "myDiet"
 date: 2019-05-02T11:22:29+01:00
 draft: true
 ---
-
-# My Diet
-## empowering users to monitor their information diets
+# empowering users to monitor their information diets
 
 Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
@@ -16,19 +14,18 @@ By becoming an adopter of fbtrex, you are participanting in a user-driven initia
 
 ## How to become a power user and know your habits
 
-### 1. Install the fbTREX browser extension
+##### 1. Install the fbTREX browser extension
 
 It's easy to install for both [Firefox](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and [Google Chrome](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).<br>
 <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
 
-### 2. Opt-in and scroll!
-In the browser where you installed the extension, open Facebook. You will see a dialog windows on the bottom where you can opt-in: accept and refresh. Then just scroll your NewsFeed. The extension will register the public posts you are seeing.
+##### 2. Download your data
+
+You will get a csv that contains the posts you have seen, by which sources, their content, as well as other metadata. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python library, which you can install from our github repository. Another option is to directly get your data from the API: you can read the docs here.
 
 
-### 3. Download your data
-There are two ways to download your data. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python interface, which you can install from our github repository. Another option is to directly get your data from the API: you can read the docs here.
+##### 3. Visualize and get insights
 
-### 4. Visualize and get insights
 After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app. You can also start browsing your data in a visual way directly with our interface by clicking on "Your Data".
 
 
