@@ -9,7 +9,7 @@ Facebook’s personalisation algorithms have an impact on our lifestyles, priori
 
 With fbTREX, we can better monitor our information diets, and get insights into how they present to us different realities. Who is informing us, and about what topics? Are we being provided with misleading information or deceptive advertising?
 
-By becoming an adopter of fbtrex, you are participanting in a user-driven initiative to make social media more transparent.
+By becoming an adopter of fbtrex, you are not just getting the insights Facebook does not offer you on your own activity, but you are also participanting in a user-driven initiative to make social media more accountable and transparent.
 
 
 ## How to become a power user and know your habits
@@ -34,7 +34,9 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 
 ## Privacy
 
-At tracking.exposed we **REALLY** care about privacy. That's why fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the public data that Facebook provides them. The goal of this collection is to study social media, not the subjects participating to the initiative. Still, this information can contain a lot of personally identifying information (PII), so fbTREX’s ethical policy imposes the following limits:
+At tracking.exposed we **REALLY** care about privacy. That's why fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the public data that Facebook provides them. The goal of this collection is to study social media, not the subjects participating to the initiative.
+
+Still, this information can contain a lot of personally identifying information (PII), so fbTREX’s ethical policy imposes the following limits:
 * We will collect only the information that Facebook provides to you in your news feed, not in groups or you own profile page.
 * We will collect only posts marked as public. We will never collect posts marked for friends only.
 * You have full control over your data, and may delete it at any time.
