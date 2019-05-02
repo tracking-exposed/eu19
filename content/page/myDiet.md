@@ -20,18 +20,18 @@ Promoting algorithmic diversity and our right to pick our own algorithms is a pr
 
 ### 1. Install the fbTREX browser extension
 
-Our extensions is available as a [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and in the [Chrome Web Store](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).<br>
+It's easy to install for both [Firefox](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and [Google Chrome](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).<br>
 <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
 
 ### 2. Opt-in and scroll!
-All you need to do is just open facebook, opt-in and use it normally. The extension will register the public posts you are seeing.
+In the browser where you installed the extension, open Facebook. You will see a dialog windows on the bottom where you can opt-in: accept and refresh. Then just scroll your NewsFeed. The extension will register the public posts you are seeing.
 
 
 ### 3. Download your data
-There are two ways to download your data. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python interface, which you can download from our github repository.
+There are two ways to download your data. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python interface, which you can install from our github repository. Another option is to directly get your data from the API: you can read the docs here.
 
 ### 4. Visualize and get insights
-After you have download and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc, or with Tableau, Rawgraphs.io or any other data visualization app.
+After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app.
 
 
 ## Privacy
