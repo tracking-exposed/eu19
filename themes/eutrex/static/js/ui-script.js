@@ -197,7 +197,9 @@ jQuery(document).ready(function($) {
             }
         }
     });
-
-    $('a[target*="_blank"]').addClass('external-link permalink')
+    /**
+     * add outlink icon in lin with no btn class
+     */
+    $('a[target*="_blank"]:not(.btn)').addClass('external-link permalink')
 
 });

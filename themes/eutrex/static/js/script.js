@@ -264,7 +264,7 @@ jQuery(document).ready(function($) {
                     '</p>' +
                     '<h3 class="light-font top">' +
                     '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
-                    '<span class="paragraph">Try search for a new keyword, keep in mind that the search is case sensitive</span>' +
+                    '<span class="paragraph">Try search for a new keyword</span>' +
                     '</h3>' +
                     '</header>' +
                     '<div class="row"></div> '
