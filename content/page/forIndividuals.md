@@ -45,7 +45,6 @@ Still, this information can contain a lot of personally identifying information 
 * All research conducted must strictly aim at understanding social phenomena and algorithmic influence, you will never be the subject or object of any study.
 
 
-#### Donate your digital body to science
-#### Install the fbTREX browser extension today!
+### Install the fbTREX browser extension today!
 
 <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
