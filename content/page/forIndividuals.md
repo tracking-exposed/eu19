@@ -4,7 +4,7 @@ date: 2019-05-02T11:22:29+01:00
 draft: true
 ---
 # fbTREX for Individuals
-#### empowering users to monitor their information diets
+### empowering users to monitor their information diets
 
 Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
@@ -13,7 +13,7 @@ With fbTREX, we can better monitor our information diets, and get insights into 
 By becoming an adopter of fbtrex, you are not just getting the insights Facebook does not offer you on your own activity, but you are also participanting in a user-driven initiative to make social media more accountable and transparent.
 
 
-## How to become a power user and know your habits
+### How to become a power user and know your habits
 
 ##### 1. Install the fbTREX browser extension
 
@@ -33,7 +33,7 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 
 <table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png"></td></tr></table>
 
-## Privacy
+### Privacy
 
 At tracking.exposed we **REALLY** care about privacy. That's why fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the public data that Facebook provides them. The goal of this collection is to study social media, not the subjects participating to the initiative.
 
