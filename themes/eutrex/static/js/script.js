@@ -50,92 +50,47 @@ jQuery(document).ready(function($) {
     }
 
     /**
-     * Do search function
+     * Check if property exist in Json array
      *
-     * @param keyword
-     * @param lang
+     * @param obj
+     * @returns {boolean}
      */
-    function doSearch( keyword, lang ){
-        var url = 'https://something.com/' + lang + '/' + keyword,
-            items = [];
-        //todo: use "url" in place of sample data
-        $.getJSON("https://gist.githubusercontent.com/vecna/7087664041e7f0a9c99c22ea7fd1d6b1/raw/38d0c72e4f17a86bef9bfb587b2809fc0395943c/it___Italia.json", function (data) {
-            $.each(data, function (key, val) {
+    function checkNested(obj /*, level1, level2, ... levelN*/) {
+        var args = Array.prototype.slice.call(arguments, 1);
 
-                var id = val['semantic']['_id'],
-                    linkOutput,
-                    author = val['post']['author'],
-                    permalink = val['post']['permalink'],
-                    dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'},
-                    date = val['post']['publicationTime'],
-                    time = new Date(date).toLocaleTimeString("en-US"),
-                    formattedDate = new Date(date).toLocaleDateString("en-US", dateOptions),
-                    type = val['post']['type'],
-                    text = val['post']['fulltext'],
-                    textSize = val['semantic']['textsize'],
-                    relevantWord = val['semantic']['l'],
-                    relevantWordString = relevantWord.toString(),
-                    link = val['post']['links'];
+        for (var i = 0; i < args.length; i++) {
+            if (!obj || !obj.hasOwnProperty(args[i])) {
+                return false;
+            }
+            obj = obj[args[i]];
+        }
+        return true;
+    }
 
-                //remove link if null
-                if(link == '') linkOutput = '';
-                else linkOutput = "<small>External link contained: <a href='" + link[0]['link'] + "' target='_blank'>" + link[0]['linked'] + "</a></small><br/>";
+    /**
+     * Return 0 for undefined val
+     *
+     * @param val
+     * @returns {*}
+     */
+    function preventUndefined( val ) {
+        var output;
+        if( val == 'undefined' || val == '' || val == null || !val ) output = 0;
+        else output = val;
+        return output
+    }
 
-                items.push(
-                    "<li id='" + id + "' class='post'>" +
-                    "<header>" +
-                    "<a href='https://www.facebook.com" + permalink + "' target='_blank' class='permalink icon-extra-small'>Post link</a>" +
-                    "<strong class='author icon-extra-small'>" + author + "</strong>" +
-                    "<small>" + formattedDate + ". " + time + "</small><br />" +
-                    "<small>Type: <b>" + type + "</b></small>, " +
-                    "<small>words count: <b>" + textSize + "</b></small> " +
-                    "</header>" +
-                    "<p>" + text + "</p>" +
-                    "<footer>" +
-                    linkOutput +
-                    "<small class='relevant-words'>Keywords: <i>" +  relevantWordString.replace(/,/g, '</i> <i>') + "</i></small>" +
-                    "</footer>" +
-                    "</li>"
-                );
-            });
-            $("<ul/>", {
-                html: items.join("")
-            }).appendTo(results);
-
-        }).fail( function() {
-            preloader.hide();
-            $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(results);
-
-        }).done( function( data ) {
-            var ArrayLength = data.length;
-
-            preloader.hide();
-            results.before('<header class="center">' +
-                '<p>' +
-                '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class="primary-color"><b>' + url + '</b></a>' +
-                '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
-                '</p>' +
-                '<h3 class="light-font top">' +
-                '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
-                '<span class="paragraph">here are displayed only the XX% of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
-                '</h3>' +
-                '</header>' +
-                '<div class="row"></div> '
-            );
-            results.after('<footer class="center">' +
-                '<h3 class="light-font top">' +
-                'There are other <b>XXX</b> results<br />' +
-                '<span class="paragraph">To see them all use the:</span>' +
-                '</h3>' +
-                '<p>' +
-                '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class=" primary-color"><b>' + url + '</b></a>' +
-                '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
-                '</p>' +
-                '</footer>'
-            );
-        });
-    } //end doSearch function
-
+    /**
+     * Format string to search: first lettere is Uppercase and no space allowed
+     *
+     * @param string
+     * @returns {string}
+     */
+    function formatString(string)
+    {
+        var str = string.charAt(0).toUpperCase() + string.slice(1);
+        return str.replace(/\s+/g, '-');
+    }
 
     /**
      * Get full country name form country code
@@ -178,6 +133,223 @@ jQuery(document).ready(function($) {
         return countryName;
     }
 
+    /**
+     * get lang code form language or country
+     *
+     * @param langName
+     * @returns {*}
+     */
+    function getLangCode( langName ) {
+        var langCode;
+
+        if( langName == 'italian' || langName == 'italy' )          langCode = 'it';
+        if( langName == 'bulgarian' || langName == 'bulgaria' )     langCode = 'bg';
+        if( langName == 'croatian' || langName == 'croatia' )       langCode = 'hr';
+        if( langName == 'czech' || langName == 'czech-republic' )   langCode = 'hr';
+        if( langName == 'danish' || langName == 'denmark' )         langCode = 'dk';
+        if( langName == 'dutch' || langName == 'netherlands' )      langCode = 'nl';
+        if( langName == 'english' || langName == 'great-britain' )  langCode = 'en';
+        if( langName == 'estonian' || langName == 'estonia' )       langCode = 'ee';
+        if( langName == 'finnish' || langName == 'finland' )        langCode = 'fi';
+        if( langName == 'french' || langName == 'france' )          langCode = 'fr';
+        if( langName == 'german' || langName == 'germany' )         langCode = 'de';
+        if( langName == 'greek' || langName == 'greece' )           langCode = 'gr';
+        if( langName == 'hungarian' || langName == 'hungary' )      langCode = 'hu';
+        if( langName == 'latvian' || langName == 'latvia' )         langCode = 'lv';
+        if( langName == 'lithuanian' || langName == 'lithuania' )   langCode = 'lt';
+        if( langName == 'polish' || langName == 'poland' )          langCode = 'pl';
+        if( langName == 'portuguese' || langName == 'portugal' )    langCode = 'pt';
+        if( langName == 'romanian' || langName == 'romania' )       langCode = 'ro';
+        if( langName == 'slovak' || langName == 'slovakia' )        langCode = 'sk';
+        if( langName == 'slovenian' || langName == 'slovenia' )     langCode = 'si';
+        if( langName == 'spanish' || langName == 'spain' )          langCode = 'es';
+        if( langName == 'swedish' || langName == 'sweden' )         langCode = 'se';
+
+        return langCode;
+    }
+
+    /**
+     * Do search function
+     *
+     * @param keyword
+     * @param lang
+     * @return push html into #results
+     */
+    function doSearch( keyword, lang ){
+
+        if(!keyword) {
+            preloader.hide();
+            $('<p class="error"><b>No keyword!</b> <span>You need to search for a keyword, use the form above!</span></p>').appendTo(results);
+            return;
+        }
+
+        var url = 'https://facebook.tracking.exposed/api/v2/' + getLangCode(lang) + '/noogle/' + keyword + '/100-0',
+            items = [];
+
+        //console.log(lang+', '+url);
+
+        $.getJSON(url, function (data) {
+            $.each(data, function (key, val) {
+
+                var id = val['semanticId'],
+                    author = val['summary']['source'],
+                    permalink = val['summary']['permaLink'],
+                    dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'},
+                    date = val['summary']['publicationTime'],
+                    time = new Date(date).toLocaleTimeString("en-US"),
+                    formattedDate = new Date(date).toLocaleDateString("en-US", dateOptions),
+                    type = val['summary']['fblinktype'],
+                    nature = val['summary']['nature'],
+                    text = val['summary']['texts'],
+                    textSize = val['summary']['textsize'],
+                    relevantWord = val['l'],
+                    relevantWordString = relevantWord.toString(),
+                    like = val['summary']['LIKE'],
+                    love = val['summary']['LOVE'],
+                    haha = val['summary']['HAHA'],
+                    angry = val['summary']['ANGRY'],
+                    sad = val['summary']['SAD'],
+                    wow = val['summary']['WOW'],
+                    linkOutput,
+                    permalinkOutput;
+
+                //Check for value in nested property
+                if( checkNested(val, 'summary', 'opengraph', 'link') ) {
+                    var link = val['summary']['opengraph']['link'],
+                        anchorLinkText = val['summary']['opengraph']['title'];
+                }
+
+                //remove link if null
+                if(!link || link == 'undefined') linkOutput = '<small>No external link contained</small>';
+                else linkOutput = "<small>External link contained: <a href='" + link + "' target='_blank'>" + anchorLinkText + "</a></small><br/>";
+
+                //remove permalink if null
+                if(!permalink) permalinkOutput = '';
+                else permalinkOutput = "<a href='https://www.facebook.com" + permalink + "' target='_blank' class='permalink icon-extra-small'>Post link</a>";
+
+                items.push(
+                    "<li id='" + id + "' class='post'>" +
+                    "<header>" +
+                    permalinkOutput +
+                    "<strong class='author icon-extra-small'>" + author + "</strong>" +
+                    "<small>" + formattedDate + ". " + time + "</small><br />" +
+                    "<small>Type: <b>" + type + " (" + nature + ")</b></small>, " +
+                    "<small>words count: <b>" + textSize + "</b></small><br />" +
+                    "<small>Like: <b>" + preventUndefined(like) + "</b>, Love: <b>" + preventUndefined(love) + "</b>, Haha: <b>" + preventUndefined(haha) + "</b>, Wow: <b>" + preventUndefined(wow) + "</b>, Sad: <b>" + preventUndefined(sad) + "</b>, Angry: <b>" + preventUndefined(angry) + "</b>, </small>" +
+                    "</header>" +
+                    "<p>" + text + "</p>" +
+                    "<footer>" +
+                    linkOutput +
+                    "<small class='relevant-words'>Keywords: <i>" +  relevantWordString.replace(/,/g, '</i> <i>') + "</i></small>" +
+                    "</footer>" +
+                    "</li>"
+                );
+            });
+            $("<ul/>", {
+                html: items.join("")
+            }).appendTo(results);
+
+        }).fail( function() {
+            preloader.hide();
+            $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(results);
+        }).done( function( data ) {
+            var ArrayLength = data.length;
+            preloader.hide();
+            if(ArrayLength == 0) {
+                results.before('<header class="center">' +
+                    '<p>' +
+                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class="primary-color break"><b>' + url + '</b></a>' +
+                        //todo: insert proper link to documentation
+                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                    '</p>' +
+                    '<h3 class="light-font top">' +
+                    '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
+                    '<span class="paragraph">Try search for a new keyword, keep in mind that the search is case sensitive</span>' +
+                    '</h3>' +
+                    '</header>' +
+                    '<div class="row"></div> '
+                );
+            } else {
+                results.before('<header class="center">' +
+                    '<p>' +
+                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class="primary-color break"><b>' + url + '</b></a>' +
+                        //todo: insert proper link to documentation
+                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                    '</p>' +
+                    '<h3 class="light-font top">' +
+                    '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
+                    '<span class="paragraph">here are displayed only a small amount of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
+                    '</h3>' +
+                    '</header>' +
+                    '<div class="row"></div> '
+                );
+                results.after('<footer class="center">' +
+                    '<h3 class="light-font top">' +
+                    'There are much more other results<br />' +
+                    '<span class="paragraph">To see them all use the:</span>' +
+                    '</h3>' +
+                    '<p>' +
+                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class=" primary-color break"><b>' + url + '</b></a>' +
+                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                    '</p>' +
+                    '</footer>'
+                );
+            }
+        });
+    } //end doSearch function
+
+
+    /*
+    todo: fix map api
+    function getLoud( lang ) {
+
+        //console.log(lang.toLowerCase());
+
+        url = 'https://facebook.tracking.exposed/api/v2/' + lang.toLowerCase() + '/loud/10-1';
+
+        $.getJSON(url, function( data ) {
+
+            var countryData= getCountryName( lang ),
+                languageData = lang,
+                totalKeywordsData = 0;
+                //contributorsData = obj[0]['total'],
+                //totalKeywordsData = data['textsize'],
+                //labelsData = '<li>' + obj[0]['l'] + '</li> ';
+
+            $.each(data, function (key, val) {
+                var
+                    contributorsData = val['contributors'],
+                    keywordsData = val['textsize'],
+                    totalKeywordsData = keywordsData,
+                    labelsData = val['l'];
+                console.log(labelsData);
+                console.log(keywordsData);
+            });
+
+            console.log('tot: ' + totalKeywordsData);
+                //formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
+
+            overlay.find('h3').html(countryData);
+            overlay.find('b.language-data').html(languageData);
+            overlay.find('b.contributors-data').html(contributorsData);
+            overlay.find('b.keywords-sum').html(totalKeywordsData);
+            overlay.find('ul.keywords-data').html(labelsData);
+            $('a#country-link').attr( 'href', '/country/' + lang );
+
+
+        }).fail( function() {
+            overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
+            overlay.find('ul.preview-data').empty();
+            overlay.find('div.center').empty();
+        });
+        openOverlay('#preview-info');
+    }
+
+    country.click(function() {
+        getLoud($(this).attr('id'));
+    });
+
+    */
 
 
     //////////////////////////////
@@ -189,8 +361,9 @@ jQuery(document).ready(function($) {
      */
     if( mapContainer.length > 0 )
     {
+        url = 'https://raw.githubusercontent.com/lrnzctld/eu19/master/data/keywords-preview.json';
         //the same json for every request
-        $.getJSON("https://raw.githubusercontent.com/lrnzctld/eu19/master/data/keywords-preview.json", function(data) {
+        $.getJSON(url, function(data) {
             previewData = data;
         }).fail( function() {
             previewData = null;
@@ -221,8 +394,6 @@ jQuery(document).ready(function($) {
             openOverlay('#preview-info');
         });
     }
-
-
     /**
      * map Trackers
      */
@@ -276,10 +447,10 @@ jQuery(document).ready(function($) {
     {
         var items = [],
             slug = searchPage.attr('data-lang'),
-            url = 'https://something.com/lang/' + slug.toLowerCase();
+            url = "https://gist.githubusercontent.com/vecna/b3aed1224d8873e58f80f1c4705ce94c/raw/cb4bea12b4de951ccd2403cc8b74608e864ba1fa/topk-IT.json";
 
         //todo: use "slug" in place of sample data
-        $.getJSON("https://gist.githubusercontent.com/vecna/b3aed1224d8873e58f80f1c4705ce94c/raw/cb4bea12b4de951ccd2403cc8b74608e864ba1fa/topk-IT.json", function (data) {
+        $.getJSON(url, function (data) {
             $.each(data, function (key, val) {
                 items.push("<li id='" + key + "' class='keyword-element' data-value='" + val['label'] + "'><a href='/country/{{ urlize .Title }}/#" + val['label'] + "'>" + val['label'] + "</a> " + "(" + val['count'] + ")</li>");
             });
@@ -298,7 +469,7 @@ jQuery(document).ready(function($) {
             var ref = $(this).attr('data-value');
             e.preventDefault();
             removeLocationHash();
-            window.location.href += '#'+ref.replace(/\s+/g, '-').toLowerCase();
+            window.location.href += '#'+ref.replace(/\s+/g, '-');
             location.reload();
         });
     }
@@ -314,7 +485,7 @@ jQuery(document).ready(function($) {
     mainForm.submit( function(e) {
         e.preventDefault();
         var lang = countrySelect.val(),
-            keyword = keywordInput.val();
+            keyword = formatString(keywordInput.val());
         if( keyword == '' || keyword == null ) {
             $('.error').remove();
             return  $('<p class="error"><span>Please, type a keyword</span></p>').appendTo(mainForm);
@@ -323,13 +494,13 @@ jQuery(document).ready(function($) {
     });
     singleForm.submit( function(e) {
         e.preventDefault();
-        var keyword = keywordInput.val();
+        var keyword = formatString(keywordInput.val());
         if( keyword == '' || keyword == null ) {
             $('.error').remove();
             return  $('<p class="error"><span>Please, type a keyword</span></p>').appendTo(singleForm);
         }
         removeLocationHash();
-        window.location.href += '#'+keyword.replace(/\s+/g, '-').toLowerCase();
+        window.location.href += '#'+keyword;
         location.reload();
     });
     /**
@@ -344,7 +515,7 @@ jQuery(document).ready(function($) {
 
 
     //////////////////////////////
-    // UI ELEMETNTS
+    // UI ELEMENTS
     //////////////////////////////
 
     /**

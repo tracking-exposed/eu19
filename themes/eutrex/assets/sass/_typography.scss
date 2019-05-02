@@ -234,6 +234,9 @@ figcaption, .footnotes li {
   background-position: right 1px !important;
   background-size: 20px !important;
 }
+.break {
+  word-break: break-all;
+}
 
 /* --------------------------------------------------
 ## Entry  formatting
