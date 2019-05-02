@@ -5,27 +5,23 @@ draft: true
 ---
 
 # My Diet
-
-other possible titles:
-myInfo, myFbInfo, DietTracker, SocialHealth, fbInfo, Fitbook, knowyourself, knowyourhabits, healthmonitor, infodiet..
-
-
-### WHY: fbTREX empowers users to monitor their information diet
-
-It has become evident in the recent years that Facebook does not offer us a complete or balanced information diet. For instance, if you have hundreds of connections on Facebook, yet you are repeatedly updated with content that is being shared by around 30 friends, you should have a right to know that Facebook is restricting your information diet, as well as why and how.
+empowering users to monitor their information diets
 
 Our *information diet* is increasingly determined by personalisation algorithms. We believe citizens have a right to know whether the information we are being fed truly nourishes our development and agency, at an individual and societal level.
 
-Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. This problem is compounded by Facebook’s massive network effect: we believe suggestions like “delete Facebook” are impractical when this leads to social isolation, or in general to the accumulation of small *social handicaps* for professionals or other individuals.
+Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
 With fbTREX, we can better monitor our information diets, and get insights into how they present to us different realities. Who is informing us, and about what topics? Are we being provided with misleading information or deceptive advertising?
 
 Promoting algorithmic diversity and our right to pick our own algorithms is a primary goal for fbTREX. We are creating a community to share, compare, improve, remix, and critique algorithms as autonomous and informed individuals deciding what kind of information is most appropriate for ourselves at any given time, and exploring potentially healthier alternatives for social interaction.
 
 
-### HOW: Steps to take to do this
+### How to become a power user and monitor you diet
 
 1. Install the fbTREX browser extension
+
+<img class="full" class="align-center" src="https://user-images.githubusercontent.com/40333748/56972602-9101d580-6b6b-11e9-8135-245ade98f919.png">
+
 Our extensions is available as a [Firefox Add-On](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and in the [Chrome Web Store](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).
 <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
 
