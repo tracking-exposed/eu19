@@ -28,8 +28,7 @@ You will get a csv that contains the posts you have seen, by which sources, thei
 
 After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app. You can also start browsing your data in a visual way directly with our interface by clicking on "Your Data".
 
-<table><tr><th>![image](https://user-images.githubusercontent.com/40333748/57097897-255d6b00-6d19-11e9-9dcd-6fe65e8c4d82.png)</th><th>
-![image](https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png)</th></tr><tr><td>![image](https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png)</td><td>![image](https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png)</td></tr></table>
+<table><tr><th><img src="https://user-images.githubusercontent.com/40333748/57097897-255d6b00-6d19-11e9-9dcd-6fe65e8c4d82.png"></th><th><img src="https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png"></th></tr><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png"></td></tr></table>
 
 ## Privacy
 
