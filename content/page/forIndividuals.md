@@ -4,7 +4,7 @@ date: 2019-05-02T11:22:29+01:00
 draft: true
 ---
 # fbTREX for Individuals
-### empowering users to monitor their information diets
+### Want to know more about how Facebook is influencing you?
 
 Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
@@ -13,7 +13,7 @@ With fbTREX, we can better monitor our information diets, and get insights into 
 By becoming an adopter of fbtrex, you are not just getting the insights Facebook does not offer you on your own activity, but you are also participanting in a user-driven initiative to make social media more accountable and transparent.
 
 
-### How to become a power user and know your habits
+### How to become a power user and be in control on your information diet
 
 ##### 1. Install the fbTREX browser extension
 
@@ -28,8 +28,6 @@ If you decide to join the EU19 initiative, researchers will only be able to see 
 
 <table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57098627-dadcee00-6d1a-11e9-8512-a2cfa48271e2.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57107827-63668900-6d31-11e9-89c7-e5ea0f9acf3c.png"></td></tr></table>
   
-
-
 
 ##### 3. Make visualizations and get insights
 
