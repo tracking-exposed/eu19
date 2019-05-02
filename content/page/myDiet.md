@@ -11,6 +11,8 @@ Facebook’s personalisation algorithms have an impact on our lifestyles, priori
 
 With fbTREX, we can better monitor our information diets, and get insights into how they present to us different realities. Who is informing us, and about what topics? Are we being provided with misleading information or deceptive advertising?
 
+By becoming an adopter of fbtrex, you are participanting in a user-driven initiative to make social media more transparent.
+
 
 ## How to become a power user and know your habits
 
@@ -27,7 +29,7 @@ In the browser where you installed the extension, open Facebook. You will see a 
 There are two ways to download your data. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python interface, which you can install from our github repository. Another option is to directly get your data from the API: you can read the docs here.
 
 ### 4. Visualize and get insights
-After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app.
+After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app. You can also start browsing your data in a visual way directly with our interface by clicking on "Your Data".
 
 
 ## Privacy
