@@ -41,3 +41,5 @@ At tracking.exposed we **REALLY** care about privacy. That's why fbTREX prioriti
 
 #### Donate your digital body to science
 #### Install the fbTREX browser extension today!
+
+<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
