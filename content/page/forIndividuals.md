@@ -31,7 +31,8 @@ You will get a csv that contains the posts you have seen, by which sources, thei
 
 After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app. You can also start browsing your data in a visual way directly with our interface by clicking on "Your Data".
 
-<table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png"></td></tr></table>
+<table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png"></td></tr><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57106209-18e30d80-6d2d-11e9-80fe-7a5c94f29ddc.png"></td></tr></table>
+
 
 ### Privacy
 
