@@ -16,7 +16,7 @@ With fbTREX, we can better monitor our information diets, and get insights into 
 Promoting algorithmic diversity and our right to pick our own algorithms is a primary goal for fbTREX. We are creating a community to share, compare, improve, remix, and critique algorithms as autonomous and informed individuals deciding what kind of information is most appropriate for ourselves at any given time, and exploring potentially healthier alternatives for social interaction.
 
 
-## How to become a power user and monitor you diet
+## How to become a power user and know your habits
 
 ### 1. Install the fbTREX browser extension
 
