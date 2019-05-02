@@ -1,9 +1,10 @@
 ---
-title: "myDiet"
+title: "forIndividuals.md"
 date: 2019-05-02T11:22:29+01:00
 draft: true
 ---
-# empowering users to monitor their information diets
+# fbTREX for Individuals
+#### empowering users to monitor their information diets
 
 Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
@@ -26,7 +27,7 @@ You will get a csv that contains the posts you have seen, by which sources, thei
 <img src="https://user-images.githubusercontent.com/40333748/57098627-dadcee00-6d1a-11e9-8512-a2cfa48271e2.png">
 
 
-##### 3. Visualize and get insights
+##### 3. Make visualizations and get insights
 
 After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app. You can also start browsing your data in a visual way directly with our interface by clicking on "Your Data".
 
