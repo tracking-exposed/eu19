@@ -7,13 +7,9 @@ draft: true
 # My Diet
 ## empowering users to monitor their information diets
 
-Our *information diet* is increasingly determined by personalisation algorithms. We believe citizens have a right to know whether the information we are being fed truly nourishes our development and agency, at an individual and societal level.
-
 Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
 With fbTREX, we can better monitor our information diets, and get insights into how they present to us different realities. Who is informing us, and about what topics? Are we being provided with misleading information or deceptive advertising?
-
-Promoting algorithmic diversity and our right to pick our own algorithms is a primary goal for fbTREX. We are creating a community to share, compare, improve, remix, and critique algorithms as autonomous and informed individuals deciding what kind of information is most appropriate for ourselves at any given time, and exploring potentially healthier alternatives for social interaction.
 
 
 ## How to become a power user and know your habits
@@ -44,5 +40,5 @@ At tracking.exposed we **REALLY** care about privacy. That's why fbTREX prioriti
 * All research conducted must strictly aim at understanding social phenomena and algorithmic influence, you will never be the subject or object of any study.
 
 
-### Donate your digital body to science
-### Install the fbTREX browser extension today!
+#### Donate your digital body to science
+#### Install the fbTREX browser extension today!
