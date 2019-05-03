@@ -107,7 +107,7 @@ jQuery(document).ready(function($) {
         if( countryCode == 'dk' ) countryName = 'Denmark';
         if( countryCode == 'be' ) countryName = 'Belgium';
         if( countryCode == 'at' ) countryName = 'Austria';
-        if( countryCode == 'cz' ) countryName = 'Czechia';
+        if( countryCode == 'cs' ) countryName = 'Czech-republic';
         if( countryCode == 'sk' ) countryName = 'Slovakia';
         if( countryCode == 'lu' ) countryName = 'Luxembourg';
         if( countryCode == 'pt' ) countryName = 'Portugal';
@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
         if( countryCode == 'gr' ) countryName = 'Greece';
         if( countryCode == 'fi' ) countryName = 'Finland';
         if( countryCode == 'de' ) countryName = 'Germany';
-        if( countryCode == 'se' ) countryName = 'Sweden';
+        if( countryCode == 'sv' ) countryName = 'Sweden';
         if( countryCode == 'cy' ) countryName = 'Cyprus';
         if( countryCode == 'ie' ) countryName = 'Ireland';
         if( countryCode == 'hu' ) countryName = 'Hungary';
@@ -124,12 +124,12 @@ jQuery(document).ready(function($) {
         if( countryCode == 'lv' ) countryName = 'Latvia';
         if( countryCode == 'ro' ) countryName = 'Romania';
         if( countryCode == 'bg' ) countryName = 'Bulgaria';
-        if( countryCode == 'ee' ) countryName = 'Estonia';
+        if( countryCode == 'et' ) countryName = 'Estonia';
         if( countryCode == 'fr' ) countryName = 'France';
         if( countryCode == 'nl' ) countryName = 'Netherlands';
         if( countryCode == 'mt' ) countryName = 'Malta';
         if( countryCode == 'hr' ) countryName = 'Croatia';
-        if( countryCode == 'gb' ) countryName = 'Great Britain';
+        if( countryCode == 'gb' ) countryName = 'Great-Britain';
 
         return countryName;
     }
@@ -144,28 +144,34 @@ jQuery(document).ready(function($) {
         var langName = lang.toLowerCase(),
             langCode;
 
-        if( langName == 'italian' || langName == 'italy' )          langCode = 'it';
-        if( langName == 'bulgarian' || langName == 'bulgaria' )     langCode = 'bg';
-        if( langName == 'croatian' || langName == 'croatia' )       langCode = 'hr';
-        if( langName == 'czech' || langName == 'czech-republic' )   langCode = 'cs';
-        if( langName == 'danish' || langName == 'denmark' )         langCode = 'da';
-        if( langName == 'dutch' || langName == 'netherlands' )      langCode = 'nl';
-        if( langName == 'english' || langName == 'great-britain' )  langCode = 'en';
-        if( langName == 'estonian' || langName == 'estonia' )       langCode = 'et';
-        if( langName == 'finnish' || langName == 'finland' )        langCode = 'fi';
-        if( langName == 'french' || langName == 'france' )          langCode = 'fr';
-        if( langName == 'german' || langName == 'germany' )         langCode = 'de';
-        if( langName == 'greek' || langName == 'greece' )           langCode = 'gr'; //missing
-        if( langName == 'hungarian' || langName == 'hungary' )      langCode = 'hu';
-        if( langName == 'latvian' || langName == 'latvia' )         langCode = 'lv';
-        if( langName == 'lithuanian' || langName == 'lithuania' )   langCode = 'lt';
-        if( langName == 'polish' || langName == 'poland' )          langCode = 'pl';
-        if( langName == 'portuguese' || langName == 'portugal' )    langCode = 'pt';
-        if( langName == 'romanian' || langName == 'romania' )       langCode = 'ro';
-        if( langName == 'slovak' || langName == 'slovakia' )        langCode = 'sk';
-        if( langName == 'slovenian' || langName == 'slovenia' )     langCode = 'sl';
-        if( langName == 'spanish' || langName == 'spain' )          langCode = 'es';
-        if( langName == 'swedish' || langName == 'sweden' )         langCode = 'se'; //missing
+        if( langName == 'italian' || langName == 'italy' || langName == 'it' )          langCode = 'it';
+        if( langName == 'bulgarian' || langName == 'bulgaria' || langName == 'bg' )     langCode = 'bg';
+        if( langName == 'croatian' || langName == 'croatia' || langName == 'hr' )       langCode = 'hr';
+        if( langName == 'czech' || langName == 'czech-republic' || langName == 'cs' )   langCode = 'cs';
+        if( langName == 'danish' || langName == 'denmark' || langName == 'dk' )         langCode = 'da';
+        if( langName == 'dutch' || langName == 'netherlands' || langName == 'nl' )      langCode = 'nl';
+        if( langName == 'estonian' || langName == 'estonia' || langName == 'et' )       langCode = 'et';
+        if( langName == 'finnish' || langName == 'finland' || langName == 'fi' )        langCode = 'fi';
+        if( langName == 'french' || langName == 'france' || langName == 'fr' )          langCode = 'fr';
+        if( langName == 'french' || langName == 'luxembourg ' || langName == 'lu' )     langCode = 'fr';
+        if( langName == 'french' || langName == 'belgium' || langName == 'be' )         langCode = 'fr';
+        if( langName == 'german' || langName == 'germany' || langName == 'de' )         langCode = 'de';
+        if( langName == 'german' || langName == 'austria' || langName == 'at' )         langCode = 'de';
+        if( langName == 'hungarian' || langName == 'hungary' || langName == 'hu' )      langCode = 'hu';
+        if( langName == 'latvian' || langName == 'latvia' || langName == 'lv' )         langCode = 'lv';
+        if( langName == 'lithuanian' || langName == 'lithuania' || langName == 'lt' )   langCode = 'lt';
+        if( langName == 'polish' || langName == 'poland' || langName == 'pl' )          langCode = 'pl';
+        if( langName == 'portuguese' || langName == 'portugal' || langName == 'pt' )    langCode = 'pt';
+        if( langName == 'romanian' || langName == 'romania' || langName == 'ro' )       langCode = 'ro';
+        if( langName == 'slovak' || langName == 'slovakia' || langName == 'sk' )        langCode = 'sk';
+        if( langName == 'slovenian' || langName == 'slovenia' || langName == 'si' )     langCode = 'sl';
+        if( langName == 'spanish' || langName == 'spain' || langName == 'es' )          langCode = 'es';
+        if( langName == 'swedish' || langName == 'sweden' || langName == 'sv' )         langCode = 'sv';
+        if( langName == 'greek' || langName == 'greece' || langName == 'gr' )           langCode = 'el';
+        if( langName == 'greek' || langName == 'cyprus' || langName == 'cy' )           langCode = 'el';
+        if( langName == 'english' || langName == 'ireland' || langName == 'ie' )        langCode = 'en';
+        if( langName == 'english' || langName == 'great-britain' || langName == 'gb' )  langCode = 'en';
+        if( langName == 'english' || langName == 'malta' || langName == 'mt' )          langCode = 'en';
 
         return langCode;
     }
@@ -188,7 +194,7 @@ jQuery(document).ready(function($) {
         var url = 'https://facebook.tracking.exposed/api/v2/' + getLangCode(lang) + '/noogle/' + keyword + '/100-0',
             items = [];
 
-        console.log(lang+', '+url);
+        //console.log(lang+', '+url);
 
         $.getJSON(url, function (data) {
             $.each(data, function (key, val) {
@@ -300,6 +306,47 @@ jQuery(document).ready(function($) {
         });
     } //end doSearch function
 
+    /**
+     * Get country info for language
+     *
+     * @param lang
+     */
+    function getSummary( lang ) {
+
+        var langCode = getLangCode( lang ),
+            url = 'https://facebook.tracking.exposed/api/v2/' + langCode + '/langinfo';
+
+        //console.log(lang+', '+langCode+', '+url);
+
+        $.getJSON(url, function( data ) {
+
+            var i,
+                labelsArray = data['content']['most'],
+                timeWindow = data['content']['consideredHoursWindow'],
+                contributors = data['content']['contributors'],
+                totalLabels = data['content']['labelsCount'],
+                countryData= getCountryName( lang ),
+                languageData = langCode;
+
+            overlay.find('h3').html(countryData);
+            overlay.find('b.language-data').html(languageData);
+            overlay.find('b.contributors-data').html(contributors);
+            overlay.find('b.keywords-sum').html(totalLabels);
+            for ( i = 0; i < labelsArray.length; i++) {
+                label = labelsArray[i];
+                var labelRow = "<li id='" + label + "' class='keyword-element' data-value='" + label + "'><a href='/country/"  + getCountryName( lang).toLowerCase() + "/#" + formatString( label ) + "'>" + label + "</a></li>";
+                overlay.find('ul.keywords-data').append(labelRow);
+            }
+            $('a#country-link').attr( 'href', '/country/' + getCountryName( lang).toLowerCase() );
+
+        }).fail( function() {
+            overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
+            overlay.find('ul.preview-data').empty();
+            overlay.find('div.center').empty();
+        });
+        openOverlay('#preview-info');
+    }
+
 
 
     //////////////////////////////
@@ -352,107 +399,8 @@ jQuery(document).ready(function($) {
     }
 
 
-
-
-
-
-
-
-
-
-    /*
-     todo: fix map api
-     function getLoud( lang ) {
-
-     //console.log(lang.toLowerCase());
-
-     url = 'https://facebook.tracking.exposed/api/v2/' + lang.toLowerCase() + '/loud/10-1';
-
-     $.getJSON(url, function( data ) {
-
-     var countryData= getCountryName( lang ),
-     languageData = lang,
-     totalKeywordsData = 0;
-     //contributorsData = obj[0]['total'],
-     //totalKeywordsData = data['textsize'],
-     //labelsData = '<li>' + obj[0]['l'] + '</li> ';
-
-     $.each(data, function (key, val) {
-     var
-     contributorsData = val['contributors'],
-     keywordsData = val['textsize'],
-     totalKeywordsData = keywordsData,
-     labelsData = val['l'];
-     console.log(labelsData);
-     console.log(keywordsData);
-     });
-
-     console.log('tot: ' + totalKeywordsData);
-     //formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
-
-     overlay.find('h3').html(countryData);
-     overlay.find('b.language-data').html(languageData);
-     overlay.find('b.contributors-data').html(contributorsData);
-     overlay.find('b.keywords-sum').html(totalKeywordsData);
-     overlay.find('ul.keywords-data').html(labelsData);
-     $('a#country-link').attr( 'href', '/country/' + lang );
-
-
-     }).fail( function() {
-     overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
-     overlay.find('ul.preview-data').empty();
-     overlay.find('div.center').empty();
-     });
-     openOverlay('#preview-info');
-     }
-
-     country.click(function() {
-     getLoud($(this).attr('id'));
-     });
-
-     */
-
-
     /**
-     * map FaceBook data preview
-     */
-    if( mapContainer.length > 0 )
-    {
-        url = 'https://raw.githubusercontent.com/lrnzctld/eu19/master/data/keywords-preview.json';
-        //the same json for every request
-        $.getJSON(url, function(data) {
-            previewData = data;
-        }).fail( function() {
-            previewData = null;
-        });
-        //trigger on country map click
-        country.click(function() {
-            if ( !previewData ) {
-                overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
-                overlay.find('ul.preview-data').empty();
-                overlay.find('div.center').empty();
-            } else {
-                var code = $(this).attr('id'),
-                    obj = getObjects(previewData, 'lang', code),
-                    countryData= obj[0]['country'],
-                    languageData = obj[0]['language'],
-                    contributorsData = obj[0]['total'],
-                    totalKeywordsData = obj[0]['totalKeywords'],
-                    labelsData = obj[0]['labels'],
-                    formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
-
-                overlay.find('h3').html(countryData);
-                overlay.find('b.language-data').html(languageData);
-                overlay.find('b.contributors-data').html(contributorsData);
-                overlay.find('b.keywords-sum').html(totalKeywordsData);
-                overlay.find('ul.keywords-data').html(labelsData);
-                $('a#country-link').attr('href', '/country/'+formattedCountry);
-            }
-            openOverlay('#preview-info');
-        });
-    }
-    /**
-     * map Trackers
+     * todo: map Trackers
      */
     if( mapTrackersContainer.length > 0 )
     {
@@ -498,13 +446,12 @@ jQuery(document).ready(function($) {
     }
 
 
-
     //////////////////////////////
     // TRIGGERS
     //////////////////////////////
 
     /**
-     * home and single form trigger
+     * home form trigger
      */
     mainForm.submit( function(e) {
         e.preventDefault();
@@ -516,6 +463,10 @@ jQuery(document).ready(function($) {
         }
         window.location.href = '/language/' + lang + '/#' + keyword;
     });
+
+    /**
+     * single page form trigger
+     */
     singleForm.submit( function(e) {
         e.preventDefault();
         var keyword = formatString(keywordInput.val());
@@ -527,6 +478,14 @@ jQuery(document).ready(function($) {
         window.location.href += '#'+keyword;
         location.reload();
     });
+
+    /**
+     * Map trigger
+     */
+    country.click(function() {
+        getSummary( $(this).attr('id') );
+    });
+
     /**
      * Main trigger doSearch just loading the page
      */
