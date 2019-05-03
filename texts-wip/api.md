@@ -412,33 +412,33 @@ Returns a comma-separated-values file containing personal data of an user. `$YOU
     <td>displaySource</td>
     <td>The full string displayed above the post.</td>
     <td>string</td>
-    <td>`"Catalunya Diari"`</td>
+    <td>"Catalunya Diari"</td>
   </tr>
   <tr>
     <td>textsize</td>
     <td>Length of the text.</td>
     <td>integer</td>
-    <td>`171`</td>
+    <td>171</td>
   </tr>
   <tr>
     <td>texts</td>
     <td>List of texts for the impression. Contains translations but not comments.</td>
     <td>nested</td>
-    <td>`[
+    <td>[
       "Hello world.", "Also this."
-    ]`</td>
+    ]</td>
   </tr>
   <tr>
     <td>impressionTime</td>
     <td>Time in which the impression was collected/observed.</td>
     <td>string</td>
-    <td>`"2019-04-21T15:05:15.000Z"`</td>
+    <td>"2019-04-21T15:05:15.000Z"</td>
   </tr>
   <tr>
     <td>impressionOrder</td>
     <td>Order at which the impression appeared when scrolling the timeline.</td>
     <td>integer</td>
-    <td>`14`</td>
+    <td>14</td>
   </tr>
   <tr>
     <td>user</td>
