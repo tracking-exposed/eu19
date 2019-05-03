@@ -95,11 +95,12 @@ jQuery(document).ready(function($) {
     /**
      * Get full country name form country code
      *
-     * @param countryCode
+     * @param country
      * @returns {*}
      */
-    function getCountryName( countryCode ) {
-        var countryName;
+    function getCountryName( country ) {
+        var countryCode = country.toLowerCase(),
+            countryName;
 
         if( countryCode == 'it' ) countryName = 'Italy';
         if( countryCode == 'si' ) countryName = 'Slovenia';
@@ -136,24 +137,25 @@ jQuery(document).ready(function($) {
     /**
      * get lang code form language or country
      *
-     * @param langName
+     * @param lang
      * @returns {*}
      */
-    function getLangCode( langName ) {
-        var langCode;
+    function getLangCode( lang ) {
+        var langName = lang.toLowerCase(),
+            langCode;
 
         if( langName == 'italian' || langName == 'italy' )          langCode = 'it';
         if( langName == 'bulgarian' || langName == 'bulgaria' )     langCode = 'bg';
         if( langName == 'croatian' || langName == 'croatia' )       langCode = 'hr';
-        if( langName == 'czech' || langName == 'czech-republic' )   langCode = 'hr';
-        if( langName == 'danish' || langName == 'denmark' )         langCode = 'dk';
+        if( langName == 'czech' || langName == 'czech-republic' )   langCode = 'cs';
+        if( langName == 'danish' || langName == 'denmark' )         langCode = 'da';
         if( langName == 'dutch' || langName == 'netherlands' )      langCode = 'nl';
         if( langName == 'english' || langName == 'great-britain' )  langCode = 'en';
-        if( langName == 'estonian' || langName == 'estonia' )       langCode = 'ee';
+        if( langName == 'estonian' || langName == 'estonia' )       langCode = 'et';
         if( langName == 'finnish' || langName == 'finland' )        langCode = 'fi';
         if( langName == 'french' || langName == 'france' )          langCode = 'fr';
         if( langName == 'german' || langName == 'germany' )         langCode = 'de';
-        if( langName == 'greek' || langName == 'greece' )           langCode = 'gr';
+        if( langName == 'greek' || langName == 'greece' )           langCode = 'gr'; //missing
         if( langName == 'hungarian' || langName == 'hungary' )      langCode = 'hu';
         if( langName == 'latvian' || langName == 'latvia' )         langCode = 'lv';
         if( langName == 'lithuanian' || langName == 'lithuania' )   langCode = 'lt';
@@ -161,9 +163,9 @@ jQuery(document).ready(function($) {
         if( langName == 'portuguese' || langName == 'portugal' )    langCode = 'pt';
         if( langName == 'romanian' || langName == 'romania' )       langCode = 'ro';
         if( langName == 'slovak' || langName == 'slovakia' )        langCode = 'sk';
-        if( langName == 'slovenian' || langName == 'slovenia' )     langCode = 'si';
+        if( langName == 'slovenian' || langName == 'slovenia' )     langCode = 'sl';
         if( langName == 'spanish' || langName == 'spain' )          langCode = 'es';
-        if( langName == 'swedish' || langName == 'sweden' )         langCode = 'se';
+        if( langName == 'swedish' || langName == 'sweden' )         langCode = 'se'; //missing
 
         return langCode;
     }
@@ -186,7 +188,7 @@ jQuery(document).ready(function($) {
         var url = 'https://facebook.tracking.exposed/api/v2/' + getLangCode(lang) + '/noogle/' + keyword + '/100-0',
             items = [];
 
-        //console.log(lang+', '+url);
+        console.log(lang+', '+url);
 
         $.getJSON(url, function (data) {
             $.each(data, function (key, val) {
@@ -299,62 +301,117 @@ jQuery(document).ready(function($) {
     } //end doSearch function
 
 
-    /*
-    todo: fix map api
-    function getLoud( lang ) {
-
-        //console.log(lang.toLowerCase());
-
-        url = 'https://facebook.tracking.exposed/api/v2/' + lang.toLowerCase() + '/loud/10-1';
-
-        $.getJSON(url, function( data ) {
-
-            var countryData= getCountryName( lang ),
-                languageData = lang,
-                totalKeywordsData = 0;
-                //contributorsData = obj[0]['total'],
-                //totalKeywordsData = data['textsize'],
-                //labelsData = '<li>' + obj[0]['l'] + '</li> ';
-
-            $.each(data, function (key, val) {
-                var
-                    contributorsData = val['contributors'],
-                    keywordsData = val['textsize'],
-                    totalKeywordsData = keywordsData,
-                    labelsData = val['l'];
-                console.log(labelsData);
-                console.log(keywordsData);
-            });
-
-            console.log('tot: ' + totalKeywordsData);
-                //formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
-
-            overlay.find('h3').html(countryData);
-            overlay.find('b.language-data').html(languageData);
-            overlay.find('b.contributors-data').html(contributorsData);
-            overlay.find('b.keywords-sum').html(totalKeywordsData);
-            overlay.find('ul.keywords-data').html(labelsData);
-            $('a#country-link').attr( 'href', '/country/' + lang );
-
-
-        }).fail( function() {
-            overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
-            overlay.find('ul.preview-data').empty();
-            overlay.find('div.center').empty();
-        });
-        openOverlay('#preview-info');
-    }
-
-    country.click(function() {
-        getLoud($(this).attr('id'));
-    });
-
-    */
-
 
     //////////////////////////////
     // PUBLIC FUNCTIONS
     //////////////////////////////
+
+    /**
+     *  most used keywords data
+     */
+    if( searchPage.length > 0 )
+    {
+        var i,
+            label,
+            slug = searchPage.attr('data-lang'),
+            lang_info = getLangCode(slug),
+            url = 'https://facebook.tracking.exposed/api/v2/' + lang_info + '/langinfo';
+
+        $.getJSON(url, function (data) {
+
+            var labelsArray = data['content']['most'],
+                timeWindow = data['content']['consideredHoursWindow'],
+                contributors = data['content']['contributors'],
+                totalLabels = data['content']['labelsCount'];
+
+            $('b.contributors-data').html(contributors);
+            $('b.time-window').html(timeWindow);
+            $('b.total-key').html(totalLabels);
+
+            for ( i = 0; i < labelsArray.length; i++) {
+                label = labelsArray[i];
+                var labelRow = "<li id='" + label + "' class='keyword-element' data-value='" + label + "'><a href='/" + label + "'>" + label + "</a></li>";
+                $('ul#most-keyword').append(labelRow);
+            }
+
+        }).fail( function() {
+            preloaderKey.hide();
+            $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(keywords);
+        }).done( function() {
+            preloaderKey.hide();
+        });
+
+        // reload page if click on keyword
+        $(document).on('click',".keyword-element",function (e) {
+            var ref = $(this).attr('data-value');
+            e.preventDefault();
+            removeLocationHash();
+            window.location.href += '#'+ref.replace(/\s+/g, '-');
+            location.reload();
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+    /*
+     todo: fix map api
+     function getLoud( lang ) {
+
+     //console.log(lang.toLowerCase());
+
+     url = 'https://facebook.tracking.exposed/api/v2/' + lang.toLowerCase() + '/loud/10-1';
+
+     $.getJSON(url, function( data ) {
+
+     var countryData= getCountryName( lang ),
+     languageData = lang,
+     totalKeywordsData = 0;
+     //contributorsData = obj[0]['total'],
+     //totalKeywordsData = data['textsize'],
+     //labelsData = '<li>' + obj[0]['l'] + '</li> ';
+
+     $.each(data, function (key, val) {
+     var
+     contributorsData = val['contributors'],
+     keywordsData = val['textsize'],
+     totalKeywordsData = keywordsData,
+     labelsData = val['l'];
+     console.log(labelsData);
+     console.log(keywordsData);
+     });
+
+     console.log('tot: ' + totalKeywordsData);
+     //formattedCountry = countryData.replace(/\s+/g, '-').toLowerCase();
+
+     overlay.find('h3').html(countryData);
+     overlay.find('b.language-data').html(languageData);
+     overlay.find('b.contributors-data').html(contributorsData);
+     overlay.find('b.keywords-sum').html(totalKeywordsData);
+     overlay.find('ul.keywords-data').html(labelsData);
+     $('a#country-link').attr( 'href', '/country/' + lang );
+
+
+     }).fail( function() {
+     overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
+     overlay.find('ul.preview-data').empty();
+     overlay.find('div.center').empty();
+     });
+     openOverlay('#preview-info');
+     }
+
+     country.click(function() {
+     getLoud($(this).attr('id'));
+     });
+
+     */
+
 
     /**
      * map FaceBook data preview
@@ -440,39 +497,6 @@ jQuery(document).ready(function($) {
         });
     }
 
-    /**
-     *  most used keywords data
-     */
-    if( searchPage.length > 0 )
-    {
-        var items = [],
-            slug = searchPage.attr('data-lang'),
-            url = "https://gist.githubusercontent.com/vecna/b3aed1224d8873e58f80f1c4705ce94c/raw/cb4bea12b4de951ccd2403cc8b74608e864ba1fa/topk-IT.json";
-
-        //todo: use "slug" in place of sample data
-        $.getJSON(url, function (data) {
-            $.each(data, function (key, val) {
-                items.push("<li id='" + key + "' class='keyword-element' data-value='" + val['label'] + "'><a href='/country/{{ urlize .Title }}/#" + val['label'] + "'>" + val['label'] + "</a> " + "(" + val['count'] + ")</li>");
-            });
-            $("<ul/>", {
-                html: items.join("")
-            }).appendTo(keywords);
-        }).fail( function() {
-            preloaderKey.hide();
-            $('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(keywords);
-        }).done( function() {
-            preloaderKey.hide();
-        });
-
-        // reload page if click on keyword
-        $(document).on('click',".keyword-element",function (e) {
-            var ref = $(this).attr('data-value');
-            e.preventDefault();
-            removeLocationHash();
-            window.location.href += '#'+ref.replace(/\s+/g, '-');
-            location.reload();
-        });
-    }
 
 
     //////////////////////////////
