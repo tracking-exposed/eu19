@@ -3,18 +3,16 @@ title: "Why join fbTREX?"
 date: 2019-05-02T11:22:29+01:00
 draft: true
 ---
-# Every facebook user can benefit of this
-### Want to know more about how Facebook shape your perception?
+# Every facebook user can benefit from fbTREX
+### Want to know more about how Facebook shapes your perception?
 
-Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and ultimately the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
+Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
-By installing fbTREX browser extension, you can get insights into how they present to us different realities. We, as researcher, commits to analyze social phenomenon and not individual behavior. We all have to understand how algorithms interact with us, and because of their personalized nature, only with a collective distributed observation we can get a grasp. 
+By installing the fbTREX browser extension, you can get insights into how they present different realities to us. We, as researchers, commit to analyze social phenomena and not individual behaviour. We all need to understand how algorithms interact with us. Because of their personalized nature, and the opacity of Facebook, only with a collective distributed observation we can get a grasp. 
 
-Join us if you want to know who is informing you, which topics Facebook prefers, what is kept away from you despite we are subscribed to a page or a friend.
+Join us if you want to know who is informing you, which topics Facebook prefers, what is kept away from you despite your subscriptions to a page or a friend. By becoming an adopter of fbtrex, you are not just getting the insights Facebook does not offer you on your own activity, but you are also participanting in a user-driven initiative to make social media more accountable and transparent.
 
-By becoming an adopter of fbtrex, you are not just getting the insights Facebook does not offer you on your own activity, but you are also participanting in a user-driven initiative to make social media more accountable and transparent.
-
-### How to become a power user and be in control on your information diet
+### How to become a power user and be in control of your information diet
 
 ##### 1. Install the fbTREX browser extension
 
@@ -23,9 +21,8 @@ It's easy to install for both [Firefox](https://addons.mozilla.org/en-US/firefox
 
 ##### 2. Download your data
 
-You will get a csv that contains the posts you have seen, by which sources, their content, as well as other metadata. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python library, which you can install from our [github repository](https://github.com/tracking-exposed/dashboard). Another option is to directly get your data from the API: you can [read the docs here](https://github.com/tracking-exposed/eu19/blob/master/texts-wip/api.md).
+You will get a csv that contains the posts you have seen, by which sources, their content, as well as other metadata. You can either download a csv by clicking on "Your Data" above any post in Facebook or use our python library, which you can install from our [github repository](https://github.com/tracking-exposed/dashboard). Another option is to directly get your data from the API: you can [read the docs here](https://github.com/tracking-exposed/eu19/blob/master/texts-wip/api.md).
 If you decide to join the EU19 initiative, researchers will only be able to see the posts from the News Media pages that will be compared.
-
 
 <table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57098627-dadcee00-6d1a-11e9-8512-a2cfa48271e2.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57107827-63668900-6d31-11e9-89c7-e5ea0f9acf3c.png"></td></tr></table>
   
@@ -46,7 +43,7 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 
 At tracking.exposed, is not our goal do business with data nor link the data to any actual individual. All the submission in fbTREX database are anonymous, and linked to a private cryptographic key generated at the time you install the browser extension. The owner of a private key has control of the data signed and sent by that key.
 
-Access to the full fbTREX dataset is strictly limited, and the usage of this data are documented. The goal of this collection is to study social media, not the subjects participating to the initiative.
+Access to the full fbTREX dataset is strictly limited, and the usage of this data are well documented. The goal of this collection is to study social media websites, and **not the subjects** participating to the initiative.
 
 Still, this information can contain some personally identifying information, for example, the sequence of people who populates a timeline, might reveal after some extensive analysis, who is using the tool. To avoid this, the timeline is for us a protected information, and only the legitimate owner can have access to it.
 
