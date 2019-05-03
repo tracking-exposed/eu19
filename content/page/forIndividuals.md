@@ -22,7 +22,7 @@ It's easy to install for both [Firefox](https://addons.mozilla.org/en-US/firefox
 
 ##### 2. Download your data
 
-You will get a csv that contains the posts you have seen, by which sources, their content, as well as other metadata. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python library, which you can install from our github repository. Another option is to directly get your data from the API: you can read the docs here.
+You will get a csv that contains the posts you have seen, by which sources, their content, as well as other metadata. You can either download a csv by clicking on "Your Data" above any post in facebook or use our python library, which you can install from our [github repository](https://github.com/tracking-exposed/dashboard). Another option is to directly get your data from the API: you can [read the docs here](https://github.com/tracking-exposed/eu19/blob/master/texts-wip/api.md).
 If you decide to join the EU19 initiative, researchers will only be able to see the posts from the News Media pages that will be compared.
 
 
@@ -36,6 +36,11 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 <table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png"></td></tr><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57106209-18e30d80-6d2d-11e9-80fe-7a5c94f29ddc.png"></td></tr></table>
 
 
+### Install the fbTREX browser extension today!
+
+<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
+
+
 ### Privacy
 
 At tracking.exposed we **REALLY** care about privacy. That's why fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the public data that Facebook provides them. The goal of this collection is to study social media, not the subjects participating to the initiative.
@@ -46,8 +51,3 @@ Still, this information can contain a lot of personally identifying information 
 * You have full control over your data, and may delete it at any time.
 * No one will have access to your data unless you expressly grant them access. You will have to opt-in to any third-party, including research groups, that you may want to interact with.
 * All research conducted must strictly aim at understanding social phenomena and algorithmic influence, you will never be the subject or object of any study.
-
-
-### Install the fbTREX browser extension today!
-
-<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
