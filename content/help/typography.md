@@ -4,12 +4,28 @@ date: 2019-01-25T13:56:58+01:00
 draft: false
 ---
 
+
 # h1 Heading
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
 ##### h5 Heading
 ###### h6 Heading
+
+
+## Custom widget
+**Boxes widget** has two param: "color" and "text"
+
+*No color* variable means Blue background
+{{< boxes text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" >}}
+
+`red` color variable
+{{< boxes color="red" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" >}}
+
+`yellow` color variable
+{{< boxes color="yellow" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" >}}
+
+
 
 
 ## Horizontal Rules

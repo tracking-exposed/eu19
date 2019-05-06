@@ -1,7 +1,7 @@
 ---
 title: "Why join fbTREX?"
 date: 2019-05-02T11:22:29+01:00
-draft: true
+draft: false
 ---
 # Every facebook user can benefit from fbTREX
 ### Want to know more about how Facebook shapes your perception?
@@ -17,7 +17,16 @@ Join us if you want to know who is informing you, which topics Facebook prefers,
 ##### 1. Install the fbTREX browser extension
 
 It's easy to install for both [Firefox](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and [Google Chrome](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).<br>
-<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
+   <div class="column_1-2 center">
+        <div class="icon-big firefox-icon"></div><br />
+        <p><a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/" target="_blank" class="btn"><b>Download for FireFox</b></a></p>
+    </div>
+    <div class="column_1-2 center right omega">
+        <div class="icon-big chrome-icon"></div><br />
+         <p><a href="https://chrome.google.com/webstore/detail/trackingexposed-investiga/fnknflppefckhjhecbfigfhlcbmcnmmi" target="_blank" class="btn"><b>Download for Chrome</b></a></p>
+    </div>
+
+<!--<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>-->
 
 ##### 2. Download your data
 
@@ -36,6 +45,14 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 
 ### Install the fbTREX browser extension today!
 
+  <div class="column_1-2 center">
+        <div class="icon-big firefox-icon"></div><br />
+        <p><a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/" target="_blank" class="btn"><b>Download for FireFox</b></a></p>
+    </div>
+    <div class="column_1-2 center right omega">
+        <div class="icon-big chrome-icon"></div><br />
+         <p><a href="https://chrome.google.com/webstore/detail/trackingexposed-investiga/fnknflppefckhjhecbfigfhlcbmcnmmi" target="_blank" class="btn"><b>Download for Chrome</b></a></p>
+    </div>
 <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
 
 
