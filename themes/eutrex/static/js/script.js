@@ -50,14 +50,13 @@ jQuery(document).ready(function($) {
     }
 
     /**
-     * Check if property exist in Json array
+     * Check if property exist in nested Json array
      *
      * @param obj
      * @returns {boolean}
      */
     function checkNested(obj /*, level1, level2, ... levelN*/) {
         var args = Array.prototype.slice.call(arguments, 1);
-
         for (var i = 0; i < args.length; i++) {
             if (!obj || !obj.hasOwnProperty(args[i])) {
                 return false;
@@ -68,10 +67,10 @@ jQuery(document).ready(function($) {
     }
 
     /**
-     * Return 0 for undefined val
+     * Return 0 for undefined val in Json array
      *
      * @param val
-     * @returns {*}
+     * @returns {val}
      */
     function preventUndefined( val ) {
         var output;
@@ -135,7 +134,7 @@ jQuery(document).ready(function($) {
     }
 
     /**
-     * get lang code form language or country
+     * get language code form language, country name or country code
      *
      * @param lang
      * @returns {*}
@@ -181,7 +180,7 @@ jQuery(document).ready(function($) {
      *
      * @param keyword
      * @param lang
-     * @return push html into #results
+     * @return {html}
      */
     function doSearch( keyword, lang ){
 
@@ -304,12 +303,13 @@ jQuery(document).ready(function($) {
                 );
             }
         });
-    } //end doSearch function
+    }
 
     /**
-     * Get country info for language
+     * Get info summary from language
      *
      * @param lang
+     * @return {html}
      */
     function getSummary( lang ) {
 
@@ -319,7 +319,6 @@ jQuery(document).ready(function($) {
         //console.log(lang+', '+langCode+', '+url);
 
         $.getJSON(url, function( data ) {
-
             var i,
                 labelsArray = data['content']['most'],
                 timeWindow = data['content']['consideredHoursWindow'],
@@ -347,20 +346,15 @@ jQuery(document).ready(function($) {
         openOverlay('#preview-info');
     }
 
-
-
-    //////////////////////////////
-    // PUBLIC FUNCTIONS
-    //////////////////////////////
-
     /**
-     *  most used keywords data
+     * Get most used keyswords
+     *
+     *  @param slug
+     *  @return {html}
      */
-    if( searchPage.length > 0 )
-    {
+    function getMostUsedKeys( slug ) {
         var i,
             label,
-            slug = searchPage.attr('data-lang'),
             lang_info = getLangCode(slug),
             url = 'https://facebook.tracking.exposed/api/v2/' + lang_info + '/langinfo';
 
@@ -387,17 +381,7 @@ jQuery(document).ready(function($) {
         }).done( function() {
             preloaderKey.hide();
         });
-
-        // reload page if click on keyword
-        $(document).on('click',".keyword-element",function (e) {
-            var ref = $(this).attr('data-value');
-            e.preventDefault();
-            removeLocationHash();
-            window.location.href += '#'+ref.replace(/\s+/g, '-');
-            location.reload();
-        });
     }
-
 
     /**
      * todo: map Trackers
@@ -413,7 +397,6 @@ jQuery(document).ready(function($) {
 
             //remove old content from overlay
             overlay.find('.news-sites').empty();
-            //todo: use "url" in place of sample data
             $.getJSON("https://gist.githubusercontent.com/vecna/7cfbccfbea1e569ce121176117a541b9/raw/0ab7abc042548a26c839349b8e5d347393c06b5c/mock.json", function (data) {
                 $.each(data, function (key, val) {
 
@@ -480,10 +463,30 @@ jQuery(document).ready(function($) {
     });
 
     /**
-     * Map trigger
+     * Map info trigger
      */
     country.click(function() {
-        getSummary( $(this).attr('id') );
+        overlay.find('ul.keywords-data').empty();
+        var slug = $(this).attr('id');
+        getSummary( slug );
+    });
+
+    /**
+     *  Most used keywords data
+     */
+    if( searchPage.length > 0 ) {
+        var slug = searchPage.attr('data-lang');
+        getMostUsedKeys( slug );
+    }
+    /**
+     * Reload page if click on most used keyword
+     */
+    $(document).on('click',".keyword-element",function (e) {
+        var ref = $(this).attr('data-value');
+        e.preventDefault();
+        removeLocationHash();
+        window.location.href += '#'+ref;
+        location.reload();
     });
 
     /**
