@@ -478,21 +478,22 @@ jQuery(document).ready(function($) {
         var slug = searchPage.attr('data-lang');
         getMostUsedKeys( slug );
     }
-    /**
-     * Reload page if click on most used keyword
-     */
-    $(document).on('click',".keyword-element",function (e) {
-        var ref = $(this).attr('data-value');
-        e.preventDefault();
-        removeLocationHash();
-        window.location.href += '#'+ref;
-        location.reload();
-    });
 
-    /**
-     * Main trigger doSearch just loading the page
-     */
     if( searchPage.length > 0 ) {
+        /**
+         * Reload page if click on most used keyword
+         */
+        $(document).on('click',".keyword-element",function (e) {
+            var ref = $(this).attr('data-value');
+            e.preventDefault();
+            removeLocationHash();
+            window.location.href += '#'+ref;
+            location.reload();
+        });
+        
+        /**
+         * Main trigger doSearch just loading the page
+         */
         var keyword = window.location.hash.substring(1),
             lang = searchPage.attr('data-lang').toLowerCase();
         keywordInput.val(keyword);
