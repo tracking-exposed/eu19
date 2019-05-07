@@ -42,6 +42,11 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 
 <table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png"></td></tr><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57106209-18e30d80-6d2d-11e9-80fe-7a5c94f29ddc.png"></td></tr></table>
 
+##### 4. (Optionally) Compare with other friends
+
+1. First, download your csv(s) and share them using email or any other way you can think of.
+2. Open both csv(s), select all the content of the second (excluding the first row), copy it, and paste it under your first one. You can repeat this process multiple times to concatenate more csvs.
+3. Use the resulting csv in Google Sheets or in  RAWgraphs.io.
 
 ### Install the fbTREX browser extension today!
 
@@ -53,7 +58,6 @@ After you have downloaded and/or transformed your data, you can visualize it usi
         <div class="icon-big chrome-icon"></div><br />
          <p><a href="https://chrome.google.com/webstore/detail/trackingexposed-investiga/fnknflppefckhjhecbfigfhlcbmcnmmi" target="_blank" class="btn"><b>Download for Chrome</b></a></p>
     </div>
-<a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/"><img src="https://facebook.tracking.exposed/images/AMO-button_1.png"></a><a target="_blank" href="https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi"><img src="https://facebook.tracking.exposed/images/ChromeWebStore_Badge_v2_206x58.png"></a>
 
 
 ### Our interest and your rights (a.k.a, privacy)
