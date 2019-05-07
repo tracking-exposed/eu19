@@ -16,7 +16,6 @@ Join us if you want to know who is informing you, which topics Facebook prefers,
 
 ##### 1. Install the fbTREX browser extension
 
-It's easy to install for both [Firefox](https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/) and [Google Chrome](https://chrome.google.com/webstore/detail/facebooktrackingexposed/fnknflppefckhjhecbfigfhlcbmcnmmi).<br>
    <div class="column_1-2 center">
         <div class="icon-big firefox-icon"></div><br />
         <p><a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-tracking-exposed/" target="_blank" class="btn"><b>Download for FireFox</b></a></p>
