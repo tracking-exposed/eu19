@@ -52,7 +52,32 @@ If you decide to join the EU19 initiative, researchers will only be able to see 
 
 After you have downloaded and/or transformed your data, you can visualize it using a spreadsheet software like Excel or LibreOffice Calc. You can also use Tableau, Rawgraphs.io or any other data visualization app. You can also start browsing your data in a visual way directly with our interface by clicking on "Your Data".
 
-<table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png"></td></tr><tr><td><img src="https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57106209-18e30d80-6d2d-11e9-80fe-7a5c94f29ddc.png"></td></tr></table>
+<table>
+   <tr>
+      <td>
+         <a href="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57097671-9f412480-6d18-11e9-8edd-ee027d4bceaf.png" alt="Google Sheets: Count of posts per source for a user.">
+         </a>
+      </td>
+      <td>
+         <a href="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57097644-8a649100-6d18-11e9-9ec5-777527d90ca0.png" alt="Google Sheets: distribution of posts between sponsored/organic.">
+         </a>
+      </td>
+   </tr>
+   <tr>
+      <td>
+         <a href="https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57097704-b3852180-6d18-11e9-84f1-590c59a17ba5.png" alt="Count posts per type of post.">
+         </a>
+      </td>
+      <td>
+         <a href="https://user-images.githubusercontent.com/40333748/57106209-18e30d80-6d2d-11e9-80fe-7a5c94f29ddc.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57106209-18e30d80-6d2d-11e9-80fe-7a5c94f29ddc.png" alt="Google Sheets: Count of posts per source (sponsored posts only).">
+         </a>
+      </td>
+   </tr>
+</table>
 
 ##### 4. (Optionally) Compare with other friends
 
@@ -62,7 +87,17 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 <table>
    <tr>
       <td>
-         <img src="https://user-images.githubusercontent.com/40333748/57306578-5d7ef800-70e3-11e9-83b3-4e8fe59e4ff1.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57306586-62dc4280-70e3-11e9-974d-a7dcf0660275.png"></td></tr></table>
+         <a href="https://user-images.githubusercontent.com/40333748/57306578-5d7ef800-70e3-11e9-83b3-4e8fe59e4ff1.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57306578-5d7ef800-70e3-11e9-83b3-4e8fe59e4ff1.png" alt="RAWgraphs.io: Comparison of sources per number of posts between two users (left and right), sponsored only.">
+         </a>
+      </td>
+      <td>
+         <a href="https://user-images.githubusercontent.com/40333748/57306586-62dc4280-70e3-11e9-974d-a7dcf0660275.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57306586-62dc4280-70e3-11e9-974d-a7dcf0660275.png" alt="RAWgraphs.io: Comparison of sources per number of posts between two users (left and right), organic only.">
+         </a>
+      </td>
+   </tr>
+</table>
 
 ### Install the fbTREX browser extension today!
 
