@@ -47,6 +47,7 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 1. First, download your csv(s) and share them using email or any other way you can think of.
 2. Open both csv(s), select all the content of the second (excluding the first row), copy it, and paste it under your first one. You can repeat this process multiple times to concatenate more csvs.
 3. Use the resulting csv in Google Sheets or in  RAWgraphs.io.
+<table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57306578-5d7ef800-70e3-11e9-83b3-4e8fe59e4ff1.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57306586-62dc4280-70e3-11e9-974d-a7dcf0660275.png"></td></tr></table>
 
 ### Install the fbTREX browser extension today!
 
