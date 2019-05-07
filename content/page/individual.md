@@ -32,7 +32,20 @@ Join us if you want to know who is informing you, which topics Facebook prefers,
 You will get a csv that contains the posts you have seen, by which sources, their content, as well as other metadata. You can either download a csv by clicking on "Your Data" above any post in Facebook or use our python library, which you can install from our [github repository](https://github.com/tracking-exposed/dashboard). Another option is to directly get your data from the API: you can [read the docs here](https://github.com/tracking-exposed/eu19/blob/master/texts-wip/api.md).
 If you decide to join the EU19 initiative, researchers will only be able to see the posts from the News Media pages that will be compared.
 
-<table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57098627-dadcee00-6d1a-11e9-8512-a2cfa48271e2.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57107827-63668900-6d31-11e9-89c7-e5ea0f9acf3c.png"></td></tr></table>
+<table>
+   <tr>
+      <td>
+         <a href="https://user-images.githubusercontent.com/40333748/57098627-dadcee00-6d1a-11e9-8512-a2cfa48271e2.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57098627-dadcee00-6d1a-11e9-8512-a2cfa48271e2.png" alt="The csv you get when you download your data.">
+         </a>
+      </td>
+      <td>
+         <a href="https://user-images.githubusercontent.com/40333748/57107827-63668900-6d31-11e9-89c7-e5ea0f9acf3c.png" target="_blank">
+            <img src="https://user-images.githubusercontent.com/40333748/57107827-63668900-6d31-11e9-89c7-e5ea0f9acf3c.png" alt="When you share data in the context of EU19, researcher will only see the content from the sources specified in the opt-in page.">
+         </a>
+      </td>
+   </tr>
+</table>
   
 
 ##### 3. Make visualizations and get insights
@@ -46,7 +59,10 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 1. First, download your csv(s) and share them using email or any other way you can think of.
 2. Open both csv(s), select all the content of the second (excluding the first row), copy it, and paste it under your first one. You can repeat this process multiple times to concatenate more csvs.
 3. Use the resulting csv in Google Sheets or in  RAWgraphs.io.
-<table><tr><td><img src="https://user-images.githubusercontent.com/40333748/57306578-5d7ef800-70e3-11e9-83b3-4e8fe59e4ff1.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57306586-62dc4280-70e3-11e9-974d-a7dcf0660275.png"></td></tr></table>
+<table>
+   <tr>
+      <td>
+         <img src="https://user-images.githubusercontent.com/40333748/57306578-5d7ef800-70e3-11e9-83b3-4e8fe59e4ff1.png"></td><td><img src="https://user-images.githubusercontent.com/40333748/57306586-62dc4280-70e3-11e9-974d-a7dcf0660275.png"></td></tr></table>
 
 ### Install the fbTREX browser extension today!
 
