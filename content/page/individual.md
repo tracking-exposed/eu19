@@ -83,7 +83,7 @@ After you have downloaded and/or transformed your data, you can visualize it usi
 
 1. First, download your csv(s) and share them using email or any other way you can think of.
 2. Open both csv(s), select all the content of the second (excluding the first row), copy it, and paste it under your first one. You can repeat this process multiple times to concatenate more csvs.
-3. Use the resulting csv in Google Sheets or in  RAWgraphs.io.
+3. Use the resulting csv in Google Sheets or in Rawgraphs.io; The examples below are an example on how two friends can compare each other, but you can play with more visualizations.
 <table>
    <tr>
       <td>

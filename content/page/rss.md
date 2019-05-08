@@ -4,7 +4,7 @@ date: 2019-01-30T15:09:22+01:00
 draft: false
 ---
 
-### [fbTREX RSS feed](https://facebook.tracking.exposed/feeds/) has rolled out ahead of the 2019 European elections to empower citizens to educate themselves and each other based on a collective feed of information on various subjects.
+### [fbTREX RSS feed](https://facebook.tracking.exposed/rss/) has rolled out ahead of the 2019 European elections to empower citizens to educate themselves and each other based on a collective feed of information on various subjects.
 
 Facebook does not enable us to understand or control how our news feed content is selected, and has even been found to provide different users seeking the same information completely different lenses through which to perceive of the subject, as Eli Pariser [discovered](https://www.rollingstone.com/politics/politics-news/book-excerpt-the-filter-bubble-by-eli-pariser-71053/). The influence that Facebook’s algorithm exercises over our worldviews reinforces political polarisation and restricts users’ common access to a complete spectrum of knowledge.
 
@@ -16,7 +16,7 @@ We hope that you will consider assisting in the development of this tool by [don
 
 fbTREX RSS feed is designed to foster the spirit of the GDPR, empowering us to have more control over the sources that inform us and enabling us to escape the filter bubbles Facebook has designated for us.
 
-fbTREX is not a SOCMINT tool. RSS queries are restricted to concepts represented by Wikipedia entries. This makes it useful for research and exploration into a broad range of subjects, while preventing potential abuse of personal data.
+fbTREX is not a SOCMINT tool. RSS queries are restricted to concepts represented by Wikipedia entries. This makes it useful for research and exploration into a broad range of subjects, while preventing potential abuse of personal data, you can know more on how does it work via [fbTREX RSS details](https://facebook.tracking.exposed/fbtrexRSS).
 
 #### What is RSS?
 
