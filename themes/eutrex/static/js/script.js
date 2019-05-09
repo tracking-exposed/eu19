@@ -183,7 +183,7 @@ jQuery(document).ready(function($) {
 
         if(!keyword) {
             preloader.hide();
-            $('<p class="error"><b>No keyword!</b> <span>Pick one from the top on the left</span></p>').appendTo(results);
+            $('<p class="error"><b>No keyword!</b> <span>Pick one from the <i>Most used keywords</i> box, located above or on the left</span></p>').appendTo(results);
             return;
         }
 
@@ -220,9 +220,7 @@ jQuery(document).ready(function($) {
                 $.each(val['l'], function(i, el) {
                     if($.inArray(el, uniqueKeywords) === -1) {
                         uniqueKeywords.push(el);
-                        clickableKeywords += `<small class='relevant-words'>
-                            <i onclick="newkw('${encodeURIComponent(el)}')">${el}</i>
-                        </small>`;
+                        clickableKeywords += `<small class='relevant-words'><i onclick="newkw('${encodeURIComponent(el)}')">${el}</i></small>`;
                     }
                 });
 
@@ -240,7 +238,7 @@ jQuery(document).ready(function($) {
                 if(!permalink) permalinkOutput = '';
                 else permalinkOutput = "<a href='https://www.facebook.com" + permalink + "' target='_blank' class='permalink icon-extra-small'>Post link</a>";
 
-                let reactions = ""
+                let reactions = "";
                 reactions += like ? ("Like: <b>" + like + " </b>") : "";
                 reactions += love ? ("Love: <b>" + love + " </b>") : "";
                 reactions += haha ? ("Haha: <b>" + haha + " </b>") : "";
@@ -248,14 +246,15 @@ jQuery(document).ready(function($) {
                 reactions += sad ? ("Sad: <b>" + sad + " </b>") : "";
                 reactions += angry ? ("Angry: <b>" + angry + " </b>") : "";
 
+                if(reactions) var sep = ' | '; else sep = '';
+
                 items.push(
                     "<li id='" + id + "' class='post'>" +
                     "<header>" +
                     permalinkOutput +
                     "<strong class='author icon-extra-small'>" + author + "</strong>" +
-                    "<small>" + formattedDate + ". " + time + "</small>" + ", " +
-                    // "<small>Type: <b>" + type + " (" + nature + ")</b></small>, " +
-                    "<small>Text length: <b>" + textSize + "</b></small>" + " | " +
+                    "<small>" + formattedDate + ". " + time + "</small>" + " | " +
+                    "<small>Text length: <b>" + textSize + "</b></small>" + sep +
                     "<small>" + reactions + "</small>" + 
                     "</header>" +
                     "<p>" + text + "</p>" +
@@ -279,12 +278,12 @@ jQuery(document).ready(function($) {
             if(ArrayLength == 0) {
                 results.before('<header class="center">' +
                     '<p>' +
-                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + rssurl + '" class="primary-color break"><b>' + rssurl + '</b></a>' +
+                    '<span class="icon-extra-small rss">RSS link:</span> <code class="break">' + rssurl + '</code>' +
                     '<small><a href="/page/rss/" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
-                    '<h3 class="light-font top">' +
+                    '<h3 class="light-font top break">' +
                     '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
-                    '<span class="paragraph">Try search for a new keyword</span>' +
+                    '<span class="paragraph no-break">Try search for a new keyword</span>' +
                     '</h3>' +
                     '</header>' +
                     '<div class="row"></div> '
@@ -292,19 +291,19 @@ jQuery(document).ready(function($) {
             } else {
                 results.before('<header class="center">' +
                     '<p>' +
-                    '<span class="icon-extra-small rss">RSS:</span> <a href="' + rssurl + '" class="primary-color break"><b>' + rssurl + '</b></a>' +
+                    '<span class="icon-extra-small rss">RSS:</span> <code class="break">' + rssurl + '</code>' +
                     '<small><a href="/page/rss/" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
-                    '<h3 class="light-font top">' +
+                    '<h3 class="light-font top break">' +
                     '<b>' + ArrayLength + '</b> appearances of: <i class="keyword-value">' + keyword + '</i><br />' +
-                    '<span class="paragraph">By watching the <a href="/page/rss">events horizontally</a> you can pop your bubble, and with some limit, control your algorithm!<br /> To get all results, subscribe to the RSS with a feed reader</span>' +
+                    '<span class="paragraph no-break">By watching the <a href="/page/rss">events horizontally</a> you can pop your bubble, and with some limit, control your algorithm!<br /> <small>To get all results, subscribe to the RSS with a feed reader</small></span>' +
                     '</h3>' +
                     '</header>' +
                     '<div class="row"></div> '
                 );
                 results.after('<footer class="center">' +
                     '<p>' +
-                    '<span class="icon-extra-small rss">RSS:</span> <a href="' + rssurl + '" class=" primary-color break"><b>' + rssurl + '</b></a>' +
+                    '<span class="icon-extra-small rss">RSS:</span> <code class="break">' + rssurl + '</code>' +
                     '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
                     '</footer>'
@@ -347,9 +346,11 @@ jQuery(document).ready(function($) {
             $('a#country-link').attr( 'href', '/country/' + getCountryName( lang).toLowerCase() );
 
         }).fail( function() {
-            overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
             overlay.find('ul.preview-data').empty();
             overlay.find('div.center').empty();
+            overlay.find('p.error').remove();
+            overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>');
+
         });
         openOverlay('#preview-info');
     }

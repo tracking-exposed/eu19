@@ -104,6 +104,9 @@ kbd, code {
   word-wrap: break-word;
   @include border-radius(2px, 2px, 2px, 2px);
 }
+code.break {
+  display: inline;
+}
 var {
   font-family: $bold;
   border-bottom: dotted 1px $black;
@@ -236,6 +239,9 @@ figcaption, .footnotes li {
 }
 .break {
   word-break: break-all;
+}
+.no-break {
+  word-break: keep-all !important;
 }
 
 /* --------------------------------------------------
