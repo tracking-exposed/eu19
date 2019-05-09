@@ -73,10 +73,7 @@ jQuery(document).ready(function($) {
      * @returns {val}
      */
     function preventUndefined( val ) {
-        var output;
-        if( val == 'undefined' || val == '' || val == null || !val ) output = 0;
-        else output = val;
-        return output
+        return ( val == 'undefined' || val == '' || !val ) ? 0 : val;
     }
 
     /**
@@ -186,14 +183,13 @@ jQuery(document).ready(function($) {
 
         if(!keyword) {
             preloader.hide();
-            $('<p class="error"><b>No keyword!</b> <span>You need to search for a keyword, use the form above!</span></p>').appendTo(results);
+            $('<p class="error"><b>No keyword!</b> <span>Pick one from the top on the left</span></p>').appendTo(results);
             return;
         }
 
-        var url = 'https://facebook.tracking.exposed/api/v2/' + getLangCode(lang) + '/noogle/' + keyword + '/100-0',
-            items = [];
-
-        //console.log(lang+', '+url);
+        var url = 'https://facebook.tracking.exposed/api/v2/' + getLangCode(lang) + '/noogle/' + keyword + '/39-0';
+        var rssurl = `https://facebook.tracking.exposed/feeds/0/${getLangCode(lang)}/${encodeURIComponent(keyword)}`;
+        var items = [];
 
         $.getJSON(url, function (data) {
             $.each(data, function (key, val) {
@@ -203,20 +199,20 @@ jQuery(document).ready(function($) {
                     permalink = val['summary']['permaLink'],
                     dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'},
                     date = val['summary']['publicationTime'],
-                    time = new Date(date).toLocaleTimeString("en-US"),
-                    formattedDate = new Date(date).toLocaleDateString("en-US", dateOptions),
+                    time = date ? new Date(date).toLocaleTimeString("en-US") : "",
+                    formattedDate = date ? new Date(date).toLocaleDateString("en-US", dateOptions) : "unknow publication time",
                     type = val['summary']['fblinktype'],
-                    nature = val['summary']['nature'],
+                    // nature = val['summary']['nature'],
                     text = val['summary']['texts'],
                     textSize = val['summary']['textsize'],
                     relevantWord = val['l'],
                     relevantWordString = relevantWord.toString(),
-                    like = val['summary']['LIKE'],
-                    love = val['summary']['LOVE'],
-                    haha = val['summary']['HAHA'],
-                    angry = val['summary']['ANGRY'],
-                    sad = val['summary']['SAD'],
-                    wow = val['summary']['WOW'],
+                    like = preventUndefined(val['summary']['LIKE']),
+                    love = preventUndefined(val['summary']['LOVE']),
+                    haha = preventUndefined(val['summary']['HAHA']),
+                    angry = preventUndefined(val['summary']['ANGRY']),
+                    sad = preventUndefined(val['summary']['SAD']),
+                    wow = preventUndefined(val['summary']['WOW']),
                     linkOutput,
                     permalinkOutput;
 
@@ -227,22 +223,30 @@ jQuery(document).ready(function($) {
                 }
 
                 //remove link if null
-                if(!link || link == 'undefined') linkOutput = '<small>No external link contained</small>';
+                if(!link || link == 'undefined') linkOutput = "";
                 else linkOutput = "<small>External link contained: <a href='" + link + "' target='_blank'>" + anchorLinkText + "</a></small><br/>";
 
                 //remove permalink if null
                 if(!permalink) permalinkOutput = '';
                 else permalinkOutput = "<a href='https://www.facebook.com" + permalink + "' target='_blank' class='permalink icon-extra-small'>Post link</a>";
 
+                let reactions = ""
+                reactions += like ? ("Like: <b>" + like + " </b>") : "";
+                reactions += love ? ("Love: <b>" + love + " </b>") : "";
+                reactions += haha ? ("Haha: <b>" + haha + " </b>") : "";
+                reactions += wow ? ("Wow: <b>" + wow + " </b>") : "";
+                reactions += sad ? ("Sad: <b>" + sad + " </b>") : "";
+                reactions += angry ? ("Angry: <b>" + angry + " </b>") : "";
+
                 items.push(
                     "<li id='" + id + "' class='post'>" +
                     "<header>" +
                     permalinkOutput +
                     "<strong class='author icon-extra-small'>" + author + "</strong>" +
-                    "<small>" + formattedDate + ". " + time + "</small><br />" +
-                    "<small>Type: <b>" + type + " (" + nature + ")</b></small>, " +
-                    "<small>words count: <b>" + textSize + "</b></small><br />" +
-                    "<small>Like: <b>" + preventUndefined(like) + "</b>, Love: <b>" + preventUndefined(love) + "</b>, Haha: <b>" + preventUndefined(haha) + "</b>, Wow: <b>" + preventUndefined(wow) + "</b>, Sad: <b>" + preventUndefined(sad) + "</b>, Angry: <b>" + preventUndefined(angry) + "</b>, </small>" +
+                    "<small>" + formattedDate + ". " + time + "</small>" + ", " +
+                    // "<small>Type: <b>" + type + " (" + nature + ")</b></small>, " +
+                    "<small>Text length: <b>" + textSize + "</b></small>" + " | " +
+                    "<small>" + reactions + "</small>" + 
                     "</header>" +
                     "<p>" + text + "</p>" +
                     "<footer>" +
@@ -265,7 +269,7 @@ jQuery(document).ready(function($) {
             if(ArrayLength == 0) {
                 results.before('<header class="center">' +
                     '<p>' +
-                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class="primary-color break"><b>' + url + '</b></a>' +
+                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + rssurl + '" class="primary-color break"><b>' + rssurl + '</b></a>' +
                         //todo: insert proper link to documentation
                     '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
@@ -279,24 +283,20 @@ jQuery(document).ready(function($) {
             } else {
                 results.before('<header class="center">' +
                     '<p>' +
-                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class="primary-color break"><b>' + url + '</b></a>' +
+                    '<span class="icon-extra-small rss">RSS:</span> <a href="' + rssurl + '" class="primary-color break"><b>' + rssurl + '</b></a>' +
                         //todo: insert proper link to documentation
                     '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
                     '<h3 class="light-font top">' +
-                    '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
-                    '<span class="paragraph">here are displayed only a small amount of the total results. <br /> To see all results, copy the RSS url above and paste it into a feed reader</span>' +
+                    '<b>' + ArrayLength + '</b> appearances of: <i class="keyword-value">' + keyword + '</i><br />' +
+                    '<span class="paragraph">By watching the <a href="/page/rss">events horizontally</a> you can pop your bubble, and with some limit, control your algorithm!<br /> To get all results, subscribe to the RSS with a feed reader</span>' +
                     '</h3>' +
                     '</header>' +
                     '<div class="row"></div> '
                 );
                 results.after('<footer class="center">' +
-                    '<h3 class="light-font top">' +
-                    'There are much more other results<br />' +
-                    '<span class="paragraph">To see them all use the:</span>' +
-                    '</h3>' +
                     '<p>' +
-                    '<span class="icon-extra-small rss">RSS link:</span> <a href="' + url + '" class=" primary-color break"><b>' + url + '</b></a>' +
+                    '<span class="icon-extra-small rss">RSS:</span> <a href="' + rssurl + '" class=" primary-color break"><b>' + rssurl + '</b></a>' +
                     '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
                     '</footer>'
