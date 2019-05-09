@@ -46,11 +46,11 @@ menu = ["main", "footer"]
     url = "/page/individual/"
     weight = -120
  [[menu.main]]
-    page = "Candidate"
-    identifier = "candidate"
+    page = "data-activism"
+    identifier = "data-activism"
     parent = "pages"
-    name = "Candidates"
-    url = "/page/candidate/"
+    name = "Data activism"
+    url = "/page/data-activism/"
     weight = -130
  [[menu.main]]
     page = "Ethos"
@@ -105,10 +105,10 @@ menu = ["main", "footer"]
      url = "/page/individual/"
      weight = -130
  [[menu.footer]]
-     page = "Candidate"
-     identifier = "candidate"
-     name = "Candidates"
-     url = "/page/candidate/"
+     page = "data-activism"
+     identifier = "data-activism"
+     name = "Data activism"
+     url = "/page/data-activism/"
      weight = -140
  [[menu.footer]]
      page = "Ethos"
