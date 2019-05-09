@@ -341,7 +341,7 @@ jQuery(document).ready(function($) {
             overlay.find('b.keywords-sum').html(totalLabels);
             for ( i = 0; i < labelsArray.length; i++) {
                 label = labelsArray[i];
-                var labelRow = "<li id='" + label + "' class='keyword-element' data-value='" + label + "'><a href='/country/"  + getCountryName( lang).toLowerCase() + "/#" + formatString( label ) + "'>" + label + "</a></li>";
+                var labelRow = "<li id='" + label + "' class='keyword-element' data-value='" + label + "'><a href='/country/"  + getCountryName( lang).toLowerCase() + "/#" +  label  + "'>" + label + "</a></li>";
                 overlay.find('ul.keywords-data').append(labelRow);
             }
             $('a#country-link').attr( 'href', '/country/' + getCountryName( lang).toLowerCase() );
@@ -479,15 +479,15 @@ jQuery(document).ready(function($) {
         getSummary( slug );
     });
 
-    /**
-     *  Most used keywords data
-     */
+    //search page triggers
     if( searchPage.length > 0 ) {
+
+        /**
+         *  Most used keywords data
+         */
         var slug = searchPage.attr('data-lang');
         getMostUsedKeys( slug );
-    }
 
-    if( searchPage.length > 0 ) {
         /**
          * Reload page if click on most used keyword
          */
@@ -575,5 +575,6 @@ jQuery(document).ready(function($) {
  */
 function newkw(kw) {
     window.location.assign('#' + kw);
+    location.reload();
 }
 

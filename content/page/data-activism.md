@@ -1,6 +1,6 @@
 ---
 title: "data activism"
-date: 2019-05-09T15:21:28+01:00
+date: 2019-05-08T15:21:28+01:00
 draft: false
 ---
 

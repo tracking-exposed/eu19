@@ -101,7 +101,7 @@ form#main-search .keywords-wrapper {
   width: calc( 100% - 340px );
 }
 form.main-search .keywords-wrapper {
-  width: calc( 98% - 145px );
+  width: calc( 98% - 150px );
 }
 label[for="country-select"] {
   background: transparent url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9ImZsYWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9IjcuNSA3LjUgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgNy41IDcuNSAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGZpbGw9IiM4RjhGOEYiIGQ9Ik0yNi4xNSwxMC43MjljLTAuMDc4LTAuMDE3LTEuOTItMC4zOTctNC4xODItMC4zOTdjLTEuODA3LDAtMy41NDgsMC4yOTktNS4wODUsMC41NjQKCWMtMS4yMjMsMC4yMS0yLjI4LDAuMzkyLTMuMTQ1LDAuMzkyYy0xLjk2NiwwLTQuNTg5LTAuNTUzLTQuNjE0LTAuNTU5bC0wLjgwOS0wLjE3MnYxMy4zODFMOC44MSwyNC4wNwoJYzAuMDksMC4wMjUsMi4yMjYsMC41OTgsNC45MywwLjU5OGMxLjcyOSwwLDMuMTAzLTAuMjU4LDQuNDM1LTAuNTA2YzEuMjM2LTAuMjMyLDIuNDA0LTAuNDUxLDMuNzk1LTAuNDUxCgljMi42NTYsMCwzLjgzNCwwLjM0OCwzLjg0NCwwLjM1MmwwLjg3MSwwLjI3M1YxMC44NEwyNi4xNSwxMC43Mjl6IE05LjY1NSwyMi44OTVWMTIuMTkzYzAuOTc3LDAuMTc1LDIuNjU5LDAuNDMzLDQuMDg0LDAuNDMzCgljMC4xMTUsMCwwLjIzMy0wLjAwMywwLjM1NC0wLjAwOHYxMC43MDdjLTAuMTE3LDAuMDAyLTAuMjMzLDAuMDA2LTAuMzU0LDAuMDA2QzExLjk1NSwyMy4zMywxMC40MSwyMy4wNTcsOS42NTUsMjIuODk1egoJIE0xNy45MjYsMjIuODQ2Yy0wLjk2MSwwLjE4Mi0xLjk0OSwwLjM2NS0zLjA2OSwwLjQ0M1YxMi41NThjMC43MDMtMC4wNzYsMS40NjUtMC4yMDcsMi4yNTUtMC4zNDMKCWMxLjAzMS0wLjE3NywyLjE1OC0wLjM3LDMuMzE4LTAuNDcxdjEwLjcxMUMxOS41NDMsMjIuNTQ1LDE4LjcyNiwyMi42OTcsMTcuOTI2LDIyLjg0NnogTTI1LjM0NCwyMi42MDQKCWMtMC42ODQtMC4xMTEtMS43ODktMC4yMy0zLjM3NS0wLjIzYy0wLjI2NiwwLTAuNTIxLDAuMDEyLTAuNzc1LDAuMDIzVjExLjY5YzAuMjU4LTAuMDExLDAuNTE2LTAuMDIxLDAuNzc1LTAuMDIxCgljMS40MjQsMCwyLjY5MSwwLjE2NiwzLjM3NSwwLjI3NFYyMi42MDR6Ii8+Cjwvc3ZnPg==') no-repeat;
@@ -217,10 +217,12 @@ li.language-icon {
   margin-bottom: 5px;
   list-style-type: decimal;
   display: list-item;
-  margin-left: 10%;
+  margin-left: 5%;
   font-style: italic;
 }
-
+li.keywords-icon {
+  width: 90%;
+}
 
 /* --------------------------------------------------
 ## SEARCH-PAGES
@@ -319,6 +321,7 @@ li.language-icon {
   display: inline-block;
   color: $black;
   background-color: $grey;
+  text-decoration: underline;
   padding: 2px 4px;
   margin-right: 5px;
   margin-bottom: 5px;
