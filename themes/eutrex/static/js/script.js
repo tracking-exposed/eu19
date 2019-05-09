@@ -205,8 +205,6 @@ jQuery(document).ready(function($) {
                     // nature = val['summary']['nature'],
                     text = val['summary']['texts'],
                     textSize = val['summary']['textsize'],
-                    relevantWord = val['l'],
-                    relevantWordString = relevantWord.toString(),
                     like = preventUndefined(val['summary']['LIKE']),
                     love = preventUndefined(val['summary']['LOVE']),
                     haha = preventUndefined(val['summary']['HAHA']),
@@ -215,6 +213,18 @@ jQuery(document).ready(function($) {
                     wow = preventUndefined(val['summary']['WOW']),
                     linkOutput,
                     permalinkOutput;
+
+                // make a selection of unique keyword related, and prepare the clickable button with their label
+                var clickableKeywords = "";
+                var uniqueKeywords = [];
+                $.each(val['l'], function(i, el) {
+                    if($.inArray(el, uniqueKeywords) === -1) {
+                        uniqueKeywords.push(el);
+                        clickableKeywords += `<small class='relevant-words'>
+                            <i onclick="newkw('${encodeURIComponent(el)}')">${el}</i>
+                        </small>`;
+                    }
+                });
 
                 //Check for value in nested property
                 if( checkNested(val, 'summary', 'opengraph', 'link') ) {
@@ -251,7 +261,7 @@ jQuery(document).ready(function($) {
                     "<p>" + text + "</p>" +
                     "<footer>" +
                     linkOutput +
-                    "<small class='relevant-words'>Keywords: <i>" +  relevantWordString.replace(/,/g, '</i> <i>') + "</i></small>" +
+                    clickableKeywords +
                     "</footer>" +
                     "</li>"
                 );
@@ -270,8 +280,7 @@ jQuery(document).ready(function($) {
                 results.before('<header class="center">' +
                     '<p>' +
                     '<span class="icon-extra-small rss">RSS link:</span> <a href="' + rssurl + '" class="primary-color break"><b>' + rssurl + '</b></a>' +
-                        //todo: insert proper link to documentation
-                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                    '<small><a href="/page/rss/" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
                     '<h3 class="light-font top">' +
                     '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
@@ -284,8 +293,7 @@ jQuery(document).ready(function($) {
                 results.before('<header class="center">' +
                     '<p>' +
                     '<span class="icon-extra-small rss">RSS:</span> <a href="' + rssurl + '" class="primary-color break"><b>' + rssurl + '</b></a>' +
-                        //todo: insert proper link to documentation
-                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                    '<small><a href="/page/rss/" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
                     '<h3 class="light-font top">' +
                     '<b>' + ArrayLength + '</b> appearances of: <i class="keyword-value">' + keyword + '</i><br />' +
@@ -558,3 +566,14 @@ jQuery(document).ready(function($) {
     });
 
 });
+
+/**
+ * Replace the URL with the one of the clicked keyword
+ *
+ * @param event
+ * @return null (side effect window reload)
+ */
+function newkw(kw) {
+    window.location.assign('#' + kw);
+}
+

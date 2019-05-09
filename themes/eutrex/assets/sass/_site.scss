@@ -317,12 +317,13 @@ li.language-icon {
 }
 .relevant-words i {
   display: inline-block;
-  color: $black;;
+  color: $black;
   background-color: $grey;
   padding: 2px 4px;
   margin-right: 5px;
   margin-bottom: 5px;
   @include border-radius(4px,4px,4px,4px);
+  cursor: pointer;
 }
 
 
