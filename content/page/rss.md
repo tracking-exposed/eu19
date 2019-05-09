@@ -41,19 +41,3 @@ There are various RSS readers for various platforms, but here are some of the op
 [Wikipedia's comparison of feed readers](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators)\
 [Readers available on github](https://github.com/topics/rss-reader)
 
-#### Privacy
-
-fbTREX prioritises the protection of personal data. Access to the full fbTREX dataset is strictly limited to researchers analysing collective phenomena in the public interest. We are asking individuals only to share some of the public data that Facebook provides them – the goal is to study social media, not the subjects participating. Still, this information can contain a lot of personally identifying information (PII), so fbTREX’s ethical policy imposes the following limits:
-* We will collect only the information that Facebook provides to you in your news feed
-* We will collect only posts marked as public. We will never collect posts marked for friends only.
-* You have full control over your data, and may delete it at any time.
-* No one will have access to your data unless you expressly grant them access. You will have to opt-in to any third-party, including research groups, that you may want to interact with.
-* All research conducted must strictly aim at understanding social phenomena and algorithmic influence, you will never be the subject or object of any study.
-
-#### CTA
-First part:\
-Pop your bubble!
-
-Second part:\
-Explore our collective news feed\
-Explore our collaborative news feed
