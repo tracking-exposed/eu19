@@ -281,7 +281,7 @@ jQuery(document).ready(function($) {
                 results.before(
                     '<header class="center">' +
                     '<h3 class="light-font top break">' +
-                    '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
+                    '<b>'+ArrayLength+'</b> appearances of: <i class="keyword-value">'+decodeURIComponent(keyword)+'</i><br />' +
                     '<span class="paragraph no-break">Try search for a new keyword</span>' +
                     '</h3>' +
                     '</header>' +
@@ -297,8 +297,8 @@ jQuery(document).ready(function($) {
                 results.before(
                     '<header class="center">' +
                     '<h3 class="light-font top break">' +
-                    '<b>' + ArrayLength + '</b> appearances of: <i class="keyword-value">' + keyword + '</i><br />' +
-                    '<span class="paragraph no-break">By watching the <a href="/page/rss">events horizontally</a> you can pop your bubble, and with some limit, control your algorithm!<br /> <small>To get all results, subscribe to the RSS with a feed reader</small></span>' +
+                    '<b>'+ArrayLength + '</b> appearances of: <i class="keyword-value">'+decodeURIComponent(keyword)+'</i><br />' +
+                    '<span class="paragraph no-break">This report up to 39 posts; To observe <a href="/page/rss">content <i>across the bubble</i></a>, subscribe to the RSS with a feed reader</span>' +
                     '</h3>' +
                     '</header>' +
                     '<div class="row"></div> '
