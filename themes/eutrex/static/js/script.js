@@ -13,7 +13,8 @@ jQuery(document).ready(function($) {
         results = $('#results'),
         preloader = $('.preloader'),
         mapContainer = $('#map-container'),
-        mapTrackersContainer = $('#map-trackers-container');
+        mapTrackersContainer = $('#map-trackers-container'),
+        previewDataList = $('ul.preview-data');
 
 
     //////////////////////////////
@@ -77,7 +78,7 @@ jQuery(document).ready(function($) {
     }
 
     /**
-     * Format string to search: first lettere is Uppercase and no space allowed
+     * Format string to search: first letter is Uppercase and no space allowed
      *
      * @param string
      * @returns {string}
@@ -188,7 +189,8 @@ jQuery(document).ready(function($) {
         }
 
         var url = 'https://facebook.tracking.exposed/api/v2/' + getLangCode(lang) + '/noogle/' + keyword + '/39-0';
-        var rssurl = `https://facebook.tracking.exposed/feeds/0/${getLangCode(lang)}/${encodeURIComponent(keyword)}`;
+        var rssurlvariable = `${getLangCode(lang)}/${encodeURIComponent(keyword)}`;
+        var rssurl = 'https://facebook.tracking.exposed/feeds/0/<span class="tertiary-color">' + rssurlvariable + '</span>';
         var items = [];
 
         $.getJSON(url, function (data) {
@@ -276,11 +278,8 @@ jQuery(document).ready(function($) {
             var ArrayLength = data.length;
             preloader.hide();
             if(ArrayLength == 0) {
-                results.before('<header class="center">' +
-                    '<p>' +
-                    '<span class="icon-extra-small rss">RSS link:</span> <code class="break">' + rssurl + '</code>' +
-                    '<small><a href="/page/rss/" class="icon-extra-small help">How to use RSS</a></small>' +
-                    '</p>' +
+                results.before(
+                    '<header class="center">' +
                     '<h3 class="light-font top break">' +
                     '<b>' + ArrayLength + '</b> results for keyword: <i class="keyword-value">' + keyword + '</i><br />' +
                     '<span class="paragraph no-break">Try search for a new keyword</span>' +
@@ -289,11 +288,14 @@ jQuery(document).ready(function($) {
                     '<div class="row"></div> '
                 );
             } else {
-                results.before('<header class="center">' +
-                    '<p>' +
-                    '<span class="icon-extra-small rss">RSS:</span> <code class="break">' + rssurl + '</code>' +
-                    '<small><a href="/page/rss/" class="icon-extra-small help">How to use RSS</a></small>' +
-                    '</p>' +
+                previewDataList.append(
+                    '<li class="icon-small rss bottom">' +
+                    '<b>RSS:</b> <code class="break">' + rssurl + '</code><br />' +
+                    '<small><a href="/page/rss/">How to use RSS</a></small>' +
+                    '</li>'
+                );
+                results.before(
+                    '<header class="center">' +
                     '<h3 class="light-font top break">' +
                     '<b>' + ArrayLength + '</b> appearances of: <i class="keyword-value">' + keyword + '</i><br />' +
                     '<span class="paragraph no-break">By watching the <a href="/page/rss">events horizontally</a> you can pop your bubble, and with some limit, control your algorithm!<br /> <small>To get all results, subscribe to the RSS with a feed reader</small></span>' +
@@ -301,10 +303,10 @@ jQuery(document).ready(function($) {
                     '</header>' +
                     '<div class="row"></div> '
                 );
-                results.after('<footer class="center">' +
+                results.after(
+                    '<footer class="center">' +
                     '<p>' +
-                    '<span class="icon-extra-small rss">RSS:</span> <code class="break">' + rssurl + '</code>' +
-                    '<small><a href="#" class="icon-extra-small help">How to use RSS</a></small>' +
+                    '<small><a href="/page/rss" class="icon-extra-small help">How to use RSS</a></small>' +
                     '</p>' +
                     '</footer>'
                 );
@@ -343,7 +345,7 @@ jQuery(document).ready(function($) {
                 var labelRow = "<li id='" + label + "' class='keyword-element' data-value='" + label + "'><a href='/country/"  + getCountryName( lang).toLowerCase() + "/#" +  label  + "'>" + label + "</a></li>";
                 overlay.find('ul.keywords-data').append(labelRow);
             }
-            $('a#country-link').attr( 'href', '/country/' + getCountryName( lang).toLowerCase() );
+            $('a#country-link').attr( 'href', '/country/' + getCountryName( lang ).toLowerCase() );
 
         }).fail( function() {
             overlay.find('ul.preview-data').empty();
