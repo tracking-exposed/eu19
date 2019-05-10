@@ -223,7 +223,7 @@ li.has-children:hover {
   width: 100%;
   padding: 20px 0;
   margin-top: 100px;
-  @include box-shadow(0,-5px,15px,0,rgba(0,0,0,.1));
+  @include box-shadow(0,-12px,15px,0,rgba(0,0,0,.1));
 }
 #colophon .logo {
   float: none;

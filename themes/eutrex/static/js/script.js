@@ -281,13 +281,14 @@ jQuery(document).ready(function($) {
                 results.before(
                     '<header class="center">' +
                     '<h3 class="light-font top break">' +
-                    '<b>'+ArrayLength+'</b> appearances of: <i class="keyword-value">'+decodeURIComponent(keyword)+'</i><br />' +
+                    '<b>'+ArrayLength+'</b> appearances of: <i class="keyword-value">' + decodeURIComponent(keyword) + '</i><br />' +
                     '<span class="paragraph no-break">Try search for a new keyword</span>' +
                     '</h3>' +
                     '</header>' +
                     '<div class="row"></div> '
                 );
             } else {
+                var text = (ArrayLength == 1 ) ? 'appearance' : 'appearances';
                 previewDataList.append(
                     '<li class="icon-small rss bottom">' +
                     '<b>RSS:</b> <code class="break">' + rssurl + '</code><br />' +
@@ -297,7 +298,7 @@ jQuery(document).ready(function($) {
                 results.before(
                     '<header class="center">' +
                     '<h3 class="light-font top break">' +
-                    '<b>'+ArrayLength + '</b> appearances of: <i class="keyword-value">'+decodeURIComponent(keyword)+'</i><br />' +
+                    '<b>' + ArrayLength + '</b> ' + text +' of: <i class="keyword-value">' + decodeURIComponent(keyword) + '</i><br />' +
                     '<span class="paragraph no-break">This report up to 39 posts; To observe <a href="/page/rss">content <i>across the bubble</i></a>, subscribe to the RSS with a feed reader</span>' +
                     '</h3>' +
                     '</header>' +
@@ -433,6 +434,7 @@ jQuery(document).ready(function($) {
             }).fail( function() {
                 overlay.find('h3').remove();
                 overlay.find('.center').remove();
+                overlay.find('p.error').remove();
                 overlay.append('<p class="error"><b>Oops!</b> <span>Something goes wrong, please try later!</span></p>').appendTo(keywords);
             });
             openOverlay('#trackers-info');

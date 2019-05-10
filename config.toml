@@ -22,7 +22,6 @@ canonifyURLs = true
 #sectionPagesMenu = "main"
 
 
-
 menu = ["main", "footer"]
 
  [[menu.main]]
@@ -78,12 +77,12 @@ menu = ["main", "footer"]
     name = "Languages"
     url = "/language/"
     weight = -170
- [[menu.main]]
-    page = "trackers"
-    identifier = "trackers"
-    name = "Trackers"
-    url = "/page/trackers/"
-    weight = -180
+# [[menu.main]]
+#    page = "trackers"
+#    identifier = "trackers"
+#    name = "Trackers"
+#    url = "/page/trackers/"
+#    weight = -180
 
 
  [[menu.footer]]
@@ -122,9 +121,9 @@ menu = ["main", "footer"]
      name = "Watch events horizontally"
      url = "/page/rss/"
      weight = -160
- [[menu.footer]]
-     page = "trackers"
-     identifier = "trackers"
-     name = "Trackers"
-     url = "/page/trackers/"
-     weight = -170
+# [[menu.footer]]
+#     page = "trackers"
+#     identifier = "trackers"
+#     name = "Trackers"
+#     url = "/page/trackers/"
+#     weight = -170
