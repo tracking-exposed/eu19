@@ -6,7 +6,7 @@ draft: false
 
 {{< boxes text="We are data activists. In the society of information, who has the power to disclose or hide data is also able to influence our understanding of society, and therefore to limit our freedom. Facebook won't help us here: that's why we must act." >}}
 
-As the research that exposed the Volkswagen pollution scandal has revealed, how one is collecting data is so fundamental that it might make a difference between a critical analysis and the press review of a company. We, as free thinkers and researchers, want to be able to collect data from the bottom, as users, from users, for users. In other terms, not just for ourselves. We build tools that allow other researchers, or users themselves, to understand how the algorithm is having an impact on their life: in this challenge, the deception is *personalized*, and our solution is *collective*.
+As the research that exposed the Volkswagen pollution scandal has revealed, how one is collecting data is so fundamental that it might make a difference between a critical analysis and the press release of a company. We, as free thinkers and researchers, want to be able to collect data from the bottom, as users, from users, for users. In other terms, not just for ourselves. We build tools that allow other researchers, or users themselves, to understand how the algorithm is having an impact on their life: in this challenge, the deception is *personalized*, and our solution is *collective*.
 
 {{< colorblock color="red" text="So you heard Facebook should provide some data to some researchers..." >}}
 
