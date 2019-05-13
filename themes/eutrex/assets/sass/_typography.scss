@@ -6,20 +6,20 @@ body {
   direction: ltr;
   letter-spacing: 0.5px;
   font-weight: $regular;
-  background-color: $grey-bg;
+  background-color: $background;
 }
 
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: $tertiary
+  color: $primary
 }
 a:visited {
-  color: $tertiary-light;
+  color: $primary;
 }
 a:hover, a:focus, a:active {
-  color: $tertiary-light;
+  color: $primary-light;
 }
 a:focus {
   outline: thin dotted;
@@ -32,23 +32,23 @@ a:hover, a:active {
 ## Heading
 --------------------------------------------------------------*/
 h1, .h1_style {
-  font-size: 40px;
+  font-size: 42px;
   line-height: 140%;
-  font-weight: $regular;
+  font-family: $medium;
   margin-bottom: 25px;
   margin-top: 25px;
 }
 h2, .h2_style {
   font-size: 32px;
   line-height: 140%;
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 20px;
   margin-top: 35px;
 }
 h3, .h3_style{
   font-size: 24px;
   line-height: 140%;
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 15px;
   margin-top: 25px;
 }
@@ -56,37 +56,29 @@ h4, .h4_style {
   font-size: 18px;
   line-height: 140%;
   text-transform: uppercase;
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 10px;
   margin-top: 15px;
 }
 h5, h6, .h5_style {
   font-size: 18px;
   line-height: 140%;
-  color: $grey-full;
+  color: $grey-dark;
   margin-bottom: 10px;
   margin-top: 15px;
 }
 h5 {
-  font-weight: $bold;
+  font-family: $bold;
 }
-
-.entry-content ul, .entry-content ol {
-  margin: 30px 0 30px 2%;
-}
-.entry-content li {
-  margin-bottom: 15px;
-}
-
 
 /*--------------------------------------------------------------
 ## Characters formatting
 --------------------------------------------------------------*/
 div, form, p, .paragraph, small, .small, mark, label, input {
-  font-weight: $regular;
+  font-family: $regular;
 }
 b, .bold, strong, .strong {
-  font-weight: $bold !important;
+  font-family: $bold !important;
 }
 em, i, .italic {
   font-style: italic;
@@ -95,7 +87,7 @@ p, .paragraph {
   font-size: 16px;
   line-height: 160%;
   display: block;
-  font-weight: $regular;
+  font-family: $regular;
   margin-bottom: 15px;
 }
 small, .small {
@@ -108,12 +100,15 @@ kbd, code {
   padding: 2px 6px;
   display: inline-block;
   background: $grey-light;
-  border: solid 1px $grey-medium;
+  border: solid 1px $grey;
   word-wrap: break-word;
   @include border-radius(2px, 2px, 2px, 2px);
 }
+code.break {
+  display: inline;
+}
 var {
-  font-weight: $bold;
+  font-family: $bold;
   border-bottom: dotted 1px $black;
 }
 del, strike {
@@ -124,7 +119,7 @@ blockquote, q {
   margin: 10px 0 10px 15px;
   padding-left: 15px;
   font-style: italic;
-  border-left: solid 2px $grey-medium;
+  border-left: solid 2px $grey;
   @include border-radius(2px, 2px, 2px, 2px);
 }
 blockquote p, q p {
@@ -133,7 +128,7 @@ blockquote p, q p {
 cite {
   display: inline-block;
   margin-left: 30px;
-  font-weight: $bold;
+  font-family: $bold;
 }
 pre {
   max-width: 100%;
@@ -145,7 +140,6 @@ pre {
 }
 mark, address {
   background: $secondary;
-  border: solid 1px $secondary;
   padding: 0 4px;
   @include border-radius(2px, 2px, 2px, 2px);
 }
@@ -168,10 +162,11 @@ table td, table th {
   background-color: $white;
   vertical-align: middle;
   border-spacing: 0;
+  border-bottom: solid 1px $grey;
 }
 table th {
   background-color: $grey-light;
-  border: solid 1px $grey-medium;
+  padding: 16px 12px;
 }
 dl {
   margin-bottom: 35px;
@@ -180,17 +175,37 @@ dl dd {
   margin: 0 0 20px 2%;
 }
 dl dt {
-  font-weight: $bold;
+  font-family: $bold;
   margin-bottom: 5px;
 }
 hr {
   display: block;
   margin: 20px 0;
-
-
 }
-figcaption {
-  font-size: 80%;
+figure {
+  margin-bottom: 20px;
+}
+figure.full img {
+  width: 100%;
+  margin: 10px auto;
+}
+figure.half img {
+  width: 50%;
+}
+figure.align-left img {
+  float: left;
+  margin: 0 15px 5px 0;
+}
+figure.align-right img {
+  float: right;
+  margin: 0 0 5px 15px;
+}
+figure.align-center img {
+  margin: 10px auto;
+  display: block;
+}
+figcaption, .footnotes li {
+  font-size: 80% !important;
 }
 .underline {
   text-decoration: underline !important;
@@ -199,21 +214,78 @@ figcaption {
   @include text-shadow(0, 1px, 1px, $black);
 }
 .black {
-  color: $black;
+  color: $black !important;
 }
 .primary-color {
   color: $primary !important;
 }
 .secondary-color {
-  color: $tertiary;
+  color: $secondary;
+}
+.tertiary-color {
+ color: $tertiary;
 }
 .light-font {
-  font-weight: $regular !important;
+  font-family: $regular !important;
 }
 .white {
   color: $white !important;
 }
+.external-link {
+  display: inline-block;
+  padding-right: 25px;
+  background-position: right 1px !important;
+  background-size: 20px !important;
+}
+.break {
+  word-break: break-all;
+}
+.no-break {
+  word-break: keep-all !important;
+}
 
+/* --------------------------------------------------
+## Entry  formatting
+--------------------------------------------------  */
+.entry-content ul, .entry-content ol {
+  margin: 30px 0 30px 2%;
+}
+.entry-content li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 160%;
+  margin-left: 3%;
+}
+.entry-header h1 {
+  font-size: 52px;
+  margin: 0;
+}
+.entry-content {
+  max-width: 740px;
+  margin: 40px auto 0 auto;
+}
+.entry-header {
+  margin: 0;
+  padding: 100px 0 100px 0;
+  border-bottom: solid 1px $grey;
+}
+.sub-theme .entry-header {
+  background-color: $primary;
+  color: $white;
+  border-bottom: none;
+}
+.highlight {
+  padding: 10px;
+  background-color: $primary;
+  color: $white;
+}
+.highlight.red {
+  background-color: $tertiary;
+}
+.highlight.yellow {
+  background-color: $secondary;
+  color: $black;
+}
 
 /* --------------------------------------------------
 ## BTN
@@ -225,7 +297,7 @@ figcaption {
   padding: 10px 35px;
   background-color: $tertiary;
   font-size: 12px;
-  font-weight: $regular;
+  font-family: $regular;
   text-decoration: none;
   color: $white !important;
   cursor: pointer;
@@ -245,8 +317,8 @@ figcaption {
   background-color: $tertiary-dark;
 }
 .btn_big {
-  padding: 20px 50px;
-  font-size: 17px;
+  padding: 16px 50px;
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -264,7 +336,6 @@ input[type="submit"] {
   font-size: 13px;
   line-height: 15px;
   padding: 15px 45px;
-  //@include box-shadow(0,0,3px,0,$grey-medium);
   border-radius: 0;
   cursor: pointer;
   margin: 10px 0;
@@ -308,8 +379,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
   font-family: $font-stack;
-  color: $grey-medium;
-  border: 1px solid $grey-medium;
+  border: 1px solid $grey;
   padding: 15px 10px;
   line-height: 15px;
   font-size: 13px;
@@ -344,11 +414,15 @@ input[type="radio"] {
 label.checkbox {
   display: inline-block;
   cursor: pointer;
-  margin-bottom: 5px;
+  width: 100%;
+}
+label.checkbox small {
+  padding-top: 5px;
 }
 select {
-  border: 1px solid $grey-medium;
+  border: 1px solid $grey;
 }
 textarea {
   width: 100%;
 }
+

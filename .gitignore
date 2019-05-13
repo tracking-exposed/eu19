@@ -1,4 +1,10 @@
 *~
-/public
+public
 .idea
 .sass-cache
+tests_output
+chromedriver.log
+node_modules/*
+tests_output
+chromedriver.log
+geckodriver.log

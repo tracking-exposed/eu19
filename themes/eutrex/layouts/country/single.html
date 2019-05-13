@@ -1,0 +1,47 @@
+{{ define "main" -}}
+{{ .Scratch.Add "lang"  .Params.lang }}
+<div class="container">
+    <header class="search-page">
+        <figure class="left">
+            <img src="/images/country/{{ urlize .Title }}.svg" />
+        </figure>
+        <div class="page-info left">
+            <h1 class="top bottom">{{ .Title }}</h1>
+            <small><a href="/country">Change country</a></small>
+            <ul class="preview-data">
+                <li class="language-icon icon-small">
+                     <b class="language-data">{{ .Params.lang }}</b> language
+                    <small><a href="/language">Change language</a></small>
+                </li>
+                <li class="contributors-icon icon-small">
+                    <b class="contributors-data"></b> contributors<br />
+                    <small>Means we that observe this language with <b class="contributors-data"></b> supporters who has download our extension. <a href='{{ ref . "/page/get-the-extension.md" }}' title="Download the browser extension">Be one of them</a>.</small>
+                </li>
+            </ul>
+        </div>
+        <span class="clear"></span>
+    </header>
+
+    <div class="search-page-container" id="search-page" data-lang="{{ .Params.lang }}">
+        <div class="column_1-3">
+            <h3 class="top">
+                Most used keywords<br />
+                <span class="paragraph"><small>
+                    For {{ .Params.lang }}, in the last <b class="time-window"></b> hours <br />
+                    Total keywords: <b class="total-key"></b>
+                </small></span>
+            </h3>
+            <div id="most-used-keywords">
+                <img src="/images/preloader.gif" class="preloader preloader-key" width="60" height="60" />
+                <ul id="most-keyword"></ul>
+            </div>
+        </div>
+        <div class="column_2-3 omega">
+
+            {{- partial "single-form.html" . -}}
+
+        </div>
+        <span class="clear"></span>
+    </div>
+</div>
+{{- end }}

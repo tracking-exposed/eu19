@@ -7,12 +7,12 @@
     <meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
     <meta name="robots" content="index, follow" />
 
-    <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}" property="og:title">
-    <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" property="og:description">
+    <meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}">
+    <meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:locale" content="en-US" />
-    <meta property="og:site_name" content="EU Tracking Exposed" />
+    <meta property="og:site_name" content="EU19 Tracking Exposed" />
     <meta property="og:image" content="/images/trex-logo.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="200" />
@@ -49,7 +49,9 @@
     }
     </script>
     {{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+
+    {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "main.scss" . | toCSS $options | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ .Hugo.Generator }}
 </head>

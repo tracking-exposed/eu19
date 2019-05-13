@@ -16,3 +16,11 @@ For any refercence go to [Hugo basic usage page](https://gohugo.io/getting-start
 ## Create content
 To create a new content, run the command `hugo new FOLDER/FILE-NAME.md` i.e. `hugo new faq/what-is-rss.md`. It will make a .md file stored in the relative folder under `content` folder.
 In front-matte of the new .md file, change the `draft` value to `false` to publish the post.
+
+## Test suite with Nightwatch
+In order to test application you need to 
++ Have Chrome installed
++ Install [nodeJs](https://nodejs.org/en/)
++ Install NightWatch, run: `npm -g install nightwatch` **-g** option make `nightwatch` available globally
+### Running test
+lunch `hugo server` then lunch `npm test`

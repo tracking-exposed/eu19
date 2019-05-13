@@ -74,6 +74,22 @@ GENERAL RESPONSIVE QUERY
 
 @media screen and (max-width: 680px)
 {
+  form#main-search .keywords-wrapper {
+    width: 60%;
+    margin-right: 0 !important;
+  }
+  .country-wrapper {
+    width: 38%;
+  }
+  form#main-search button, form#main-search  .button-wrapper {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .search-page-container .column_1-3 {
+    border-right: none;
+    border-bottom: solid 1px $grey;
+    margin-bottom: 20px;
+  }
 
 }
 
@@ -93,7 +109,10 @@ GENERAL RESPONSIVE QUERY
 
 @media screen and (max-width: 460px)
 {
-
+  h1.logotype {
+    line-height: 42px;
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-width: 380px)

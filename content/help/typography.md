@@ -1,8 +1,9 @@
 ---
 title: "Typography"
 date: 2019-01-25T13:56:58+01:00
-draft: false
+draft: true
 ---
+
 
 # h1 Heading
 ## h2 Heading
@@ -10,6 +11,21 @@ draft: false
 #### h4 Heading
 ##### h5 Heading
 ###### h6 Heading
+
+
+## Custom widget
+**Boxes widget** has two param: "color" and "text"
+
+*No color* variable means Blue background
+{{< boxes text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" >}}
+
+`red` color variable
+{{< boxes color="red" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" >}}
+
+`yellow` color variable
+{{< boxes color="yellow" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" >}}
+
+
 
 
 ## Horizontal Rules
@@ -121,20 +137,6 @@ Right aligned columns
 [link with title](http://google.com/ "title text!")
 
 Autoconverted link https://google.com (enable linkify to see)
-
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
 
 ### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)

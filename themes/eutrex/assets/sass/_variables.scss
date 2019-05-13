@@ -1,28 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-
 /*fonts var*/
-$font-stack: 'Raleway', sans-serif;
-$regular: 400;
-$bold: 700;
-
-/*shade of gray*/
-$black: #2d2d2d;
-$grey-dark: #3C3C3C;
-$grey-full: #787878;
-$grey-medium: #dcdcdc;
-$grey-light: #f9f9f9;
-$grey-bg: #F2F6F5;
-$white: #FFF;
-
-/*colors stack*/
-$primary: #003399;
-$primary-dark: #015470;
-$primary-light: #2DA6AF;
-$background: #DCDEE0;
-$secondary: #FFCC00;
-$tertiary: #FC1D6A;
-$tertiary-light: #fd8cb1;
-$tertiary-dark: #dc1a59;
+$font-stack: 'Trex-Regular', sans-serif;
+$regular: 'Trex-Regular', sans-serif;
+$medium: 'Trex-Medium', sans-serif;
+$bold: 'Trex-Bold', sans-serif;
 
 /*
  * mixin
