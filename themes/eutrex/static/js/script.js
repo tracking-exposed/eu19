@@ -299,7 +299,7 @@ jQuery(document).ready(function($) {
                     '<header class="center">' +
                     '<h3 class="light-font top break">' +
                     '<b>' + ArrayLength + '</b> ' + text +' of: <i class="keyword-value">' + decodeURIComponent(keyword) + '</i><br />' +
-                    '<span class="paragraph no-break">This report up to 39 posts; To observe <a href="/page/rss">content <i>across the bubble</i></a>, subscribe to the RSS with a feed reader</span>' +
+                    '<span class="paragraph no-break">We limit this preview to 39 posts. See all the matched posts <a href="/page/rss">using an RSS feed reader</a></span>' +
                     '</h3>' +
                     '</header>' +
                     '<div class="row"></div> '
