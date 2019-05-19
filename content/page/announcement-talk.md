@@ -1,4 +1,8 @@
-
+---
+title: "announcement talk at CPDP/PrivacyCamp 2019"
+date: 2019-01-30T15:09:22+01:00
+draft: false
+---
 
 Today I want to talk about a project named ALEX, which is the acronym for Algorithm Exposed, and one of its first output: a tool for scientific analysis of the social network personalisation algorithm, that we call fbtrex, facebook.tracking.exposed. It works by collecting what Facebook sends to you, as your timeline. Because is personalised, it can be collected as evidence and used to understand the algorithm logic.
 
