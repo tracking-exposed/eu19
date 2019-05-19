@@ -37,7 +37,7 @@ There are various RSS readers for various platforms, but here are some of the op
 ##### Android
 * [Flym](https://play.google.com/store/apps/details?id=net.frju.flym&hl=en_US): FOSS alternative.
 
-##### Other resources
-[Wikipedia's comparison of feed readers](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators)\
-[Readers available on github](https://github.com/topics/rss-reader)
+#### Other resources
+* [Wikipedia's comparison of feed readers](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators)\
+* [Readers available on github](https://github.com/topics/rss-reader)
 

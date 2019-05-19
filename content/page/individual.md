@@ -8,7 +8,7 @@ draft: false
 
 Facebook’s personalisation algorithms have an impact on our lifestyles, priorities, moods, opinions and the decisions we make. Yet we are prohibited from understanding their mechanics and objectives. 
 
-By installing the fbTREX browser extension, you can get insights into how they present different realities to us. We, as researchers, commit to analyze social phenomena and not individual behaviour. We all need to understand how algorithms interact with us. Because of their personalized nature, and the opacity of Facebook, only with a collective distributed observation we can get a grasp. 
+By [installing the fbTREX browser extension](/page/advanced-use), you can get insights into how they present different realities to us. We, as researchers, commit to analyze social phenomena and not individual behaviour. We all need to understand how algorithms interact with us. Because of their personalized nature, and the opacity of Facebook, only with a collective distributed observation we can get a grasp. 
 
 Join us if you want to know who is informing you, which topics Facebook prefers, what is kept away from you despite your subscriptions to a page or a friend. By becoming an adopter of fbtrex, you are not just getting the insights Facebook does not offer you on your own activity, but you are also participanting in a user-driven initiative to make social media more accountable and transparent.
 
@@ -126,3 +126,11 @@ fbTREX’s ethical policy imposes the following limits:
   * You have full control over your data, and may delete it at any time.
   * No one will have access to your data unless you expressly grant them access. You will have to opt-in to any third-party, including research groups, that you may want to interact with.
   * All research conducted must strictly aim at understanding social phenomena and algorithmic influence, you will never be the subject or object of any study.
+
+
+### Know more
+
+  * The [API](/page/api) documentation
+  * [Installation guide](/page/advanced-use) which contains also informations for developers
+  * [Browser extension repository](https://github.com/tracking-exposed/web-extension)
+  * [Our chat channel](https://chat.securitywithoutborders.org/community/channels/trackingexposed), you should register in SecurityWithoutBorder mattermost chat, and join the channel #trackingexposed
