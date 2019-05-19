@@ -17,3 +17,11 @@ So far, fbTREX has [contributed to peer-reviewed publications and other reports]
 fbTREX can also facilitate investigations into algorithmic discrimination and data exploitation, as it is ideal for comparing different users’ news feed content and advertisements based on parameters like gender, political orientation, age, likes, device, etc. This can help use gain insights into issues we have for instance seen in reports of advertisers excluding protected groups from seeing their ads through Facebook. We wish to support strategic litigation to this end and to aid in efforts by regulatory authorities to investigate whether they can adequately address issues which arise from personalisation algorithms.
 
 If you are interested in utilising fbTREX datasets in your research or investigations, please reach out to us at support@tracking.exposed. We are also working on an experimental tool to perform [Youtube algorithm analysis](https://youtube.tracking.exposed). You might find worthy our statement on [data activism](/page/data-activism).
+
+### Know more
+
+  * The [API](/page/api) documentation
+  * [Installation guide](/page/advanced-use) which contains also informations for developers
+  * [Browser extension repository](https://github.com/tracking-exposed/web-extension)
+  * [Our chat channel](https://chat.securitywithoutborders.org/community/channels/trackingexposed), you should register in SecurityWithoutBorder mattermost chat, and join the channel #trackingexposed
+
