@@ -1,97 +1,96 @@
 {{ define "main" -}}
-
-<header class="entry-header center">
-    <h1 class="bottom">Facebook answer analysis</h1>
-    <h2 class="top"><small><b>Why the Facebook's answer about newsfeed transparency is misleading</b></small></h2>
-</header>
-<div class="entry-content">
-    <p>
-        On the third of april 2019, the European Commission met Facebook to discuss changes being made to FB's newsfeed.
-        They claim to had solve transparency problem introducing a simple tool close to the post: the <a href="https://newsroom.fb.com/news/2019/03/why-am-i-seeing-this/" target="_blank"><i>Why am I seeing this post?</i></a> function.
-        <b>In our opinion FB answer to Eu Commission is misleading in three ways, here's why.</b>
-    </p>
-
-    <h3>1. Facebook did not change the newsfeed but is limited to add a tool two clicks away from every post. </h3>
-    <p>
-        FaceBook running regular experiment on user's newsfeed, but nobody ever got a notification because of Facebook changed the algorithm, nor has an option to compare different algorithms.
-    </p>
-    <p>
-        We know this thanks to our technologies that keep evidence on how contents are served when Facebook changed the algorithm, we can measure the difference between first and after.
-        So that introducing the <i>Why am I seeing this post?</i> tool, do not solve the problem that we are subject to very different treatment based on the last assumption Menlo Park research team is testing.
-        <b>The transparency tool is just hiding the dirt under the carpet</b>.
-    </p>
-    <p>We've found two metrics helpful to spot any algorithm change.</p>
-    <ul>
-        <li>
-            <b>The first is the percentage of media type.</b>
-            <p>
-                <small>
-                    We clearly observed one of our experimental profile having a stable ratio (let say, 40% pictures, 10% videos, 50% text) for weeks, with a variation by day around the 2%, and suddenly change in 60% 5% 35%, to remain stable with a daily difference of 2%.
-                    Evidence like this made us realize, Facebook controls the composition of the informative experience of each user.
-                </small>
-            </p>
-            <!--todo: CHART - https://elezioni.tracking.exposed/#[11,%22XYZ%22,0,595,null]-->
-        </li>
-        <li>
-            <b>The second is the diversity of sources considered.</b>
-            <p>
-                <small>
-                    In summer 2018 we observed a group of user following the same pages get, by surprise, a higher variety of content appearing in their timeline.
-                </small>
-            </p>
-            <!--todo: CHART - https://elezioni.tracking.exposed/#pf13 e https://elezioni.tracking.exposed/#[23,%22XYZ%22,0,595,null] -->
-        </li>
-    </ul>
-
-    <h3>2. Actually are the excluded posts the most significant loss.</h3>
-    <p>
-        What about contents Facebook did not show to you? As stated in the Web Foundation report: <a href="http://webfoundation.org/docs/2018/04/WF_InvisibleCurationContent_Screen_AW.pdf" target="_blank">"The invisible curation of Content"</a>, the hidden content were measured to be <b>the 80% compared to the 20% selected</b>.
-        This lead to two consequences:
-    </p>
-    <ul>
-        <li>This huge amount of excluded contents give to Facebook the ability to frame the perception of debate.</li>
-        <li>Because the 20% of content selected are competing for your attention, why specific post get proposed more times and others disappear after the first time?</li>
-    </ul>
-    <p><b>The transparency tool is not addressing the elephant in the room.</b></p>
-
-    <h3>3. The big deal is the metadata analysis</h3>
-    <p>
-        We know for sure Facebook does a variety of metadata analysis: analysis of group behavior, correlation of location, content analysis in links, pictures, and text.
-    </p>
-    <p>
-        Is the <i>Why I'm seeing this</i> tool expose that unspoken analysis? Not at all! It only told us that we are seeing a certain post due to <b>reactions</b>, <b>following</b>, and <b>commenting frequency</b>.
-    </p>
-    <p>
-        This tool, rather than improve transparency, is actually another engagement tool.
-    </p>
-    <div class="column_1-2">
-        <p><b>Facebook claims that:</b></p>
-        <blockquote>
-            During our research on “Why am I seeing this post?”, people told us that transparency into News Feed algorithms wasn’t enough without corresponding controls.
-            People wanted to be able to take action, so we’ve made it easy to manage what you see in News Feed right from this feature.
-            People’s feedback also helped us determine what specific information would be most valuable to highligh.
-        </blockquote>
-    </div>
-    <div class="column_1-2 omega">
-        <p><b>This actually means:</b></p>
+<section class="container">
+    <header class="entry-header center">
+        <h1 class="bottom">Facebook answer analysis</h1>
+        <h2 class="top"><small><b>Why the Facebook's answer about newsfeed transparency is misleading</b></small></h2>
+    </header>
+    <div class="entry-content">
         <p>
-            In order to get a better experience users should use more application features.
-            Implicitly, causing Facebook to record an higher more engagement, which is the metric used to evaluate advertising and community behavior.
+            On the third of april 2019, the European Commission met Facebook to discuss changes being made to FB's newsfeed.
+            They claim to had solve transparency problem introducing a simple tool close to the post: the <a href="https://newsroom.fb.com/news/2019/03/why-am-i-seeing-this/" target="_blank"><i>Why am I seeing this post?</i></a> function.
+            <b>In our opinion FB answer to Eu Commission is misleading in three ways, here's why.</b>
+        </p>
+
+        <h3>1. Facebook did not change the newsfeed but is limited to add a tool two clicks away from every post. </h3>
+        <figure><img src='/images/broom.jpg' /></figure>
+        <p>
+            FaceBook running regular experiment on user's newsfeed, but nobody ever got a notification because of Facebook changed the algorithm, nor has an option to compare different algorithms.
+        </p>
+        <p>
+            We know this thanks to our technologies that keep evidence on how contents are served when Facebook changed the algorithm, we can measure the difference between first and after.
+            So that introducing the <i>Why am I seeing this post?</i> tool, do not solve the problem that we are subject to very different treatment based on the last assumption Menlo Park research team is testing.
+            <b>The transparency tool is just hiding the dirt under the carpet</b>.
+        </p>
+        <p>We've found two metrics helpful to spot any algorithm change.</p>
+        <ul>
+            <li>
+                <b>The first is the percentage of media type.</b>
+                <p>
+                    <small>
+                        We clearly observed one of our experimental profile having a stable ratio (let say, 40% pictures, 10% videos, 50% text) for weeks, with a variation by day around the 2%, and suddenly change in 60% 5% 35%, to remain stable with a daily difference of 2%.
+                        Evidence like this made us realize, Facebook controls the composition of the informative experience of each user.
+                    </small>
+                </p>
+                <!--todo: CHART - https://elezioni.tracking.exposed/#[11,%22XYZ%22,0,595,null]-->
+            </li>
+            <li>
+                <b>The second is the diversity of sources considered.</b>
+                <p>
+                    <small>
+                        In summer 2018 we observed a group of user following the same pages get, by surprise, a higher variety of content appearing in their timeline.
+                    </small>
+                </p>
+                <!--todo: CHART - https://elezioni.tracking.exposed/#pf13 e https://elezioni.tracking.exposed/#[23,%22XYZ%22,0,595,null] -->
+            </li>
+        </ul>
+
+        <h3>2. Actually are the excluded posts the most significant loss.</h3>
+        <figure><img src='/images/elephant.jpg' /></figure>
+        <p>
+            What about contents Facebook did not show to you? As stated in the Web Foundation report: <a href="http://webfoundation.org/docs/2018/04/WF_InvisibleCurationContent_Screen_AW.pdf" target="_blank">"The invisible curation of Content"</a>, the hidden content were measured to be <b>the 80% compared to the 20% selected</b>.
+            This lead to two consequences:
+        </p>
+        <ul>
+            <li>This huge amount of excluded contents give to Facebook the ability to frame the perception of debate.</li>
+            <li>Because the 20% of content selected are competing for your attention, why specific post get proposed more times and others disappear after the first time?</li>
+        </ul>
+        <p><b>The transparency tool is not addressing the elephant in the room.</b></p>
+
+        <h3>3. The big deal is the metadata analysis</h3>
+        <p>
+            We know for sure Facebook does a variety of metadata analysis: analysis of group behavior, correlation of location, content analysis in links, pictures, and text.
+        </p>
+        <p>
+            Is the <i>Why I'm seeing this</i> tool expose that unspoken analysis? Not at all! It only told us that we are seeing a certain post due to <b>reactions</b>, <b>following</b>, and <b>commenting frequency</b>.
+        </p>
+        <p>
+            This tool, rather than improve transparency, is actually another engagement tool.
+        </p>
+        <div class="column_1-2">
+            <p><b>Facebook claims that:</b></p>
+            <blockquote>
+                During our research on “Why am I seeing this post?”, people told us that transparency into News Feed algorithms wasn’t enough without corresponding controls.
+                People wanted to be able to take action, so we’ve made it easy to manage what you see in News Feed right from this feature.
+                People’s feedback also helped us determine what specific information would be most valuable to highligh.
+            </blockquote>
+        </div>
+        <div class="column_1-2 omega">
+            <p><b>This actually means:</b></p>
+            <p>
+                In order to get a better experience users should use more application features.
+                Implicitly, causing Facebook to record an higher more engagement, which is the metric used to evaluate advertising and community behavior.
+            </p>
+        </div>
+        <span class="clear"></span>
+
+        <h3 class="center">
+            We found the facebook answer to Eu Commision not even remotely satisfying.
+        </h3>
+        <p class="center">
+            We demand: <b>More controll on the algorithm</b> and <b>More transparency on metadata analysis</b>.<br />
+            If you agree on this, <a href='{{ ref . "/page/get-the-extension.md" }}' title="Download the browser extension"><b>Download the browser extension</b></a>, to join a collaborative effort to understand Facebook algorithm.
         </p>
     </div>
-    <span class="clear"></span>
-
-    <h3 class="center">
-        We found the facebook answer to Eu Commision not even remotely satisfying.
-    </h3>
-    <p class="center">
-        We demand: <b>More controll on the algorithm</b> and <b>More transparency on metadata analysis</b>.<br />
-        If you agree on this, <a href='{{ ref . "/page/get-the-extension.md" }}' title="Download the browser extension"><b>Download the browser extension</b></a>, to join a collaborative effort to understand Facebook algorithm.
-    </p>
-
-
-
-
-</div>
+</section>
 
 {{- end }}
