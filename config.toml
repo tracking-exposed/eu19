@@ -28,7 +28,7 @@ menu = ["main", "footer"]
     page = "Pages"
     identifier = "pages"
     name = "Pages"
-    url = "#"
+    url = "/page/"
     weight = -100
  [[menu.main]]
     page = "Researcher"
