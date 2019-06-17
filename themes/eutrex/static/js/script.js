@@ -583,3 +583,160 @@ function newkw(kw) {
     location.reload();
 }
 
+
+/**
+ *  C3.js charts
+ */
+// Andrea
+var mediatype_1 = c3.generate({
+    bindto: '#media-type_1',
+    data: {
+        columns: [
+            ['Photo', 20.71],
+            ['Post', 63.91],
+            ['Video', 15.38]
+        ],
+        type: 'donut'
+    },
+    donut: {
+        title: "Andrea"
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+//Britta
+var mediatype_2 = c3.generate({
+    bindto: '#media-type_2',
+    data: {
+        columns: [
+            ['Photo', 26.81],
+            ['Post', 69.79],
+            ['Video', 3.40]
+        ],
+        type: 'donut'
+    },
+    donut: {
+        title: "Britta"
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+//Antonietta
+var mediatype_3 = c3.generate({
+    bindto: '#media-type_3',
+    data: {
+        columns: [
+            ['Photo', 35.88],
+            ['Post', 60.31],
+            ['Video', 3.82]
+        ],
+        type: 'donut'
+    },
+    donut: {
+        title: "Antonietta"
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+
+//Il fatto quotidiano
+var variety_1 = c3.generate({
+    bindto: '#variety-content_1',
+    data: {
+        columns: [
+            ['Andrea', 82],
+            ['Britta', 581],
+            ['Antonietta', 83]
+        ],
+        type: 'bar'
+    },
+    grid: {
+        y: {
+            lines: [
+                {value:600, text: 'Total published posts'}
+            ]
+        }
+    },
+    bar: {
+        width: {
+            ratio: 0.5
+        }
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+//Il giornale
+var variety_2 = c3.generate({
+    bindto: '#variety-content_2',
+    data: {
+        columns: [
+            ['Andrea', 299],
+            ['Britta', 549],
+            ['Antonietta', 52]
+        ],
+        type: 'bar'
+    },
+    grid: {
+        y: {
+            lines: [
+                {value:550, text: 'Total published posts'}
+            ]
+        }
+    },
+    bar: {
+        width: {
+            ratio: 0.5
+        }
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+//La repubblica
+var variety_3 = c3.generate({
+    bindto: '#variety-content_3',
+    data: {
+        columns: [
+            ['Andrea', 857],
+            ['Britta', 892],
+            ['Antonietta', 1129]
+        ],
+        type: 'bar'
+    },
+    grid: {
+        y: {
+            lines: [
+                {value:1150, text: 'Total published posts'}
+            ]
+        }
+    },
+    bar: {
+        width: {
+            ratio: 0.5
+        }
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+
+//webfundation hidden-content
+
+var hidden_content = c3.generate({
+    bindto: '#hidden-content',
+    data: {
+        columns: [
+            ['Hidden Posts', 9532],
+            ['Seen Posts', 2071]
+        ],
+        type: 'donut'
+    },
+    color: {
+        pattern: ['#FC1D6A','#7D344E']
+    }
+});
+
