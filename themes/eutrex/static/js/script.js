@@ -587,6 +587,7 @@ function newkw(kw) {
 /**
  *  C3.js charts
  */
+
 // Andrea
 var mediatype_1 = c3.generate({
     bindto: '#media-type_1',
@@ -599,12 +600,30 @@ var mediatype_1 = c3.generate({
         type: 'donut'
     },
     donut: {
-        title: "Andrea"
+        title: "Before placeholder"
     },
     color: {
         pattern: ['#003399', '#457AE5', '#004CE5']
     }
 });
+var mediatype_1_b = c3.generate({
+    bindto: '#media-type_1-b',
+    data: {
+        columns: [
+            ['Photo', 20.71],
+            ['Post', 63.91],
+            ['Video', 15.38]
+        ],
+        type: 'donut'
+    },
+    donut: {
+        title: "After placeholder"
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+
 //Britta
 var mediatype_2 = c3.generate({
     bindto: '#media-type_2',
@@ -617,12 +636,30 @@ var mediatype_2 = c3.generate({
         type: 'donut'
     },
     donut: {
-        title: "Britta"
+        title: "Before placeholder"
     },
     color: {
         pattern: ['#003399', '#457AE5', '#004CE5']
     }
 });
+var mediatype_2_b = c3.generate({
+    bindto: '#media-type_2-b',
+    data: {
+        columns: [
+            ['Photo', 26.81],
+            ['Post', 69.79],
+            ['Video', 3.40]
+        ],
+        type: 'donut'
+    },
+    donut: {
+        title: "After placeholder"
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+
 //Antonietta
 var mediatype_3 = c3.generate({
     bindto: '#media-type_3',
@@ -635,7 +672,24 @@ var mediatype_3 = c3.generate({
         type: 'donut'
     },
     donut: {
-        title: "Antonietta"
+        title: "before placeholder"
+    },
+    color: {
+        pattern: ['#003399', '#457AE5', '#004CE5']
+    }
+});
+var mediatype_3_b = c3.generate({
+    bindto: '#media-type_3-b',
+    data: {
+        columns: [
+            ['Photo', 35.88],
+            ['Post', 60.31],
+            ['Video', 3.82]
+        ],
+        type: 'donut'
+    },
+    donut: {
+        title: "After placeholder"
     },
     color: {
         pattern: ['#003399', '#457AE5', '#004CE5']
@@ -647,16 +701,18 @@ var variety_1 = c3.generate({
     bindto: '#variety-content_1',
     data: {
         columns: [
-            ['Andrea', 82],
-            ['Britta', 581],
-            ['Antonietta', 83]
+            ['Il fatto quotidiano', 82],
+            ['Il giornale', 581],
+            ['La repubblica', 83]
         ],
         type: 'bar'
     },
     grid: {
         y: {
             lines: [
-                {value:600, text: 'Total published posts'}
+                {value:550, text: 'Il fatto quotidiano', class: 'color'},
+                {value:600, text: 'La republica', class: 'color'},
+                {value:500, text: 'Il giornale', class: 'color'}
             ]
         }
     },
@@ -669,21 +725,24 @@ var variety_1 = c3.generate({
         pattern: ['#003399', '#457AE5', '#004CE5']
     }
 });
+
 //Il giornale
 var variety_2 = c3.generate({
     bindto: '#variety-content_2',
     data: {
         columns: [
-            ['Andrea', 299],
-            ['Britta', 549],
-            ['Antonietta', 52]
+            ['Il fatto quotidiano', 299],
+            ['Il giornale', 549],
+            ['La repubblica', 52]
         ],
         type: 'bar'
     },
     grid: {
         y: {
             lines: [
-                {value:550, text: 'Total published posts'}
+                {value:550, text: 'Il fatto quotidiano', class: 'color'},
+                {value:600, text: 'La republica', class: 'color'},
+                {value:500, text: 'Il giornale', class: 'color'}
             ]
         }
     },
@@ -696,21 +755,24 @@ var variety_2 = c3.generate({
         pattern: ['#003399', '#457AE5', '#004CE5']
     }
 });
+
 //La repubblica
 var variety_3 = c3.generate({
     bindto: '#variety-content_3',
     data: {
         columns: [
-            ['Andrea', 857],
-            ['Britta', 892],
-            ['Antonietta', 1129]
+            ['Il fatto quotidiano', 857],
+            ['Il giornale', 892],
+            ['La repubblica', 1129]
         ],
         type: 'bar'
     },
     grid: {
         y: {
             lines: [
-                {value:1150, text: 'Total published posts'}
+                {value:1000, text: 'Il fatto quotidiano', class: 'color'},
+                {value:950, text: 'La republica', class: 'color'},
+                {value:1050, text: 'Il giornale', class: 'color'}
             ]
         }
     },
@@ -725,7 +787,6 @@ var variety_3 = c3.generate({
 });
 
 //webfundation hidden-content
-
 var hidden_content = c3.generate({
     bindto: '#hidden-content',
     data: {

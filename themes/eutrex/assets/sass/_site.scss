@@ -255,6 +255,15 @@ li.keywords-icon {
   background-position-x: center;
   display: block;
 }
+#landing-page .bordered-column .column_1-3 {
+  margin-right: 1%;
+  padding-right: 1%;
+  border-right: solid 1px $grey;
+}
+
+#landing-page .bordered-column .column_1-3.omega {
+  border: none;
+}
 
 /* --------------------------------------------------
 ## SEARCH-PAGES
