@@ -10,7 +10,7 @@ landing: false
 ---
 
 Facebook promised some kind of "transparency" to the European Commission; we argue their answer is entirely unsatisfying.
-We identify three reasons why this concept of transparency is misleading:
-1. In the "Why am I seeing this post?" tool there are no traces of the experiments Facebook regularly runs on us. 
-2. In the "Why am I seeing this post?" tool there are no traces of the vast amount of excluded post. 
-3. The "Why am I seeing this post?" is only another engagement strategy: educate the user to click more on the reactions that content triggers to them.
+The company presented the "Why am I seeing this post?" as an act of transparency, but we consider it misleading because:
+1. There are no traces of the experiments Facebook regularly runs on us. 
+2. There are no traces of the vast amount of excluded post. 
+3. Is only another engagement strategy: educate the user to click more on the reactions that content triggers to them.
