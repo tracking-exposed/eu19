@@ -22,8 +22,7 @@ canonifyURLs = true
 #sectionPagesMenu = "main"
 
 
-menu = ["main", "footer"]
-
+[menu]
  [[menu.main]]
     page = "Pages"
     identifier = "pages"
